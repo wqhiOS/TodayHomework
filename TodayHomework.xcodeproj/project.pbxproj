@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		571FC4FB1C07F30C009F1F0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC4FA1C07F30C009F1F0E /* main.m */; };
+		571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FC5051C07F30C009F1F0E /* Assets.xcassets */; };
+		571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5131C07F456009F1F0E /* AppDelegate.m */; };
+		571FC52A1C07F52B009F1F0E /* THTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5291C07F52B009F1F0E /* THTabBarController.m */; };
+		571FC52E1C07F550009F1F0E /* THNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC52D1C07F550009F1F0E /* THNavigationController.m */; };
+		571FC5321C07F7B1009F1F0E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5311C07F7B1009F1F0E /* BaseViewController.m */; };
+		571FC5401C07F849009F1F0E /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC53E1C07F849009F1F0E /* PersonalCenterViewController.m */; };
+		571FC5411C07F849009F1F0E /* PersonalCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571FC53F1C07F849009F1F0E /* PersonalCenterViewController.xib */; };
+		571FC5451C07F8DD009F1F0E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5431C07F8DD009F1F0E /* HomeViewController.m */; };
+		571FC5461C07F8DD009F1F0E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571FC5441C07F8DD009F1F0E /* HomeViewController.xib */; };
+		571FC54A1C07F8ED009F1F0E /* ClassManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5481C07F8ED009F1F0E /* ClassManageViewController.m */; };
+		571FC54B1C07F8ED009F1F0E /* ClassManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571FC5491C07F8ED009F1F0E /* ClassManageViewController.xib */; };
+		571FC54F1C080BDF009F1F0E /* TeacherRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC54D1C080BDF009F1F0E /* TeacherRegisterViewController.m */; };
+		571FC5501C080BDF009F1F0E /* TeacherRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571FC54E1C080BDF009F1F0E /* TeacherRegisterViewController.xib */; };
+		571FC55B1C0815E0009F1F0E /* THLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC55A1C0815E0009F1F0E /* THLoginTextField.m */; };
+		571FC55E1C08171F009F1F0E /* THTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC55D1C08171F009F1F0E /* THTextField.m */; };
+		571FC5651C081804009F1F0E /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5641C081804009F1F0E /* AppUtils.m */; };
+		571FC5691C08184A009F1F0E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5671C08184A009F1F0E /* LoginViewController.m */; };
+		571FC56A1C08184A009F1F0E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 571FC5681C08184A009F1F0E /* LoginViewController.xib */; };
+		571FC56D1C081971009F1F0E /* THSubmitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC56C1C081971009F1F0E /* THSubmitButton.m */; };
+		571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5701C082A30009F1F0E /* UIView+Frame.m */; };
+		57427D4B1C0847E000CD6440 /* WUButtonContainrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57427D4A1C0847E000CD6440 /* WUButtonContainrView.m */; };
+		57427D501C0848AA00CD6440 /* chexbox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57427D4C1C0848AA00CD6440 /* chexbox_checked@2x.png */; };
+		57427D511C0848AA00CD6440 /* chexbox_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57427D4D1C0848AA00CD6440 /* chexbox_normal@2x.png */; };
+		57427D521C0848AA00CD6440 /* radio_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57427D4E1C0848AA00CD6440 /* radio_checked@2x.png */; };
+		57427D531C0848AA00CD6440 /* radio_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57427D4F1C0848AA00CD6440 /* radio_normal@2x.png */; };
+		57427D571C0848D300CD6440 /* WUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57427D561C0848D300CD6440 /* WUButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		571FC4F61C07F30C009F1F0E /* TodayHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		571FC4FA1C07F30C009F1F0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		571FC5051C07F30C009F1F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		571FC50A1C07F30C009F1F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571FC5101C07F334009F1F0E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		571FC5121C07F456009F1F0E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		571FC5131C07F456009F1F0E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		571FC5281C07F52B009F1F0E /* THTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTabBarController.h; sourceTree = "<group>"; };
+		571FC5291C07F52B009F1F0E /* THTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTabBarController.m; sourceTree = "<group>"; };
+		571FC52C1C07F550009F1F0E /* THNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNavigationController.h; sourceTree = "<group>"; };
+		571FC52D1C07F550009F1F0E /* THNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNavigationController.m; sourceTree = "<group>"; };
+		571FC5301C07F7B1009F1F0E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		571FC5311C07F7B1009F1F0E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		571FC53D1C07F849009F1F0E /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
+		571FC53E1C07F849009F1F0E /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
+		571FC53F1C07F849009F1F0E /* PersonalCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCenterViewController.xib; sourceTree = "<group>"; };
+		571FC5421C07F8DD009F1F0E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		571FC5431C07F8DD009F1F0E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		571FC5441C07F8DD009F1F0E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		571FC5471C07F8ED009F1F0E /* ClassManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassManageViewController.h; sourceTree = "<group>"; };
+		571FC5481C07F8ED009F1F0E /* ClassManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassManageViewController.m; sourceTree = "<group>"; };
+		571FC5491C07F8ED009F1F0E /* ClassManageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassManageViewController.xib; sourceTree = "<group>"; };
+		571FC54C1C080BDF009F1F0E /* TeacherRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherRegisterViewController.h; sourceTree = "<group>"; };
+		571FC54D1C080BDF009F1F0E /* TeacherRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherRegisterViewController.m; sourceTree = "<group>"; };
+		571FC54E1C080BDF009F1F0E /* TeacherRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherRegisterViewController.xib; sourceTree = "<group>"; };
+		571FC5541C0810DB009F1F0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		571FC5591C0815E0009F1F0E /* THLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLoginTextField.h; sourceTree = "<group>"; };
+		571FC55A1C0815E0009F1F0E /* THLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLoginTextField.m; sourceTree = "<group>"; };
+		571FC55C1C08171F009F1F0E /* THTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTextField.h; sourceTree = "<group>"; };
+		571FC55D1C08171F009F1F0E /* THTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTextField.m; sourceTree = "<group>"; };
+		571FC5631C081804009F1F0E /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
+		571FC5641C081804009F1F0E /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
+		571FC5661C08184A009F1F0E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		571FC5671C08184A009F1F0E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		571FC5681C08184A009F1F0E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		571FC56B1C081971009F1F0E /* THSubmitButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THSubmitButton.h; sourceTree = "<group>"; };
+		571FC56C1C081971009F1F0E /* THSubmitButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THSubmitButton.m; sourceTree = "<group>"; };
+		571FC56F1C082A30009F1F0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		571FC5701C082A30009F1F0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		57427D491C0847E000CD6440 /* WUButtonContainrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButtonContainrView.h; sourceTree = "<group>"; };
+		57427D4A1C0847E000CD6440 /* WUButtonContainrView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButtonContainrView.m; sourceTree = "<group>"; };
+		57427D4C1C0848AA00CD6440 /* chexbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_checked@2x.png"; sourceTree = "<group>"; };
+		57427D4D1C0848AA00CD6440 /* chexbox_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_normal@2x.png"; sourceTree = "<group>"; };
+		57427D4E1C0848AA00CD6440 /* radio_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_checked@2x.png"; sourceTree = "<group>"; };
+		57427D4F1C0848AA00CD6440 /* radio_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_normal@2x.png"; sourceTree = "<group>"; };
+		57427D551C0848D300CD6440 /* WUButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButton.h; sourceTree = "<group>"; };
+		57427D561C0848D300CD6440 /* WUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		571FC4F31C07F30C009F1F0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		571FC4ED1C07F30C009F1F0E = {
+			isa = PBXGroup;
+			children = (
+				571FC4F81C07F30C009F1F0E /* TodayHomework */,
+				571FC4F71C07F30C009F1F0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		571FC4F71C07F30C009F1F0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				571FC4F61C07F30C009F1F0E /* TodayHomework.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		571FC4F81C07F30C009F1F0E /* TodayHomework */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5111C07F456009F1F0E /* Application */,
+				571FC5141C07F456009F1F0E /* Controller */,
+				571FC51C1C07F456009F1F0E /* View */,
+				571FC5181C07F456009F1F0E /* Model */,
+				571FC5621C0817D4009F1F0E /* Tools */,
+				571FC4F91C07F30C009F1F0E /* Supporting Files */,
+			);
+			path = TodayHomework;
+			sourceTree = "<group>";
+		};
+		571FC4F91C07F30C009F1F0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5051C07F30C009F1F0E /* Assets.xcassets */,
+				571FC50A1C07F30C009F1F0E /* Info.plist */,
+				571FC4FA1C07F30C009F1F0E /* main.m */,
+				571FC5101C07F334009F1F0E /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		571FC5111C07F456009F1F0E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5121C07F456009F1F0E /* AppDelegate.h */,
+				571FC5131C07F456009F1F0E /* AppDelegate.m */,
+				571FC5541C0810DB009F1F0E /* Constants.h */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		571FC5141C07F456009F1F0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				571FC52F1C07F7A0009F1F0E /* Base */,
+				571FC5161C07F456009F1F0E /* 今日作业 */,
+				571FC5171C07F456009F1F0E /* 班级管理 */,
+				571FC5151C07F456009F1F0E /* 个人中心 */,
+				571FC5231C07F4EC009F1F0E /* 登陆注册 */,
+				571FC5241C07F4EC009F1F0E /* 其他 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		571FC5151C07F456009F1F0E /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				571FC53D1C07F849009F1F0E /* PersonalCenterViewController.h */,
+				571FC53E1C07F849009F1F0E /* PersonalCenterViewController.m */,
+				571FC53F1C07F849009F1F0E /* PersonalCenterViewController.xib */,
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		571FC5161C07F456009F1F0E /* 今日作业 */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5421C07F8DD009F1F0E /* HomeViewController.h */,
+				571FC5431C07F8DD009F1F0E /* HomeViewController.m */,
+				571FC5441C07F8DD009F1F0E /* HomeViewController.xib */,
+			);
+			path = "今日作业";
+			sourceTree = "<group>";
+		};
+		571FC5171C07F456009F1F0E /* 班级管理 */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5471C07F8ED009F1F0E /* ClassManageViewController.h */,
+				571FC5481C07F8ED009F1F0E /* ClassManageViewController.m */,
+				571FC5491C07F8ED009F1F0E /* ClassManageViewController.xib */,
+			);
+			path = "班级管理";
+			sourceTree = "<group>";
+		};
+		571FC5181C07F456009F1F0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5191C07F456009F1F0E /* 个人中心 */,
+				571FC51A1C07F456009F1F0E /* 今日作业 */,
+				571FC51B1C07F456009F1F0E /* 班级管理 */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		571FC5191C07F456009F1F0E /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		571FC51A1C07F456009F1F0E /* 今日作业 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "今日作业";
+			sourceTree = "<group>";
+		};
+		571FC51B1C07F456009F1F0E /* 班级管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "班级管理";
+			sourceTree = "<group>";
+		};
+		571FC51C1C07F456009F1F0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				571FC51D1C07F456009F1F0E /* 个人中心 */,
+				571FC51E1C07F456009F1F0E /* 今日作业 */,
+				571FC51F1C07F456009F1F0E /* 班级管理 */,
+				571FC5551C081471009F1F0E /* CommonView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		571FC51D1C07F456009F1F0E /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		571FC51E1C07F456009F1F0E /* 今日作业 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "今日作业";
+			sourceTree = "<group>";
+		};
+		571FC51F1C07F456009F1F0E /* 班级管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "班级管理";
+			sourceTree = "<group>";
+		};
+		571FC5231C07F4EC009F1F0E /* 登陆注册 */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5661C08184A009F1F0E /* LoginViewController.h */,
+				571FC5671C08184A009F1F0E /* LoginViewController.m */,
+				571FC5681C08184A009F1F0E /* LoginViewController.xib */,
+				571FC54C1C080BDF009F1F0E /* TeacherRegisterViewController.h */,
+				571FC54D1C080BDF009F1F0E /* TeacherRegisterViewController.m */,
+				571FC54E1C080BDF009F1F0E /* TeacherRegisterViewController.xib */,
+			);
+			path = "登陆注册";
+			sourceTree = "<group>";
+		};
+		571FC5241C07F4EC009F1F0E /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				571FC52B1C07F534009F1F0E /* nav */,
+				571FC5271C07F50F009F1F0E /* tabBar */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		571FC5271C07F50F009F1F0E /* tabBar */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5281C07F52B009F1F0E /* THTabBarController.h */,
+				571FC5291C07F52B009F1F0E /* THTabBarController.m */,
+			);
+			name = tabBar;
+			sourceTree = "<group>";
+		};
+		571FC52B1C07F534009F1F0E /* nav */ = {
+			isa = PBXGroup;
+			children = (
+				571FC52C1C07F550009F1F0E /* THNavigationController.h */,
+				571FC52D1C07F550009F1F0E /* THNavigationController.m */,
+			);
+			name = nav;
+			sourceTree = "<group>";
+		};
+		571FC52F1C07F7A0009F1F0E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5301C07F7B1009F1F0E /* BaseViewController.h */,
+				571FC5311C07F7B1009F1F0E /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		571FC5551C081471009F1F0E /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				571FC5591C0815E0009F1F0E /* THLoginTextField.h */,
+				571FC55A1C0815E0009F1F0E /* THLoginTextField.m */,
+				571FC55C1C08171F009F1F0E /* THTextField.h */,
+				571FC55D1C08171F009F1F0E /* THTextField.m */,
+				571FC56B1C081971009F1F0E /* THSubmitButton.h */,
+				571FC56C1C081971009F1F0E /* THSubmitButton.m */,
+				57427D481C08479400CD6440 /* 多按钮容器 */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		571FC5621C0817D4009F1F0E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				571FC56E1C082A16009F1F0E /* category */,
+				571FC5631C081804009F1F0E /* AppUtils.h */,
+				571FC5641C081804009F1F0E /* AppUtils.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		571FC56E1C082A16009F1F0E /* category */ = {
+			isa = PBXGroup;
+			children = (
+				571FC56F1C082A30009F1F0E /* UIView+Frame.h */,
+				571FC5701C082A30009F1F0E /* UIView+Frame.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		57427D481C08479400CD6440 /* 多按钮容器 */ = {
+			isa = PBXGroup;
+			children = (
+				57427D491C0847E000CD6440 /* WUButtonContainrView.h */,
+				57427D4A1C0847E000CD6440 /* WUButtonContainrView.m */,
+				57427D551C0848D300CD6440 /* WUButton.h */,
+				57427D561C0848D300CD6440 /* WUButton.m */,
+				57427D541C0848B300CD6440 /* icon */,
+			);
+			name = "多按钮容器";
+			sourceTree = "<group>";
+		};
+		57427D541C0848B300CD6440 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				57427D4C1C0848AA00CD6440 /* chexbox_checked@2x.png */,
+				57427D4D1C0848AA00CD6440 /* chexbox_normal@2x.png */,
+				57427D4E1C0848AA00CD6440 /* radio_checked@2x.png */,
+				57427D4F1C0848AA00CD6440 /* radio_normal@2x.png */,
+			);
+			name = icon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		571FC4F51C07F30C009F1F0E /* TodayHomework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 571FC50D1C07F30C009F1F0E /* Build configuration list for PBXNativeTarget "TodayHomework" */;
+			buildPhases = (
+				571FC4F21C07F30C009F1F0E /* Sources */,
+				571FC4F31C07F30C009F1F0E /* Frameworks */,
+				571FC4F41C07F30C009F1F0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayHomework;
+			productName = TodayHomework;
+			productReference = 571FC4F61C07F30C009F1F0E /* TodayHomework.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		571FC4EE1C07F30C009F1F0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "吴启晗";
+				TargetAttributes = {
+					571FC4F51C07F30C009F1F0E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 571FC4F11C07F30C009F1F0E /* Build configuration list for PBXProject "TodayHomework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 571FC4ED1C07F30C009F1F0E;
+			productRefGroup = 571FC4F71C07F30C009F1F0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				571FC4F51C07F30C009F1F0E /* TodayHomework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		571FC4F41C07F30C009F1F0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57427D521C0848AA00CD6440 /* radio_checked@2x.png in Resources */,
+				571FC54B1C07F8ED009F1F0E /* ClassManageViewController.xib in Resources */,
+				57427D511C0848AA00CD6440 /* chexbox_normal@2x.png in Resources */,
+				571FC5501C080BDF009F1F0E /* TeacherRegisterViewController.xib in Resources */,
+				57427D501C0848AA00CD6440 /* chexbox_checked@2x.png in Resources */,
+				57427D531C0848AA00CD6440 /* radio_normal@2x.png in Resources */,
+				571FC5461C07F8DD009F1F0E /* HomeViewController.xib in Resources */,
+				571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */,
+				571FC56A1C08184A009F1F0E /* LoginViewController.xib in Resources */,
+				571FC5411C07F849009F1F0E /* PersonalCenterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		571FC4F21C07F30C009F1F0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */,
+				571FC55E1C08171F009F1F0E /* THTextField.m in Sources */,
+				57427D4B1C0847E000CD6440 /* WUButtonContainrView.m in Sources */,
+				571FC5691C08184A009F1F0E /* LoginViewController.m in Sources */,
+				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,
+				571FC5651C081804009F1F0E /* AppUtils.m in Sources */,
+				571FC5321C07F7B1009F1F0E /* BaseViewController.m in Sources */,
+				571FC4FB1C07F30C009F1F0E /* main.m in Sources */,
+				571FC5401C07F849009F1F0E /* PersonalCenterViewController.m in Sources */,
+				571FC54A1C07F8ED009F1F0E /* ClassManageViewController.m in Sources */,
+				571FC55B1C0815E0009F1F0E /* THLoginTextField.m in Sources */,
+				57427D571C0848D300CD6440 /* WUButton.m in Sources */,
+				571FC52A1C07F52B009F1F0E /* THTabBarController.m in Sources */,
+				571FC52E1C07F550009F1F0E /* THNavigationController.m in Sources */,
+				571FC56D1C081971009F1F0E /* THSubmitButton.m in Sources */,
+				571FC5451C07F8DD009F1F0E /* HomeViewController.m in Sources */,
+				571FC54F1C080BDF009F1F0E /* TeacherRegisterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		571FC50B1C07F30C009F1F0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		571FC50C1C07F30C009F1F0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		571FC50E1C07F30C009F1F0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TodayHomework/PrefixHeader.pch;
+				INFOPLIST_FILE = TodayHomework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuqh.TodayHomework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		571FC50F1C07F30C009F1F0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TodayHomework/PrefixHeader.pch;
+				INFOPLIST_FILE = TodayHomework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuqh.TodayHomework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		571FC4F11C07F30C009F1F0E /* Build configuration list for PBXProject "TodayHomework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571FC50B1C07F30C009F1F0E /* Debug */,
+				571FC50C1C07F30C009F1F0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		571FC50D1C07F30C009F1F0E /* Build configuration list for PBXNativeTarget "TodayHomework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				571FC50E1C07F30C009F1F0E /* Debug */,
+				571FC50F1C07F30C009F1F0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 571FC4EE1C07F30C009F1F0E /* Project object */;
+}
