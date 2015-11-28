@@ -25,6 +25,9 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"教师注册" style:UIBarButtonItemStylePlain target:self action:@selector(teacherRegister:)];
     [self.userNameTf setleftImage:@"bg_login_name"];
     [self.passwordTf setleftImage:@"bg_login_pwd"];
+    
+ 
+    
 }
 
 - (void)teacherRegister:(UIBarButtonItem *)item {

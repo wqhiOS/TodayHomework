@@ -13,6 +13,7 @@
 
 @property (nonatomic, assign) NSInteger rowCount;
 @property (nonatomic, assign) NSInteger columnCount;
+@property (nonatomic, strong) NSMutableArray *dataArr;
 
 @end
 
@@ -28,6 +29,7 @@
     }
     return self;
 }
+
 
 
 - (void)setUpWithTitles:(NSArray *)titles type:(WUButtonType)type width:(CGFloat)width finished:(void (^)(CGFloat))finish{

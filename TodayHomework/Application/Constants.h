@@ -20,7 +20,7 @@
 #define THTfBackgroundColor [UIColor colorWithRed:1 green:0.9333 blue:0.898 alpha:1]
 
 /******* 所有科目 *******/
-#define ALL_SUBJECTS [NSMutableArray arrayWithObjects:@"语文",@"数学",@"化学",@"生物",@"英语",@"历史",@"地理",@"政治",@"物理",@"其他",, nil]
+#define ALL_SUBJECTS [NSMutableArray arrayWithObjects:@"语文",@"数学",@"化学",@"生物",@"英语",@"历史",@"地理",@"政治",@"物理",@"其他",nil]
 
 
 #endif
