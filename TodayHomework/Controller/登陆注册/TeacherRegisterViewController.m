@@ -9,6 +9,7 @@
 #import "TeacherRegisterViewController.h"
 #import "THTextField.h"
 #import "WUButtonContainrView.h"
+#import "SelectSchoolViewController.h"
 
 @interface TeacherRegisterViewController ()
 
@@ -21,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet THTextField *passwordTf;
 @property (weak, nonatomic) IBOutlet THTextField *confirmPasswordTf;
 @property (weak, nonatomic) IBOutlet THTextField *schoolTf;
+@property (nonatomic ,strong) UIButton *checkCodeBtn;
+@property (nonatomic, strong) UIButton *selectSchoolBtn;
 
 @property (weak, nonatomic) IBOutlet WUButtonContainrView *subjectContainerView;
 
@@ -43,23 +46,66 @@
         }];
     }];
     
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    
+   
 }
 
 - (void)setupTextField {
     [self.emailTf setleftImage:@"bg_login_email"];
     [self.verificationCodeTf setleftImage:@"bg_login_valid"];
+    self.verificationCodeTf.rightViewMode = UITextFieldViewModeAlways;
+    self.verificationCodeTf.rightView = self.checkCodeBtn;
     [self.realNameTf setleftImage:@"bg_login_truename"];
     [self.passwordTf setleftImage:@"bg_login_pwd"];
     [self.confirmPasswordTf setleftImage:@"bg_login_pwd"];
     [self.schoolTf setleftImage:@"bg_login_pwd"];
+    self.schoolTf.rightViewMode = UITextFieldViewModeAlways;
+    self.schoolTf.rightView = self.selectSchoolBtn;
 }
 
+#pragma mark - getter
+- (UIButton *)checkCodeBtn {
+    if (!_checkCodeBtn) {
+        _checkCodeBtn = [UIButton buttonWithType:UIButtonTypeCustom ];
+        [_checkCodeBtn setBackgroundImage:[UIImage imageNamed:@"vcode"] forState:UIControlStateNormal];
+        _checkCodeBtn.frame = CGRectMake(0, 0, 100, 48);
+        [self updateCheckCode:_checkCodeBtn];
+        [_checkCodeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_checkCodeBtn addTarget:self action:@selector(updateCheckCode:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _checkCodeBtn;
+}
+
+- (UIButton *)selectSchoolBtn {
+    if (!_selectSchoolBtn) {
+        _selectSchoolBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _selectSchoolBtn.backgroundColor = THGreenColor;
+        [_selectSchoolBtn setTitle:@"选择学校" forState:UIControlStateNormal];
+        _selectSchoolBtn.frame = CGRectMake(0, 0, 100, 48);
+        [_selectSchoolBtn addTarget:self action:@selector(selectSchool:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _selectSchoolBtn;
+}
+
+#pragma mark - action
+- (void)updateCheckCode:(UIButton *)btn {
+    
+    NSString *checkCode = [NSString stringWithFormat:@"%d",arc4random_uniform(9000)+1000];
+    [btn setTitle:checkCode forState:UIControlStateNormal];
+}
+
+- (void)selectSchool:(UIButton *)btn {
+    SelectSchoolViewController *selectedSchoolVC = [[SelectSchoolViewController alloc] init];
+    
+    selectedSchoolVC.selecteSchool = ^(NSString *selectedSchool) {
+        self.schoolTf.text = selectedSchool;
+    };
+    [self.navigationController pushViewController:selectedSchoolVC animated:YES];
+    
+
+    
+}
+
+- (void)selectSchoolViewController:(SelectSchoolViewController *)selectSchoolVC selectedSchool:(NSString *)selectedSchool {
+    self.schoolTf.text = selectedSchool;
+}
 @end

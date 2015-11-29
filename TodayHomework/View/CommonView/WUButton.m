@@ -17,12 +17,15 @@
 - (instancetype)initWithType:(WUButtonType)type title:(NSString *)title {
     if (self = [super init]) {
         
-        _buttonStype = type;
+        _btnType = type;
+
         NSString *normalImage = [NSString stringWithFormat:@"%@_normal",self.imageNamedArr[type]];
         NSString *checkedImage = [NSString stringWithFormat:@"%@_checked",self.imageNamedArr[type]];
         [self setImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];
         [self setImage:[UIImage imageNamed:checkedImage] forState:UIControlStateSelected];
         
+        
+       
         [self setTitle:title forState:UIControlStateNormal];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         self.titleLabel.font = [UIFont systemFontOfSize:15];

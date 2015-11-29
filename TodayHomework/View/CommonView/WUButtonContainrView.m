@@ -60,7 +60,6 @@
     CGFloat buttonHeight = [self.buttons.firstObject height];
     
     self.columnCount = self.width/(buttonWidth + self.columnSpacing);
-    NSLog(@"%f %f",self.width,buttonWidth);
   
     if (self.buttons.count <self.columnCount) {
         self.rowCount = 1;

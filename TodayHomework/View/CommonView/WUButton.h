@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, WUButtonType) {
 
 @interface WUButton : UIButton
 
-@property (nonatomic, assign) WUButtonType buttonStype;
+@property (nonatomic, assign) WUButtonType btnType;
 
 - (instancetype)initWithType:(WUButtonType)type title:(NSString *)title;
 

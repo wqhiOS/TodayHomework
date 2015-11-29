@@ -115,7 +115,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aln-p2-TbH" customClass="WUButtonContainrView">
                             <rect key="frame" x="77" y="363" width="235" height="20"/>
                             <animations/>
-                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="4fE-uY-yye"/>
                             </constraints>
