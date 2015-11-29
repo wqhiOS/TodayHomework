@@ -102,6 +102,9 @@
                                 <constraint firstAttribute="height" constant="48" id="a6b-Xl-3bi"/>
                             </constraints>
                             <state key="normal" title="教师注册"/>
+                            <connections>
+                                <action selector="registerClick:" destination="-1" eventType="touchUpInside" id="rAF-NB-PSx"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="请选择学校" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jhb-vS-ng1" customClass="THTextField">
                             <rect key="frame" x="8" y="300" width="304" height="48"/>

@@ -61,7 +61,6 @@ typedef NS_ENUM(NSInteger,SelectedState) {
     if (!_selectSchoolHeaderView) {
         _selectSchoolHeaderView = [SelectSchoolHeaderView selectSchoolHeaderView];
         _selectSchoolHeaderView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 48);
-        
     }
     return _selectSchoolHeaderView;
 }

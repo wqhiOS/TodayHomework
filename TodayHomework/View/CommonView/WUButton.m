@@ -23,13 +23,12 @@
         NSString *checkedImage = [NSString stringWithFormat:@"%@_checked",self.imageNamedArr[type]];
         [self setImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];
         [self setImage:[UIImage imageNamed:checkedImage] forState:UIControlStateSelected];
-        
-        
        
         [self setTitle:title forState:UIControlStateNormal];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         self.titleLabel.font = [UIFont systemFontOfSize:15];
-        [self sizeToFit];
+        
+        [self sizeToFit];/**/
         
     }
     return self;
@@ -37,8 +36,11 @@
 
 - (NSArray *)imageNamedArr {
     if (!_imageNamedArr) {
-        _imageNamedArr = @[@"radio",@"chexbox"];
+        _imageNamedArr = @[@"chexbox",@"radio"];
     }
     return _imageNamedArr;
 }
+
+
+
 @end

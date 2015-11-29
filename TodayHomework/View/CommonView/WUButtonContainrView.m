@@ -15,6 +15,8 @@
 @property (nonatomic, assign) NSInteger columnCount;
 @property (nonatomic, strong) NSMutableArray *dataArr;
 
+
+
 @end
 
 @implementation WUButtonContainrView
@@ -45,14 +47,27 @@
 //之后根据传过来的标题数组初始化buttons
     for (int i = 0; i<titles.count; i++) {
         WUButton *button = [[WUButton alloc] initWithType:type title:titles[i]];
-        
-        if (i == 0) {
+        button.tag = 1000+i;
+        if ( i==0&&type==WUButtonTypeRadio) {
             button.selected = YES;
-            self.selectedButton = button;
+            self.selectedRadioButton = button;
         }
         
+        switch (type) {
+            case WUButtonTypeRadio:
+            {
+                [button addTarget:self action:@selector(radioBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            }
+                break;
+            case WUButtonTypeMultiple:
+            {
+                [button addTarget:self action:@selector(multipleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            }
+                break;
+        }
         [self.buttons addObject:button];
     }
+    
     
 //计算排列buttons 需要 多少行 多少列
     //获得button的高度和宽度
@@ -98,12 +113,47 @@
     return _buttons;
 }
 
+- (NSMutableArray *)selectedMultipleButtons {
+    if (!_selectedMultipleButtons) {
+        _selectedMultipleButtons = @[].mutableCopy;
+    }
+    return _selectedMultipleButtons;
+}
+
 - (CGFloat)rowSpacing {
     return 20;
 }
 
 - (CGFloat)columnSpacing {
     return 8;
+}
+
+#pragma mark - action
+- (void)radioBtnClick:(WUButton *)button {
+    if (_selectedRadioButton == nil){
+        button.selected = YES;
+        _selectedRadioButton = button;
+        
+    }
+    else if (_selectedRadioButton!= button && _selectedRadioButton!=nil){
+        _selectedRadioButton.selected = NO;
+        button.selected = YES;
+        _selectedRadioButton = button;
+    }
+    else if (_selectedRadioButton !=nil && _selectedRadioButton == button){
+        button.selected = YES;
+        
+    }
+    
+}
+
+- (void)multipleBtnClick:(WUButton *)button {
+    button.selected = !button.selected;
+    if (button.selected) {
+        [self.selectedMultipleButtons addObject:button];
+    }else {
+        [self.selectedMultipleButtons removeObject:button];
+    }
 }
 
 @end

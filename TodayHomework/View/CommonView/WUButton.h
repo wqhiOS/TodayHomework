@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, WUButtonType) {
-    WUButtonTypeRadio,
-    WUButtonTypeMultiple
+    WUButtonTypeMultiple,
+    WUButtonTypeRadio
 };
 
 @interface WUButton : UIButton

@@ -14,7 +14,8 @@
 @property (nonatomic, assign) CGFloat columnSpacing;//列间距
 
 @property (nonatomic, strong) NSMutableArray *buttons;
-@property (nonatomic, strong) WUButton *selectedButton;
+@property (nonatomic, strong) WUButton *selectedRadioButton;
+@property (nonatomic, strong) NSMutableArray *selectedMultipleButtons;
 
 - (void)setUpWithTitles:(NSArray *)titles type:(WUButtonType)type width:(CGFloat)width finished:(void(^)(CGFloat))finish;
 

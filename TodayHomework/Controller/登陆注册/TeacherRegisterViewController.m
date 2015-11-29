@@ -11,7 +11,7 @@
 #import "WUButtonContainrView.h"
 #import "SelectSchoolViewController.h"
 
-@interface TeacherRegisterViewController ()
+@interface TeacherRegisterViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *widthConstraints;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewHeihtConstraint;
@@ -40,12 +40,15 @@
     
     [self setupTextField];
     CGFloat containerViewWidth = SCREEN_WIDTH - self.subjectContainerView.x - 8;
+    
+    NSMutableArray *data = @[@{@"name":@"语文",@"subjectId":@"0"},@{@"name":@"数学",@"subjectId":@"1"},@{@"name":@"英语",@"subjectId":@"2"},@{@"name":@"生物",@"subjectId":@"3"}].mutableCopy;
+
+    
     [self.subjectContainerView setUpWithTitles:[NSMutableArray arrayWithObjects:@"语文",@"数学",@"化学",@"生物",@"英语",@"历史",@"地理",@"政治",@"物理",@"其他",nil] type:WUButtonTypeMultiple width:containerViewWidth finished:^(CGFloat height) {
         [UIView animateWithDuration:0.4 animations:^{
             self.containerViewHeihtConstraint.constant = height;
         }];
     }];
-    
    
 }
 
@@ -60,6 +63,7 @@
     [self.schoolTf setleftImage:@"bg_login_pwd"];
     self.schoolTf.rightViewMode = UITextFieldViewModeAlways;
     self.schoolTf.rightView = self.selectSchoolBtn;
+    self.schoolTf.delegate = self;
 }
 
 #pragma mark - getter
@@ -100,12 +104,21 @@
         self.schoolTf.text = selectedSchool;
     };
     [self.navigationController pushViewController:selectedSchoolVC animated:YES];
-    
 
-    
 }
 
 - (void)selectSchoolViewController:(SelectSchoolViewController *)selectSchoolVC selectedSchool:(NSString *)selectedSchool {
     self.schoolTf.text = selectedSchool;
+}
+
+- (IBAction)registerClick:(id)sender {
+    
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+    [self selectSchool:self.selectSchoolBtn ];
+    return NO;
 }
 @end
