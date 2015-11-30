@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WUButton.h"
+
+typedef void (^ButtonClickBlockType)(WUButton *);
+
 @interface WUButtonContainrView : UIView
 
 @property (nonatomic, assign) CGFloat  rowSpacing;//行间距
@@ -16,6 +19,8 @@
 @property (nonatomic, strong) NSMutableArray *buttons;
 @property (nonatomic, strong) WUButton *selectedRadioButton;
 @property (nonatomic, strong) NSMutableArray *selectedMultipleButtons;
+
+@property (nonatomic, copy) ButtonClickBlockType buttonClickBlock;
 
 - (void)setUpWithTitles:(NSArray *)titles type:(WUButtonType)type width:(CGFloat)width finished:(void(^)(CGFloat))finish;
 

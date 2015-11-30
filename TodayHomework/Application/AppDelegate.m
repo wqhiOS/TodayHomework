@@ -23,10 +23,10 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    THTabBarController *tabBar = [[THTabBarController alloc] init];
-    LoginViewController *loginVc = [[LoginViewController alloc] init];
-    THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:loginVc];
-    self.window.rootViewController = nav;
+    THTabBarController *tabBar = [[THTabBarController alloc] init];
+//    LoginViewController *loginVc = [[LoginViewController alloc] init];
+//    THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:loginVc];
+    self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "TeacherRegisterViewController.h"
 #import "THTextField.h"
+#import "THTabBarController.h"
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet THTextField *userNameTf;
@@ -33,6 +34,14 @@
 - (void)teacherRegister:(UIBarButtonItem *)item {
     [self.navigationController pushViewController:[TeacherRegisterViewController new] animated:YES];
 }
+
+- (IBAction)login:(id)sender {
+    
+//    THTabBarController *tabBarController = [[THTabBarController alloc] init];
+//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

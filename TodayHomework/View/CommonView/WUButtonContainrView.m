@@ -130,15 +130,22 @@
 
 #pragma mark - action
 - (void)radioBtnClick:(WUButton *)button {
+    
+    
     if (_selectedRadioButton == nil){
         button.selected = YES;
         _selectedRadioButton = button;
-        
+        if (self.buttonClickBlock) {
+            self.buttonClickBlock(button);
+        }
     }
     else if (_selectedRadioButton!= button && _selectedRadioButton!=nil){
         _selectedRadioButton.selected = NO;
         button.selected = YES;
         _selectedRadioButton = button;
+        if (self.buttonClickBlock) {
+            self.buttonClickBlock(button);
+        }
     }
     else if (_selectedRadioButton !=nil && _selectedRadioButton == button){
         button.selected = YES;
@@ -154,6 +161,11 @@
     }else {
         [self.selectedMultipleButtons removeObject:button];
     }
+    
+    if (self.buttonClickBlock) {
+        self.buttonClickBlock(button);
+    }
+    
 }
 
 @end
