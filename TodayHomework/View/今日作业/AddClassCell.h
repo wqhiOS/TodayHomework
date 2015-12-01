@@ -24,6 +24,7 @@ typedef NS_ENUM(NSUInteger, AddClassState) {
 @property (nonatomic, assign) AddClassState addClassState;
 @property (nonatomic, assign) CGFloat containerWidth;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerHeight;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 + (instancetype)addClassCell;
 - (CGFloat)cellHeight;

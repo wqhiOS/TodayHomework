@@ -29,9 +29,7 @@
 		57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EA91C0DDEEF006B5263 /* PersonalCenterViewController.m */; };
 		57830EAC1C0DDEF0006B5263 /* PersonalCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EAA1C0DDEEF006B5263 /* PersonalCenterViewController.xib */; };
 		57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EAE1C0DDF0F006B5263 /* HomeViewController.m */; };
-		57830EB41C0DDF0F006B5263 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EAF1C0DDF0F006B5263 /* HomeViewController.xib */; };
 		57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EB11C0DDF0F006B5263 /* PublishHomeworkViewController.m */; };
-		57830EB61C0DDF0F006B5263 /* PublishHomeworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EB21C0DDF0F006B5263 /* PublishHomeworkViewController.xib */; };
 		57830EBC1C0DDF23006B5263 /* AddClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EB81C0DDF23006B5263 /* AddClassViewController.m */; };
 		57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EBA1C0DDF23006B5263 /* ClassManageViewController.m */; };
 		57830EBE1C0DDF23006B5263 /* ClassManageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EBB1C0DDF23006B5263 /* ClassManageViewController.xib */; };
@@ -39,14 +37,18 @@
 		57830EC81C0DDFE3006B5263 /* THLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EC31C0DDFE3006B5263 /* THLoginTextField.m */; };
 		57830EC91C0DDFE3006B5263 /* THSubmitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EC51C0DDFE3006B5263 /* THSubmitButton.m */; };
 		57830ECA1C0DDFE3006B5263 /* THTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EC71C0DDFE3006B5263 /* THTextField.m */; };
-		57830ED51C0DDFE9006B5263 /* chexbox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830ECD1C0DDFE9006B5263 /* chexbox_checked@2x.png */; };
-		57830ED61C0DDFE9006B5263 /* chexbox_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830ECE1C0DDFE9006B5263 /* chexbox_normal@2x.png */; };
-		57830ED71C0DDFE9006B5263 /* radio_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830ECF1C0DDFE9006B5263 /* radio_checked@2x.png */; };
-		57830ED81C0DDFE9006B5263 /* radio_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830ED01C0DDFE9006B5263 /* radio_normal@2x.png */; };
-		57830ED91C0DDFE9006B5263 /* WUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830ED21C0DDFE9006B5263 /* WUButton.m */; };
-		57830EDA1C0DDFE9006B5263 /* WUButtonContainrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830ED41C0DDFE9006B5263 /* WUButtonContainrView.m */; };
 		57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EDC1C0DE038006B5263 /* THNavigationController.m */; };
 		57830EE01C0DE038006B5263 /* THTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EDE1C0DE038006B5263 /* THTabBarController.m */; };
+		57830EE21C0DE0F9006B5263 /* HomeworkHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EE11C0DE0F9006B5263 /* HomeworkHeaderView.xib */; };
+		57830EE51C0DE108006B5263 /* HomeworkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EE41C0DE108006B5263 /* HomeworkHeaderView.m */; };
+		57830EEF1C0DE798006B5263 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EED1C0DE798006B5263 /* TextFieldCell.m */; };
+		57830EF01C0DE798006B5263 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EEE1C0DE798006B5263 /* TextFieldCell.xib */; };
+		57830EFB1C0DE7D8006B5263 /* chexbox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF31C0DE7D8006B5263 /* chexbox_checked@2x.png */; };
+		57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF41C0DE7D8006B5263 /* chexbox_normal@2x.png */; };
+		57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF51C0DE7D8006B5263 /* radio_checked@2x.png */; };
+		57830EFE1C0DE7D8006B5263 /* radio_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF61C0DE7D8006B5263 /* radio_normal@2x.png */; };
+		57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EF81C0DE7D8006B5263 /* WUButton.m */; };
+		57830F001C0DE7D8006B5263 /* WUButtonContainrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EFA1C0DE7D8006B5263 /* WUButtonContainrView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,10 +92,8 @@
 		57830EAA1C0DDEEF006B5263 /* PersonalCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCenterViewController.xib; sourceTree = "<group>"; };
 		57830EAD1C0DDF0F006B5263 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		57830EAE1C0DDF0F006B5263 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		57830EAF1C0DDF0F006B5263 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		57830EB01C0DDF0F006B5263 /* PublishHomeworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHomeworkViewController.h; sourceTree = "<group>"; };
 		57830EB11C0DDF0F006B5263 /* PublishHomeworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHomeworkViewController.m; sourceTree = "<group>"; };
-		57830EB21C0DDF0F006B5263 /* PublishHomeworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishHomeworkViewController.xib; sourceTree = "<group>"; };
 		57830EB71C0DDF23006B5263 /* AddClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassViewController.h; sourceTree = "<group>"; };
 		57830EB81C0DDF23006B5263 /* AddClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassViewController.m; sourceTree = "<group>"; };
 		57830EB91C0DDF23006B5263 /* ClassManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassManageViewController.h; sourceTree = "<group>"; };
@@ -107,18 +107,24 @@
 		57830EC51C0DDFE3006B5263 /* THSubmitButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THSubmitButton.m; sourceTree = "<group>"; };
 		57830EC61C0DDFE3006B5263 /* THTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTextField.h; sourceTree = "<group>"; };
 		57830EC71C0DDFE3006B5263 /* THTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTextField.m; sourceTree = "<group>"; };
-		57830ECD1C0DDFE9006B5263 /* chexbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_checked@2x.png"; sourceTree = "<group>"; };
-		57830ECE1C0DDFE9006B5263 /* chexbox_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_normal@2x.png"; sourceTree = "<group>"; };
-		57830ECF1C0DDFE9006B5263 /* radio_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_checked@2x.png"; sourceTree = "<group>"; };
-		57830ED01C0DDFE9006B5263 /* radio_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_normal@2x.png"; sourceTree = "<group>"; };
-		57830ED11C0DDFE9006B5263 /* WUButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButton.h; sourceTree = "<group>"; };
-		57830ED21C0DDFE9006B5263 /* WUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButton.m; sourceTree = "<group>"; };
-		57830ED31C0DDFE9006B5263 /* WUButtonContainrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButtonContainrView.h; sourceTree = "<group>"; };
-		57830ED41C0DDFE9006B5263 /* WUButtonContainrView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButtonContainrView.m; sourceTree = "<group>"; };
 		57830EDB1C0DE038006B5263 /* THNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THNavigationController.h; path = "其他/THNavigationController.h"; sourceTree = "<group>"; };
 		57830EDC1C0DE038006B5263 /* THNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THNavigationController.m; path = "其他/THNavigationController.m"; sourceTree = "<group>"; };
 		57830EDD1C0DE038006B5263 /* THTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THTabBarController.h; path = "其他/THTabBarController.h"; sourceTree = "<group>"; };
 		57830EDE1C0DE038006B5263 /* THTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THTabBarController.m; path = "其他/THTabBarController.m"; sourceTree = "<group>"; };
+		57830EE11C0DE0F9006B5263 /* HomeworkHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeworkHeaderView.xib; sourceTree = "<group>"; };
+		57830EE31C0DE108006B5263 /* HomeworkHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkHeaderView.h; sourceTree = "<group>"; };
+		57830EE41C0DE108006B5263 /* HomeworkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkHeaderView.m; sourceTree = "<group>"; };
+		57830EEC1C0DE798006B5263 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		57830EED1C0DE798006B5263 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		57830EEE1C0DE798006B5263 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		57830EF31C0DE7D8006B5263 /* chexbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_checked@2x.png"; sourceTree = "<group>"; };
+		57830EF41C0DE7D8006B5263 /* chexbox_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_normal@2x.png"; sourceTree = "<group>"; };
+		57830EF51C0DE7D8006B5263 /* radio_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_checked@2x.png"; sourceTree = "<group>"; };
+		57830EF61C0DE7D8006B5263 /* radio_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_normal@2x.png"; sourceTree = "<group>"; };
+		57830EF71C0DE7D8006B5263 /* WUButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButton.h; sourceTree = "<group>"; };
+		57830EF81C0DE7D8006B5263 /* WUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButton.m; sourceTree = "<group>"; };
+		57830EF91C0DE7D8006B5263 /* WUButtonContainrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButtonContainrView.h; sourceTree = "<group>"; };
+		57830EFA1C0DE7D8006B5263 /* WUButtonContainrView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButtonContainrView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,7 @@
 		571FC5621C0817D4009F1F0E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				57830EF11C0DE7D8006B5263 /* WUButtonContainerView */,
 				57830E5C1C0DD6FE006B5263 /* UserTool */,
 				571FC56E1C082A16009F1F0E /* category */,
 				571FC5631C081804009F1F0E /* AppUtils.h */,
@@ -216,9 +223,9 @@
 			children = (
 				57830E9E1C0DDE92006B5263 /* 其他 */,
 				57830E691C0DDDE8006B5263 /* Base */,
-				57830E6A1C0DDDE8006B5263 /* 个人中心 */,
 				57830E6B1C0DDDE8006B5263 /* 今日作业 */,
 				57830E6D1C0DDDE8006B5263 /* 班级管理 */,
+				57830E6A1C0DDDE8006B5263 /* 个人中心 */,
 				57830E6E1C0DDDE8006B5263 /* 登陆注册 */,
 			);
 			path = Controller;
@@ -248,10 +255,8 @@
 			children = (
 				57830EAD1C0DDF0F006B5263 /* HomeViewController.h */,
 				57830EAE1C0DDF0F006B5263 /* HomeViewController.m */,
-				57830EAF1C0DDF0F006B5263 /* HomeViewController.xib */,
 				57830EB01C0DDF0F006B5263 /* PublishHomeworkViewController.h */,
 				57830EB11C0DDF0F006B5263 /* PublishHomeworkViewController.m */,
-				57830EB21C0DDF0F006B5263 /* PublishHomeworkViewController.xib */,
 			);
 			path = "今日作业";
 			sourceTree = "<group>";
@@ -337,7 +342,6 @@
 				57830EC51C0DDFE3006B5263 /* THSubmitButton.m */,
 				57830EC61C0DDFE3006B5263 /* THTextField.h */,
 				57830EC71C0DDFE3006B5263 /* THTextField.m */,
-				57830ECB1C0DDFE9006B5263 /* WUButtonContainerView */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -345,6 +349,7 @@
 		57830E791C0DDDE8006B5263 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
+				57830EE61C0DE71D006B5263 /* 发布作业 */,
 			);
 			path = "个人中心";
 			sourceTree = "<group>";
@@ -358,6 +363,9 @@
 				57830E7E1C0DDDE8006B5263 /* OtherClassCell.h */,
 				57830E7F1C0DDDE8006B5263 /* OtherClassCell.m */,
 				57830E801C0DDDE8006B5263 /* OtherClassCell.xib */,
+				57830EE31C0DE108006B5263 /* HomeworkHeaderView.h */,
+				57830EE41C0DE108006B5263 /* HomeworkHeaderView.m */,
+				57830EE11C0DE0F9006B5263 /* HomeworkHeaderView.xib */,
 			);
 			path = "今日作业";
 			sourceTree = "<group>";
@@ -392,25 +400,35 @@
 			name = "其他";
 			sourceTree = "<group>";
 		};
-		57830ECB1C0DDFE9006B5263 /* WUButtonContainerView */ = {
+		57830EE61C0DE71D006B5263 /* 发布作业 */ = {
 			isa = PBXGroup;
 			children = (
-				57830ECC1C0DDFE9006B5263 /* icon */,
-				57830ED11C0DDFE9006B5263 /* WUButton.h */,
-				57830ED21C0DDFE9006B5263 /* WUButton.m */,
-				57830ED31C0DDFE9006B5263 /* WUButtonContainrView.h */,
-				57830ED41C0DDFE9006B5263 /* WUButtonContainrView.m */,
+				57830EEC1C0DE798006B5263 /* TextFieldCell.h */,
+				57830EED1C0DE798006B5263 /* TextFieldCell.m */,
+				57830EEE1C0DE798006B5263 /* TextFieldCell.xib */,
+			);
+			name = "发布作业";
+			sourceTree = "<group>";
+		};
+		57830EF11C0DE7D8006B5263 /* WUButtonContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				57830EF21C0DE7D8006B5263 /* icon */,
+				57830EF71C0DE7D8006B5263 /* WUButton.h */,
+				57830EF81C0DE7D8006B5263 /* WUButton.m */,
+				57830EF91C0DE7D8006B5263 /* WUButtonContainrView.h */,
+				57830EFA1C0DE7D8006B5263 /* WUButtonContainrView.m */,
 			);
 			path = WUButtonContainerView;
 			sourceTree = "<group>";
 		};
-		57830ECC1C0DDFE9006B5263 /* icon */ = {
+		57830EF21C0DE7D8006B5263 /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				57830ECD1C0DDFE9006B5263 /* chexbox_checked@2x.png */,
-				57830ECE1C0DDFE9006B5263 /* chexbox_normal@2x.png */,
-				57830ECF1C0DDFE9006B5263 /* radio_checked@2x.png */,
-				57830ED01C0DDFE9006B5263 /* radio_normal@2x.png */,
+				57830EF31C0DE7D8006B5263 /* chexbox_checked@2x.png */,
+				57830EF41C0DE7D8006B5263 /* chexbox_normal@2x.png */,
+				57830EF51C0DE7D8006B5263 /* radio_checked@2x.png */,
+				57830EF61C0DE7D8006B5263 /* radio_normal@2x.png */,
 			);
 			path = icon;
 			sourceTree = "<group>";
@@ -472,20 +490,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57830EFE1C0DE7D8006B5263 /* radio_normal@2x.png in Resources */,
 				57830EBE1C0DDF23006B5263 /* ClassManageViewController.xib in Resources */,
+				57830EFB1C0DE7D8006B5263 /* chexbox_checked@2x.png in Resources */,
+				57830EF01C0DE798006B5263 /* TextFieldCell.xib in Resources */,
+				57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */,
 				57830E9A1C0DDE59006B5263 /* LoginViewController.xib in Resources */,
-				57830EB61C0DDF0F006B5263 /* PublishHomeworkViewController.xib in Resources */,
-				57830ED61C0DDFE9006B5263 /* chexbox_normal@2x.png in Resources */,
-				57830ED71C0DDFE9006B5263 /* radio_checked@2x.png in Resources */,
-				57830ED81C0DDFE9006B5263 /* radio_normal@2x.png in Resources */,
-				57830ED51C0DDFE9006B5263 /* chexbox_checked@2x.png in Resources */,
+				57830EE21C0DE0F9006B5263 /* HomeworkHeaderView.xib in Resources */,
 				57830E8B1C0DDDE8006B5263 /* OtherClassCell.xib in Resources */,
 				57830E9D1C0DDE59006B5263 /* TeacherRegisterViewController.xib in Resources */,
 				57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */,
 				57830EAC1C0DDEF0006B5263 /* PersonalCenterViewController.xib in Resources */,
 				571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */,
+				57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */,
 				57830E8D1C0DDDE8006B5263 /* SelectSchoolHeaderView.xib in Resources */,
-				57830EB41C0DDF0F006B5263 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,16 +517,18 @@
 				57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */,
 				57830EC11C0DDFB9006B5263 /* SelectSchoolButton.m in Sources */,
 				57830EBC1C0DDF23006B5263 /* AddClassViewController.m in Sources */,
+				57830F001C0DE7D8006B5263 /* WUButtonContainrView.m in Sources */,
 				57830EE01C0DE038006B5263 /* THTabBarController.m in Sources */,
 				57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */,
+				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
 				571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,
-				57830ED91C0DDFE9006B5263 /* WUButton.m in Sources */,
 				57830E861C0DDDE8006B5263 /* UserModel.m in Sources */,
 				57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */,
 				57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */,
 				57830E9B1C0DDE59006B5263 /* SelectSchoolViewController.m in Sources */,
 				57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */,
+				57830EEF1C0DE798006B5263 /* TextFieldCell.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,
 				57830E991C0DDE59006B5263 /* LoginViewController.m in Sources */,
 				57830ECA1C0DDFE3006B5263 /* THTextField.m in Sources */,
@@ -516,10 +536,10 @@
 				57830E9C1C0DDE59006B5263 /* TeacherRegisterViewController.m in Sources */,
 				571FC5651C081804009F1F0E /* AppUtils.m in Sources */,
 				57830EC81C0DDFE3006B5263 /* THLoginTextField.m in Sources */,
+				57830EE51C0DE108006B5263 /* HomeworkHeaderView.m in Sources */,
 				571FC4FB1C07F30C009F1F0E /* main.m in Sources */,
 				57830EC91C0DDFE3006B5263 /* THSubmitButton.m in Sources */,
 				57830E8C1C0DDDE8006B5263 /* SelectSchoolHeaderView.m in Sources */,
-				57830EDA1C0DDFE9006B5263 /* WUButtonContainrView.m in Sources */,
 				57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */,
 				57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */,
 			);

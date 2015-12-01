@@ -48,6 +48,11 @@
     for (int i = 0; i<titles.count; i++) {
         WUButton *button = [[WUButton alloc] initWithType:type title:titles[i]];
         button.tag = 1000+i;
+        if (i == 0) {
+            if (self.buttonClickBlock) {
+                self.buttonClickBlock(button);
+            }
+        }
         if ( i==0&&type==WUButtonTypeRadio) {
             button.selected = YES;
             self.selectedRadioButton = button;

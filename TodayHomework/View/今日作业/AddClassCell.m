@@ -13,7 +13,7 @@
 
 @interface AddClassCell()
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 
 
 @end
