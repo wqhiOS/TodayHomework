@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UserModel.h"
 @interface UserTool : NSObject
 
 
-+ (void)saveUser:(UserModel *)user;
-+ (UserModel *)user;
-
-+ (void)saveClasses:(NSMutableArray *)classes;
+//+ (void)saveUser:(UserModel *)user;
+//+ (UserModel *)user;
+//
+//+ (void)saveClasses:(NSMutableArray *)classes;
 @end

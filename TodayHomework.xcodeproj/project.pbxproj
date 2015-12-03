@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6050BBFFFDF6F42CAA7FEC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A27961751BEF2DBD147CC55 /* libPods.a */; };
 		571FC4FB1C07F30C009F1F0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC4FA1C07F30C009F1F0E /* main.m */; };
 		571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FC5051C07F30C009F1F0E /* Assets.xcassets */; };
 		571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5131C07F456009F1F0E /* AppDelegate.m */; };
 		571FC5651C081804009F1F0E /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5641C081804009F1F0E /* AppUtils.m */; };
 		571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5701C082A30009F1F0E /* UIView+Frame.m */; };
+		575C932F1C101B690079984F /* WUHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C932E1C101B690079984F /* WUHttpClient.m */; };
+		575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93321C101E2A0079984F /* UserInfoHandle.m */; };
+		575C93371C1021740079984F /* BaseHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93361C1021740079984F /* BaseHandle.m */; };
+		575C933A1C102A4E0079984F /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93391C102A4E0079984F /* BaseModel.m */; };
+		575C933D1C102A650079984F /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C933C1C102A650079984F /* UserInfoModel.m */; };
+		575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C933F1C102AA40079984F /* SchoolInfoModel.m */; };
+		575C93431C102DF90079984F /* ParamInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93421C102DF90079984F /* ParamInfoModel.m */; };
+		575C93461C10382E0079984F /* UserInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93451C10382E0079984F /* UserInfoTool.m */; };
 		57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E5E1C0DD72A006B5263 /* UserTool.m */; };
-		57830E861C0DDDE8006B5263 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E721C0DDDE8006B5263 /* UserModel.m */; };
 		57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7C1C0DDDE8006B5263 /* AddClassCell.m */; };
 		57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */; };
 		57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7F1C0DDDE8006B5263 /* OtherClassCell.m */; };
@@ -52,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		474AC06B14A3B6419A99FCFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		571FC4F61C07F30C009F1F0E /* TodayHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FC4FA1C07F30C009F1F0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		571FC5051C07F30C009F1F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,10 +73,25 @@
 		571FC5641C081804009F1F0E /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		571FC56F1C082A30009F1F0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		571FC5701C082A30009F1F0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		575C932D1C101B690079984F /* WUHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUHttpClient.h; sourceTree = "<group>"; };
+		575C932E1C101B690079984F /* WUHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUHttpClient.m; sourceTree = "<group>"; };
+		575C93311C101E2A0079984F /* UserInfoHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHandle.h; sourceTree = "<group>"; };
+		575C93321C101E2A0079984F /* UserInfoHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHandle.m; sourceTree = "<group>"; };
+		575C93341C1020550079984F /* THAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THAPI.h; sourceTree = "<group>"; };
+		575C93351C1021740079984F /* BaseHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHandle.h; sourceTree = "<group>"; };
+		575C93361C1021740079984F /* BaseHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHandle.m; sourceTree = "<group>"; };
+		575C93381C102A4E0079984F /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		575C93391C102A4E0079984F /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		575C933B1C102A650079984F /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		575C933C1C102A650079984F /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		575C933E1C102AA40079984F /* SchoolInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolInfoModel.h; sourceTree = "<group>"; };
+		575C933F1C102AA40079984F /* SchoolInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolInfoModel.m; sourceTree = "<group>"; };
+		575C93411C102DF90079984F /* ParamInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamInfoModel.h; sourceTree = "<group>"; };
+		575C93421C102DF90079984F /* ParamInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamInfoModel.m; sourceTree = "<group>"; };
+		575C93441C10382E0079984F /* UserInfoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTool.h; sourceTree = "<group>"; };
+		575C93451C10382E0079984F /* UserInfoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoTool.m; sourceTree = "<group>"; };
 		57830E5D1C0DD72A006B5263 /* UserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTool.h; sourceTree = "<group>"; };
 		57830E5E1C0DD72A006B5263 /* UserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTool.m; sourceTree = "<group>"; };
-		57830E711C0DDDE8006B5263 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		57830E721C0DDDE8006B5263 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		57830E7B1C0DDDE8006B5263 /* AddClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassCell.h; sourceTree = "<group>"; };
 		57830E7C1C0DDDE8006B5263 /* AddClassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassCell.m; sourceTree = "<group>"; };
 		57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClassCell.xib; sourceTree = "<group>"; };
@@ -125,6 +149,8 @@
 		57830EF81C0DE7D8006B5263 /* WUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButton.m; sourceTree = "<group>"; };
 		57830EF91C0DE7D8006B5263 /* WUButtonContainrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButtonContainrView.h; sourceTree = "<group>"; };
 		57830EFA1C0DE7D8006B5263 /* WUButtonContainrView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButtonContainrView.m; sourceTree = "<group>"; };
+		7A27961751BEF2DBD147CC55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6050BBFFFDF6F42CAA7FEC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +170,8 @@
 			children = (
 				571FC4F81C07F30C009F1F0E /* TodayHomework */,
 				571FC4F71C07F30C009F1F0E /* Products */,
+				6B44C7247B1E1D4E27BE205E /* Pods */,
+				E80C1E7B47185337F555C3AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +190,8 @@
 				57830E681C0DDDE8006B5263 /* Controller */,
 				57830E6F1C0DDDE8006B5263 /* Model */,
 				57830E751C0DDDE8006B5263 /* View */,
+				575C93301C101E1B0079984F /* Handle */,
+				575C932C1C101A9E0079984F /* NetWork */,
 				571FC5621C0817D4009F1F0E /* Tools */,
 				571FC4F91C07F30C009F1F0E /* Supporting Files */,
 			);
@@ -209,11 +240,34 @@
 			name = category;
 			sourceTree = "<group>";
 		};
+		575C932C1C101A9E0079984F /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				575C93341C1020550079984F /* THAPI.h */,
+				575C932D1C101B690079984F /* WUHttpClient.h */,
+				575C932E1C101B690079984F /* WUHttpClient.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		575C93301C101E1B0079984F /* Handle */ = {
+			isa = PBXGroup;
+			children = (
+				575C93351C1021740079984F /* BaseHandle.h */,
+				575C93361C1021740079984F /* BaseHandle.m */,
+				575C93311C101E2A0079984F /* UserInfoHandle.h */,
+				575C93321C101E2A0079984F /* UserInfoHandle.m */,
+			);
+			path = Handle;
+			sourceTree = "<group>";
+		};
 		57830E5C1C0DD6FE006B5263 /* UserTool */ = {
 			isa = PBXGroup;
 			children = (
 				57830E5D1C0DD72A006B5263 /* UserTool.h */,
 				57830E5E1C0DD72A006B5263 /* UserTool.m */,
+				575C93441C10382E0079984F /* UserInfoTool.h */,
+				575C93451C10382E0079984F /* UserInfoTool.m */,
 			);
 			name = UserTool;
 			sourceTree = "<group>";
@@ -236,6 +290,8 @@
 			children = (
 				57830EA51C0DDECE006B5263 /* BaseViewController.h */,
 				57830EA61C0DDECE006B5263 /* BaseViewController.m */,
+				575C93381C102A4E0079984F /* BaseModel.h */,
+				575C93391C102A4E0079984F /* BaseModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -301,8 +357,12 @@
 		57830E701C0DDDE8006B5263 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
-				57830E711C0DDDE8006B5263 /* UserModel.h */,
-				57830E721C0DDDE8006B5263 /* UserModel.m */,
+				575C933B1C102A650079984F /* UserInfoModel.h */,
+				575C933C1C102A650079984F /* UserInfoModel.m */,
+				575C933E1C102AA40079984F /* SchoolInfoModel.h */,
+				575C933F1C102AA40079984F /* SchoolInfoModel.m */,
+				575C93411C102DF90079984F /* ParamInfoModel.h */,
+				575C93421C102DF90079984F /* ParamInfoModel.m */,
 			);
 			path = "个人中心";
 			sourceTree = "<group>";
@@ -433,6 +493,23 @@
 			path = icon;
 			sourceTree = "<group>";
 		};
+		6B44C7247B1E1D4E27BE205E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				474AC06B14A3B6419A99FCFB /* Pods.debug.xcconfig */,
+				7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E80C1E7B47185337F555C3AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A27961751BEF2DBD147CC55 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -440,9 +517,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 571FC50D1C07F30C009F1F0E /* Build configuration list for PBXNativeTarget "TodayHomework" */;
 			buildPhases = (
+				A4BAA7C46BC12E1278A69E59 /* Check Pods Manifest.lock */,
 				571FC4F21C07F30C009F1F0E /* Sources */,
 				571FC4F31C07F30C009F1F0E /* Frameworks */,
 				571FC4F41C07F30C009F1F0E /* Resources */,
+				5DDC996FC83D79D30689328B /* Embed Pods Frameworks */,
+				63550349CD88AD77B5286807 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -509,6 +589,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DDC996FC83D79D30689328B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63550349CD88AD77B5286807 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4BAA7C46BC12E1278A69E59 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		571FC4F21C07F30C009F1F0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -519,18 +647,22 @@
 				57830EBC1C0DDF23006B5263 /* AddClassViewController.m in Sources */,
 				57830F001C0DE7D8006B5263 /* WUButtonContainrView.m in Sources */,
 				57830EE01C0DE038006B5263 /* THTabBarController.m in Sources */,
+				575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */,
 				57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */,
 				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
 				571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,
-				57830E861C0DDDE8006B5263 /* UserModel.m in Sources */,
 				57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */,
 				57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */,
 				57830E9B1C0DDE59006B5263 /* SelectSchoolViewController.m in Sources */,
 				57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */,
+				575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */,
 				57830EEF1C0DE798006B5263 /* TextFieldCell.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,
+				575C933D1C102A650079984F /* UserInfoModel.m in Sources */,
+				575C93431C102DF90079984F /* ParamInfoModel.m in Sources */,
 				57830E991C0DDE59006B5263 /* LoginViewController.m in Sources */,
+				575C933A1C102A4E0079984F /* BaseModel.m in Sources */,
 				57830ECA1C0DDFE3006B5263 /* THTextField.m in Sources */,
 				57830EA71C0DDECE006B5263 /* BaseViewController.m in Sources */,
 				57830E9C1C0DDE59006B5263 /* TeacherRegisterViewController.m in Sources */,
@@ -540,8 +672,11 @@
 				571FC4FB1C07F30C009F1F0E /* main.m in Sources */,
 				57830EC91C0DDFE3006B5263 /* THSubmitButton.m in Sources */,
 				57830E8C1C0DDDE8006B5263 /* SelectSchoolHeaderView.m in Sources */,
+				575C93371C1021740079984F /* BaseHandle.m in Sources */,
 				57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */,
 				57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */,
+				575C93461C10382E0079984F /* UserInfoTool.m in Sources */,
+				575C932F1C101B690079984F /* WUHttpClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +767,7 @@
 		};
 		571FC50E1C07F30C009F1F0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 474AC06B14A3B6419A99FCFB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -647,6 +783,7 @@
 		};
 		571FC50F1C07F30C009F1F0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

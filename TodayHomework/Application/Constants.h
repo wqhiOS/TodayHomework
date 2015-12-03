@@ -12,7 +12,10 @@
 /****** 屏幕尺寸 *******/
 #define SCREEN_BOUNDS [[UIScreen mainScreen] bounds]
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
-#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width   
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width  
+
+/****** 版本 *********/
+#define CurrentVersion (NSString*)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 
 /******** 颜色 ********/
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]

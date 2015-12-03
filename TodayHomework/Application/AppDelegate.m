@@ -11,6 +11,7 @@
 
 #import "LoginViewController.h"
 #import "THNavigationController.h"
+#import "UserInfoTool.h"
 
 @interface AppDelegate ()
 
@@ -23,13 +24,24 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    THTabBarController *tabBar = [[THTabBarController alloc] init];
-//    LoginViewController *loginVc = [[LoginViewController alloc] init];
-//    THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:loginVc];
-    self.window.rootViewController = tabBar;
+    
+    NSLog(@"%@",[UserInfoTool userInfo]);
+    if ([UserInfoTool userInfo]) {
+        [self appStart];
+    }else {
+        LoginViewController *loginVc = [[LoginViewController alloc] init];
+        THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:loginVc];
+        self.window.rootViewController = nav;
+    }
+    
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)appStart {
+    THTabBarController *tabBar = [[THTabBarController alloc] init];
+    self.window.rootViewController = tabBar;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

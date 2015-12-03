@@ -44,6 +44,9 @@
             [weakSelf.navigationController pushViewController:vc animated:YES];
         };
         _homeworkHeaderView.personalCenterBlock = ^ {
+//            [UIView animateWithDuration:0.5 animations:^{
+//                self.tabBarController.tabBar.hidden = YES;
+//            }];
             
         };
         _homeworkHeaderView.HomeworkManageBlock = ^ {

@@ -10,6 +10,8 @@
 #import "TeacherRegisterViewController.h"
 #import "THTextField.h"
 #import "THTabBarController.h"
+#import "UserInfoHandle.h"
+#import "UserInfoTool.h"
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet THTextField *userNameTf;
@@ -37,8 +39,11 @@
 
 - (IBAction)login:(id)sender {
     
-//    THTabBarController *tabBarController = [[THTabBarController alloc] init];
-//    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarController;
+    [UserInfoHandle loginWthLoginName:self.userNameTf.text andPassword:self.passwordTf.text success:^(id obj) {
+        [UserInfoTool saveUserInfo:obj];
+    } failed:^(id obj) {
+        NSLog(@"%@",obj[@"message"]);
+    }];
     
 }
 

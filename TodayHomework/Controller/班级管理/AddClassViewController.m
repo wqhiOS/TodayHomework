@@ -86,19 +86,19 @@ static NSString *cellId = @"AddClassCellId";
 }
 
 #pragma mark - action
-- (void)nextStep:(WUButton *)sender {
-    
-    NSString *educationStage = self.educationStageCell.containerView.selectedRadioButton.currentTitle;
-    NSString *grade = self.gradeCell.containerView.selectedRadioButton.currentTitle;
-    
-    NSMutableArray *classArr = @[].mutableCopy;
-    for (WUButton *button in self.classCell.containerView.selectedMultipleButtons) {
-        [classArr addObject:[NSString stringWithFormat:@"%@%@%@",educationStage,grade,button.currentTitle]];
-    }
-    
-    [UserTool saveClasses:classArr];
-    
-}
+//- (void)nextStep:(WUButton *)sender {
+//    
+//    NSString *educationStage = self.educationStageCell.containerView.selectedRadioButton.currentTitle;
+//    NSString *grade = self.gradeCell.containerView.selectedRadioButton.currentTitle;
+//    
+//    NSMutableArray *classArr = @[].mutableCopy;
+//    for (WUButton *button in self.classCell.containerView.selectedMultipleButtons) {
+//        [classArr addObject:[NSString stringWithFormat:@"%@%@%@",educationStage,grade,button.currentTitle]];
+//    }
+//    
+//    [UserTool saveClasses:classArr];
+//    
+//}
 
 #pragma mark - cell 初始化
 - (AddClassCell *)educationStageCell {
