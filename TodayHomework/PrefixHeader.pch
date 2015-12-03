@@ -18,3 +18,34 @@
 
 
 #endif
+
+//开发库
+//#define serverUrl @"http://192.16.2.235:8080/education/rest"
+//#define serverImageUrl @"http://192.16.2.235:8080/education"
+
+////朱敏
+//#define serverUrl @"http://192.16.2.192:8888/education/rest"
+//#define serverImageUrl @"http://192.16.2.192:8888/education"
+
+//李玉阳
+//#define serverUrl @"http://192.16.2.135:8080/education/rest"
+//#define serverImageUrl @"http://192.16.2.135:8080/education"
+
+//至深
+//#define serverUrl @"http://192.16.2.46:8080/education/rest"
+//#define serverImageUrl @"http://192.16.2.192:8888/education"
+
+//测试库
+//#define serverUrl @"http://192.16.150.213:14082/education/rest"
+//#define serverImageUrl @"http://192.16.150.213:14082/education"
+
+
+//上线
+//#define serverUrl @"http://101.231.112.90:10005/education/rest"
+//#define serverImageUrl @"http://101.231.112.90:10005/education"
+
+
+////上线内网
+//#define serverUrl @"http://192.16.150.213:14083/education/rest"
+//#define serverImageUrl @"http://192.16.150.213:14083/education"
+
