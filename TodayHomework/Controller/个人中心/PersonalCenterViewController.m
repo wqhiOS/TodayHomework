@@ -7,9 +7,15 @@
 //
 
 #import "PersonalCenterViewController.h"
+#import "PersonalCenterItemCell.h"
+#import "PersonalCenterSubItemCell.h"
+#import "HeaderIconCell.h"
+#import "UserInfoTool.h"
 
-@interface PersonalCenterViewController ()
-
+@interface PersonalCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataArr;
+@property (nonatomic, strong) NSArray *cellArr;
 @end
 
 @implementation PersonalCenterViewController
@@ -17,21 +23,92 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self initData];
+    [self.view addSubview:self.tableView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)initCell {
+    
+    HeaderIconCell *headerIconcell = [HeaderIconCell headerIconCell];
+    NSArray *cellArr_0 = @[headerIconcell];
+    
+    PersonalCenterItemCell *personalCenterCell = [PersonalCenterItemCell personalCenterItemCell];
+    NSArray *cellArr_1 = @[personalCenterCell];
+    
+    PersonalCenterItemCell *messageCell = [PersonalCenterItemCell personalCenterItemCell];
+    NSArray *cellArr_2 = @[messageCell];
+    
+    PersonalCenterItemCell *safeCell = [PersonalCenterItemCell personalCenterItemCell];
+    PersonalCenterSubItemCell *emailCell = [PersonalCenterSubItemCell personalCenterSubItemCell];
+    PersonalCenterSubItemCell *loginPwdCell = [PersonalCenterSubItemCell personalCenterSubItemCell];
+    PersonalCenterSubItemCell *tradePwdCell = [PersonalCenterSubItemCell personalCenterSubItemCell];
+    NSArray *cellArr_3 = @[safeCell,emailCell,loginPwdCell,tradePwdCell];
+    
+    PersonalCenterItemCell *contactCell = [PersonalCenterItemCell personalCenterItemCell];
+    NSArray *cellArr_4 = @[contactCell];
+    
+    PersonalCenterItemCell *exitCell = [PersonalCenterItemCell personalCenterItemCell];
+    NSArray *cellArr_5 = @[exitCell];
+    
+    self.cellArr = @[cellArr_0,cellArr_1,cellArr_2,cellArr_3,cellArr_4,cellArr_5];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initData {
+    
+    UserInfoModel *userInfo = [UserInfoTool userInfo];
+    
+    NSMutableArray *group_0 = @[].mutableCopy;
+    NSDictionary *dict0 = @{@"name":userInfo.custName,@"iconHeader":userInfo.icon};
+    [group_0 addObject:dict0];
+    
+    NSMutableArray *group_1 = @[].mutableCopy;
+    NSDictionary *dict1= @{@"icon":@"personal_center",@"title":@"个人中心"};
+    [group_1 addObject:dict1];
+    
+    NSMutableArray *group_2 = @[].mutableCopy;
+    NSDictionary *dict2 = @{@"icon":@"message",@"title":@"消息中心"};
+    [group_2 addObject:dict2];
+    
+    NSMutableArray *group_3 = @[].mutableCopy;
+    NSDictionary *dict3 = @{@"icon":@"account_safe",@"title":@"安全中心"};
+    NSDictionary *dict4 = @{@"title":@"邮箱绑定",@"subTitle":userInfo.email};
+    NSDictionary *dict5 = @{@"title":@"修改登陆密码"};
+    NSDictionary *dict6 = @{@"title":@"修改手势密码"};
+    [group_3 addObjectsFromArray:@[dict3,dict4,dict5,dict6]];
+    
+    NSMutableArray *group_4 = @[].mutableCopy;
+    NSDictionary *dict7 = @{@"icon":@"icon_lx_05",@"title":@"联系我们"};
+    [group_4 addObject:dict7];
+    
+    NSMutableArray *group_5 = @[].mutableCopy;
+    NSDictionary *dict8 = @{@"icon":@"icon_"};
+    [group_5 addObject:dict8];
+    
+    self.dataArr = @[group_0,group_1,group_2,group_3,group_4,group_5];
 }
-*/
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
+#pragma mark - UITableViewDataSource 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataArr.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataArr[section] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return self.cellArr[indexPath.row];
+    
+}
 
 @end

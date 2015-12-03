@@ -21,6 +21,12 @@
 		575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C933F1C102AA40079984F /* SchoolInfoModel.m */; };
 		575C93431C102DF90079984F /* ParamInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93421C102DF90079984F /* ParamInfoModel.m */; };
 		575C93461C10382E0079984F /* UserInfoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93451C10382E0079984F /* UserInfoTool.m */; };
+		575C934F1C1042700079984F /* PersonalCenterItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C934D1C1042700079984F /* PersonalCenterItemCell.m */; };
+		575C93501C1042700079984F /* PersonalCenterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C934E1C1042700079984F /* PersonalCenterItemCell.xib */; };
+		575C93541C1044130079984F /* PersonalCenterSubItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93521C1044130079984F /* PersonalCenterSubItemCell.m */; };
+		575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93531C1044130079984F /* PersonalCenterSubItemCell.xib */; };
+		575C93591C1045D20079984F /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93571C1045D20079984F /* HeaderIconCell.m */; };
+		575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93581C1045D20079984F /* HeaderIconCell.xib */; };
 		57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E5E1C0DD72A006B5263 /* UserTool.m */; };
 		57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7C1C0DDDE8006B5263 /* AddClassCell.m */; };
 		57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */; };
@@ -90,6 +96,15 @@
 		575C93421C102DF90079984F /* ParamInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamInfoModel.m; sourceTree = "<group>"; };
 		575C93441C10382E0079984F /* UserInfoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTool.h; sourceTree = "<group>"; };
 		575C93451C10382E0079984F /* UserInfoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoTool.m; sourceTree = "<group>"; };
+		575C934C1C1042700079984F /* PersonalCenterItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterItemCell.h; sourceTree = "<group>"; };
+		575C934D1C1042700079984F /* PersonalCenterItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterItemCell.m; sourceTree = "<group>"; };
+		575C934E1C1042700079984F /* PersonalCenterItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCenterItemCell.xib; sourceTree = "<group>"; };
+		575C93511C1044130079984F /* PersonalCenterSubItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterSubItemCell.h; sourceTree = "<group>"; };
+		575C93521C1044130079984F /* PersonalCenterSubItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterSubItemCell.m; sourceTree = "<group>"; };
+		575C93531C1044130079984F /* PersonalCenterSubItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCenterSubItemCell.xib; sourceTree = "<group>"; };
+		575C93561C1045D20079984F /* HeaderIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderIconCell.h; sourceTree = "<group>"; };
+		575C93571C1045D20079984F /* HeaderIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderIconCell.m; sourceTree = "<group>"; };
+		575C93581C1045D20079984F /* HeaderIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderIconCell.xib; sourceTree = "<group>"; };
 		57830E5D1C0DD72A006B5263 /* UserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTool.h; sourceTree = "<group>"; };
 		57830E5E1C0DD72A006B5263 /* UserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTool.m; sourceTree = "<group>"; };
 		57830E7B1C0DDDE8006B5263 /* AddClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassCell.h; sourceTree = "<group>"; };
@@ -410,6 +425,15 @@
 			isa = PBXGroup;
 			children = (
 				57830EE61C0DE71D006B5263 /* 发布作业 */,
+				575C93561C1045D20079984F /* HeaderIconCell.h */,
+				575C93571C1045D20079984F /* HeaderIconCell.m */,
+				575C93581C1045D20079984F /* HeaderIconCell.xib */,
+				575C934C1C1042700079984F /* PersonalCenterItemCell.h */,
+				575C934D1C1042700079984F /* PersonalCenterItemCell.m */,
+				575C934E1C1042700079984F /* PersonalCenterItemCell.xib */,
+				575C93511C1044130079984F /* PersonalCenterSubItemCell.h */,
+				575C93521C1044130079984F /* PersonalCenterSubItemCell.m */,
+				575C93531C1044130079984F /* PersonalCenterSubItemCell.xib */,
 			);
 			path = "个人中心";
 			sourceTree = "<group>";
@@ -573,6 +597,8 @@
 				57830EFE1C0DE7D8006B5263 /* radio_normal@2x.png in Resources */,
 				57830EBE1C0DDF23006B5263 /* ClassManageViewController.xib in Resources */,
 				57830EFB1C0DE7D8006B5263 /* chexbox_checked@2x.png in Resources */,
+				575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */,
+				575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */,
 				57830EF01C0DE798006B5263 /* TextFieldCell.xib in Resources */,
 				57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */,
 				57830E9A1C0DDE59006B5263 /* LoginViewController.xib in Resources */,
@@ -584,6 +610,7 @@
 				571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */,
 				57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */,
 				57830E8D1C0DDDE8006B5263 /* SelectSchoolHeaderView.xib in Resources */,
+				575C93501C1042700079984F /* PersonalCenterItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,8 +687,10 @@
 				57830EEF1C0DE798006B5263 /* TextFieldCell.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,
 				575C933D1C102A650079984F /* UserInfoModel.m in Sources */,
+				575C93591C1045D20079984F /* HeaderIconCell.m in Sources */,
 				575C93431C102DF90079984F /* ParamInfoModel.m in Sources */,
 				57830E991C0DDE59006B5263 /* LoginViewController.m in Sources */,
+				575C93541C1044130079984F /* PersonalCenterSubItemCell.m in Sources */,
 				575C933A1C102A4E0079984F /* BaseModel.m in Sources */,
 				57830ECA1C0DDFE3006B5263 /* THTextField.m in Sources */,
 				57830EA71C0DDECE006B5263 /* BaseViewController.m in Sources */,
@@ -675,6 +704,7 @@
 				575C93371C1021740079984F /* BaseHandle.m in Sources */,
 				57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */,
 				57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */,
+				575C934F1C1042700079984F /* PersonalCenterItemCell.m in Sources */,
 				575C93461C10382E0079984F /* UserInfoTool.m in Sources */,
 				575C932F1C101B690079984F /* WUHttpClient.m in Sources */,
 			);
