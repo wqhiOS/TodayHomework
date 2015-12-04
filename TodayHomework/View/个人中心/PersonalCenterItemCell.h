@@ -10,6 +10,10 @@
 
 @interface PersonalCenterItemCell : UITableViewCell
 
+@property (nonatomic, copy) void(^personalCenterCellBlock)(void);
+
 + (instancetype)personalCenterItemCell;
+
+- (void)updateUIWithDictionary:(NSDictionary *)dict withIndexPath:(NSIndexPath *)indexPath;
 
 @end

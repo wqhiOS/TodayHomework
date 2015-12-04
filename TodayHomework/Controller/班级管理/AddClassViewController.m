@@ -79,7 +79,7 @@ static NSString *cellId = @"AddClassCellId";
         _nextStepButton = [[THSubmitButton alloc] init];
         [_nextStepButton setTitle:@"下一步" forState:UIControlStateNormal];
         _nextStepButton.frame = CGRectMake(8, 20, SCREEN_WIDTH-16, 48);
-        NSLog(@"%f",SCREEN_WIDTH);
+
         [_nextStepButton addTarget:self action:@selector(nextStep:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _nextStepButton;

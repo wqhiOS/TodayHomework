@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonalCenterSubItemCell : UITableViewCell
+@property (nonatomic, copy) void(^personalCenterCellBlock)(void);
 + (instancetype)personalCenterSubItemCell;
+- (void)updateUIWithDictionary:(NSDictionary *)dict withIndexPath:(NSIndexPath *)indexPath;
 @end

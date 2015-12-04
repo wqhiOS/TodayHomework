@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,15 +15,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personal_center" translatesAutoresizingMaskIntoConstraints="NO" id="3g2-wl-g5J">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3g2-wl-g5J">
                         <rect key="frame" x="12" y="7" width="29" height="29"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="3g2-wl-g5J" secondAttribute="height" multiplier="1:1" id="FZh-IH-jEr"/>
+                            <constraint firstAttribute="width" constant="29" id="Sbz-Qx-IGg"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um3-PT-RUF">
                         <rect key="frame" x="55" y="11" width="42" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -35,9 +40,11 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="iconImageView" destination="3g2-wl-g5J" id="MJf-56-S0A"/>
+                <outlet property="titleLabel" destination="um3-PT-RUF" id="8Tz-f9-jf2"/>
+            </connections>
+            <point key="canvasLocation" x="346" y="310"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="personal_center" width="29" height="29"/>
-    </resources>
 </document>

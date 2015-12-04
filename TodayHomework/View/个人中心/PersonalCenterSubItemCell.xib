@@ -19,7 +19,7 @@
                         <rect key="frame" x="22" y="13" width="36" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="complete" translatesAutoresizingMaskIntoConstraints="NO" id="8of-Dw-6cc">
@@ -34,7 +34,7 @@
                         <rect key="frame" x="250" y="13" width="36" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -49,6 +49,11 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="completeIcon" destination="8of-Dw-6cc" id="RJo-nj-M6n"/>
+                <outlet property="subTitleLabel" destination="azf-jo-kMR" id="5w6-Bh-LxZ"/>
+                <outlet property="titleLabel" destination="eXG-Vt-Sm3" id="E41-Cd-Y1E"/>
+            </connections>
             <point key="canvasLocation" x="206" y="309"/>
         </tableViewCell>
     </objects>

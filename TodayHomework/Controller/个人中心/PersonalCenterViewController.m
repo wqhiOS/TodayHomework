@@ -11,8 +11,9 @@
 #import "PersonalCenterSubItemCell.h"
 #import "HeaderIconCell.h"
 #import "UserInfoTool.h"
+#import "AppDelegate.h"
 
-@interface PersonalCenterViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface PersonalCenterViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataArr;
 @property (nonatomic, strong) NSArray *cellArr;
@@ -24,7 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self initData];
+    [self initCell];
     [self.view addSubview:self.tableView];
+ 
 }
 
 - (void)initCell {
@@ -48,6 +51,10 @@
     NSArray *cellArr_4 = @[contactCell];
     
     PersonalCenterItemCell *exitCell = [PersonalCenterItemCell personalCenterItemCell];
+    exitCell.personalCenterCellBlock = ^ {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"确认要退出吗？" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+        [alertView show];
+    };
     NSArray *cellArr_5 = @[exitCell];
     
     self.cellArr = @[cellArr_0,cellArr_1,cellArr_2,cellArr_3,cellArr_4,cellArr_5];
@@ -82,7 +89,7 @@
     [group_4 addObject:dict7];
     
     NSMutableArray *group_5 = @[].mutableCopy;
-    NSDictionary *dict8 = @{@"icon":@"icon_"};
+    NSDictionary *dict8 = @{@"icon":@"login_out",@"title":@"退出登陆"};
     [group_5 addObject:dict8];
     
     self.dataArr = @[group_0,group_1,group_2,group_3,group_4,group_5];
@@ -90,25 +97,63 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _tableView.dataSource = self;
+        _tableView.delegate = self;
+//        _tableView.backgroundColor = UIColorFromRGB(0xf3f3f3);
     }
     return _tableView;
 }
 
 #pragma mark - UITableViewDataSource 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"%ld",self.dataArr.count);
     return self.dataArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"%ld",[self.dataArr[section] count]);
     return [self.dataArr[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    return self.cellArr[indexPath.row];
+    NSLog(@"%@",self.dataArr[indexPath.section][indexPath.row]);
+    [self.cellArr[indexPath.section][indexPath.row] updateUIWithDictionary:self.dataArr[indexPath.section][indexPath.row] withIndexPath:indexPath];
+    [self.cellArr[indexPath.section][indexPath.row] setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
+    return self.cellArr[indexPath.section][indexPath.row];
     
 }
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.cellArr[indexPath.section][indexPath.row] personalCenterCellBlock]) {
+        [self.cellArr[indexPath.section][indexPath.row] personalCenterCellBlock]() ;
+    }
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 80;
+    }else {
+        return 44;
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 12.f;
+}
+
+//
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return CGFLOAT_MIN;
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex ==1) {
+        [UserInfoTool saveUserInfo:nil];
+        [(AppDelegate * )[UIApplication sharedApplication].delegate startLogin];
+    }
+}
 @end

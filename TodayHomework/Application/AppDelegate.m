@@ -27,11 +27,9 @@
     
     NSLog(@"%@",[UserInfoTool userInfo]);
     if ([UserInfoTool userInfo]) {
-        [self appStart];
+        [self startApp];
     }else {
-        LoginViewController *loginVc = [[LoginViewController alloc] init];
-        THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:loginVc];
-        self.window.rootViewController = nav;
+        [self startLogin];
     }
     
     [self.window makeKeyAndVisible];
@@ -39,9 +37,15 @@
     return YES;
 }
 
-- (void)appStart {
+- (void)startApp{
     THTabBarController *tabBar = [[THTabBarController alloc] init];
     self.window.rootViewController = tabBar;
+}
+
+- (void)startLogin {
+    LoginViewController *loginVc = [[LoginViewController alloc] init];
+    THNavigationController *nav = [[THNavigationController alloc] initWithRootViewController:loginVc];
+    self.window.rootViewController = nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

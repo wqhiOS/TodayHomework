@@ -12,6 +12,7 @@
 #import "THTabBarController.h"
 #import "UserInfoHandle.h"
 #import "UserInfoTool.h"
+#import "AppDelegate.h"
 @interface LoginViewController ()
 
 @property (weak, nonatomic) IBOutlet THTextField *userNameTf;
@@ -41,6 +42,7 @@
     
     [UserInfoHandle loginWthLoginName:self.userNameTf.text andPassword:self.passwordTf.text success:^(id obj) {
         [UserInfoTool saveUserInfo:obj];
+        [(AppDelegate *)[UIApplication sharedApplication].delegate startApp];
     } failed:^(id obj) {
         NSLog(@"%@",obj[@"message"]);
     }];

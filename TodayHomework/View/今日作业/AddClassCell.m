@@ -44,7 +44,6 @@
     switch (addClassState) {
         case AddClassStateEducationalStage:
         {
-            NSLog(@"%@",self.containerView);
             self.titleLabel.text = @"教育阶段";
             
             [self.containerView setUpWithTitles:@[@"小学",@"初中",@"高中"] type:WUButtonTypeRadio width:self.containerWidth finished:^(CGFloat height) {

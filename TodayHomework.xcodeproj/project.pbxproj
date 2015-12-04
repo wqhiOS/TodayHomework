@@ -13,6 +13,7 @@
 		571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5131C07F456009F1F0E /* AppDelegate.m */; };
 		571FC5651C081804009F1F0E /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5641C081804009F1F0E /* AppUtils.m */; };
 		571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5701C082A30009F1F0E /* UIView+Frame.m */; };
+		5737C2FE1C116F5B003F3EDF /* PersonalCenterTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5737C2FD1C116F5B003F3EDF /* PersonalCenterTableDataSource.m */; };
 		575C932F1C101B690079984F /* WUHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C932E1C101B690079984F /* WUHttpClient.m */; };
 		575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93321C101E2A0079984F /* UserInfoHandle.m */; };
 		575C93371C1021740079984F /* BaseHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93361C1021740079984F /* BaseHandle.m */; };
@@ -41,7 +42,6 @@
 		57830E9D1C0DDE59006B5263 /* TeacherRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E981C0DDE59006B5263 /* TeacherRegisterViewController.xib */; };
 		57830EA71C0DDECE006B5263 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EA61C0DDECE006B5263 /* BaseViewController.m */; };
 		57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EA91C0DDEEF006B5263 /* PersonalCenterViewController.m */; };
-		57830EAC1C0DDEF0006B5263 /* PersonalCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EAA1C0DDEEF006B5263 /* PersonalCenterViewController.xib */; };
 		57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EAE1C0DDF0F006B5263 /* HomeViewController.m */; };
 		57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EB11C0DDF0F006B5263 /* PublishHomeworkViewController.m */; };
 		57830EBC1C0DDF23006B5263 /* AddClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EB81C0DDF23006B5263 /* AddClassViewController.m */; };
@@ -79,6 +79,8 @@
 		571FC5641C081804009F1F0E /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		571FC56F1C082A30009F1F0E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		571FC5701C082A30009F1F0E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		5737C2FC1C116F5B003F3EDF /* PersonalCenterTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterTableDataSource.h; sourceTree = "<group>"; };
+		5737C2FD1C116F5B003F3EDF /* PersonalCenterTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterTableDataSource.m; sourceTree = "<group>"; };
 		575C932D1C101B690079984F /* WUHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUHttpClient.h; sourceTree = "<group>"; };
 		575C932E1C101B690079984F /* WUHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUHttpClient.m; sourceTree = "<group>"; };
 		575C93311C101E2A0079984F /* UserInfoHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHandle.h; sourceTree = "<group>"; };
@@ -128,7 +130,6 @@
 		57830EA61C0DDECE006B5263 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		57830EA81C0DDEEF006B5263 /* PersonalCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalCenterViewController.h; sourceTree = "<group>"; };
 		57830EA91C0DDEEF006B5263 /* PersonalCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalCenterViewController.m; sourceTree = "<group>"; };
-		57830EAA1C0DDEEF006B5263 /* PersonalCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCenterViewController.xib; sourceTree = "<group>"; };
 		57830EAD1C0DDF0F006B5263 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		57830EAE1C0DDF0F006B5263 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		57830EB01C0DDF0F006B5263 /* PublishHomeworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHomeworkViewController.h; sourceTree = "<group>"; };
@@ -316,7 +317,8 @@
 			children = (
 				57830EA81C0DDEEF006B5263 /* PersonalCenterViewController.h */,
 				57830EA91C0DDEEF006B5263 /* PersonalCenterViewController.m */,
-				57830EAA1C0DDEEF006B5263 /* PersonalCenterViewController.xib */,
+				5737C2FC1C116F5B003F3EDF /* PersonalCenterTableDataSource.h */,
+				5737C2FD1C116F5B003F3EDF /* PersonalCenterTableDataSource.m */,
 			);
 			path = "个人中心";
 			sourceTree = "<group>";
@@ -606,7 +608,6 @@
 				57830E8B1C0DDDE8006B5263 /* OtherClassCell.xib in Resources */,
 				57830E9D1C0DDE59006B5263 /* TeacherRegisterViewController.xib in Resources */,
 				57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */,
-				57830EAC1C0DDEF0006B5263 /* PersonalCenterViewController.xib in Resources */,
 				571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */,
 				57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */,
 				57830E8D1C0DDDE8006B5263 /* SelectSchoolHeaderView.xib in Resources */,
@@ -676,6 +677,7 @@
 				57830EE01C0DE038006B5263 /* THTabBarController.m in Sources */,
 				575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */,
 				57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */,
+				5737C2FE1C116F5B003F3EDF /* PersonalCenterTableDataSource.m in Sources */,
 				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
 				571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,

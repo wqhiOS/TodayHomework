@@ -10,7 +10,7 @@
 #define THAPI_h
 
 #define API_HOST @"http://192.16.150.213:14082/education/rest"
-#define API_Picture @"http://192.16.150.213:14082/education""
+#define API_Picture @"http://192.16.150.213:14082/education"
 
 /********* 登陆 **********/
 #define API_LOGIN @"/cust/login/"

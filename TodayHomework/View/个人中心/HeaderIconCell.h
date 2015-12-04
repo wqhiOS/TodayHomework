@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HeaderIconCell : UITableViewCell
+@property (nonatomic, copy) void(^personalCenterCellBlock)(void);
 + (instancetype)headerIconCell;
+- (void)updateUIWithDictionary:(NSDictionary *)dict withIndexPath:(NSIndexPath *)indexPath;
 @end

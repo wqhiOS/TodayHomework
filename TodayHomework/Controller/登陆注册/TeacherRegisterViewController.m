@@ -36,7 +36,6 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"教师注册";
     self.widthConstraints.constant = SCREEN_WIDTH - 8*2;
-    NSLog(@"%f",self.subjectContainerView.width);
     
     [self setupTextField];
     CGFloat containerViewWidth = SCREEN_WIDTH - self.subjectContainerView.x - 8;
