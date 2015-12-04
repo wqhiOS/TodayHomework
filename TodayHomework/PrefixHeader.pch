@@ -19,6 +19,12 @@
 
 #endif
 
+#ifdef DEBUG
+#define DLog( s, ... ) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define DLog( s, ... )
+#endif
+
 //开发库
 //#define serverUrl @"http://192.16.2.235:8080/education/rest"
 //#define serverImageUrl @"http://192.16.2.235:8080/education"

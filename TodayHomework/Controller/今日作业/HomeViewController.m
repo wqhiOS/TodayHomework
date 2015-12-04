@@ -9,10 +9,13 @@
 #import "HomeViewController.h"
 #import "HomeworkHeaderView.h"
 #import "PublishHomeworkViewController.h"
+#import "HomeTableDataSource.h"
+#import "HomeworkHandle.h"
 
-@interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface HomeViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) HomeTableDataSource *dataSource;
 @property (nonatomic, strong) HomeworkHeaderView *homeworkHeaderView;
 @end
 
@@ -22,14 +25,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.view addSubview:self.tableView];
+    [self loadData];
+}
+
+- (void)loadData {
+    [HomeworkHandle homeworkWithPage:0 Success:^(id obj) {
+        [self.dataSource reloadTable:obj];
+    } failed:^(id obj) {
+        
+    }];
 }
 
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
+        
+        self.dataSource = [[HomeTableDataSource alloc] initWithTableView:_tableView];
+        _tableView.dataSource = _dataSource;
+        _tableView.delegate = _dataSource;
         _tableView.tableHeaderView = self.homeworkHeaderView;
+        _tableView.allowsSelection = NO;
     }
     return _tableView;
 }
@@ -44,9 +59,7 @@
             [weakSelf.navigationController pushViewController:vc animated:YES];
         };
         _homeworkHeaderView.personalCenterBlock = ^ {
-//            [UIView animateWithDuration:0.5 animations:^{
-//                self.tabBarController.tabBar.hidden = YES;
-//            }];
+
             
         };
         _homeworkHeaderView.HomeworkManageBlock = ^ {
@@ -55,16 +68,6 @@
     }
     return _homeworkHeaderView;
 }
-
-#pragma mark - UITableViewDataSource
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [[UITableViewCell alloc] init];
-}
-
 
 
 @end

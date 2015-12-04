@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WUHttpClient.h"
+#import "THAPI.h"
+#import <MJExtension.h>
+#import "UserInfoTool.h"
 
 /**
  *  Handler处理成功时调用的Block

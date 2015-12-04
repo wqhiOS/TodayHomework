@@ -7,10 +7,9 @@
 //
 
 #import "UserInfoHandle.h"
-#import "WUHttpClient.h"
-#import "THAPI.h"
+
 #import "UserInfoModel.h"
-#import <MJExtension.h>
+
 
 @implementation UserInfoHandle
 

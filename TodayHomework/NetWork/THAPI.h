@@ -15,5 +15,8 @@
 /********* 登陆 **********/
 #define API_LOGIN @"/cust/login/"
 
+/******** 今日作业首页 **********/
+#define API_HOMEWORK_TEACHER @"/busyworkInfo/findBusyWorkByTeacher"
+
 
 #endif /* THAPI_h */

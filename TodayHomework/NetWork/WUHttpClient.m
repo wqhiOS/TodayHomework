@@ -35,7 +35,7 @@
 //        //相应设置为 data
 //        self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
 //        //请求设置为 json
-//        [self.manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"content-type"];
+//        [self.manager.requestSerializer setValue:@"text/plain" forHTTPHeaderField:@"content-type"];
         
         self.manager.requestSerializer=[AFJSONRequestSerializer serializer];
         [self.manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"from"];
