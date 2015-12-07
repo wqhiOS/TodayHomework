@@ -15,6 +15,9 @@
 @property (nonatomic, strong) HomeworkModel *busyworkInfo;
 @property (nonatomic, strong) ClassesInfoModel *classesInfo;
 @property (nonatomic, strong) NSNumber *classStudentTotla;
+@property (nonatomic, strong) NSArray *listAttachmentInfoANSWER;
+@property (nonatomic, assign) BOOL isEnd;
+
 
 
 @end

@@ -14,6 +14,8 @@
 @property (nonatomic, copy) void(^homeworkDetailBlock)(void);
 @property (nonatomic, copy) void(^checkHomeworkSituation)(void);
 
+@property (nonatomic, assign) BOOL isHomeworkManagePage;//是否是作业管理页面
+
 @property (nonatomic, strong) HomeworkStatusModel *status;
 
 @end

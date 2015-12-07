@@ -51,7 +51,7 @@ static NSString *cellId = @"HomeCellId";
 
 #pragma mark - UITableViewDelegate 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80.f;
+    return 110.f;
 }
 
 @end

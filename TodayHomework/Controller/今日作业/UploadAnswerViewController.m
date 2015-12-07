@@ -1,24 +1,23 @@
 //
-//  BaseViewController.m
+//  UploadAnswerViewController.m
 //  TodayHomework
 //
-//  Created by wuqh on 15/11/27.
+//  Created by wuqh on 15/12/7.
 //  Copyright © 2015年 吴启晗. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "UploadAnswerViewController.h"
 
-@interface BaseViewController ()
+@interface UploadAnswerViewController ()
 
 @end
 
-@implementation BaseViewController
+@implementation UploadAnswerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = UIColorFromRGB(0xf3f3f3);
-//    self.view.backgroundColor = [UIColor whiteColor];
+    // Do any additional setup after loading the view from its nib.
+    self.title = @"上传答案";
 }
 
 - (void)didReceiveMemoryWarning {

@@ -42,4 +42,10 @@
     
 }
 
++ (NSString *)currentDate {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    return [formatter stringFromDate:[NSDate date]];
+}
+
 @end

@@ -11,6 +11,8 @@
 #import "PublishHomeworkViewController.h"
 #import "HomeTableDataSource.h"
 #import "HomeworkHandle.h"
+#import "HomeworkStatusModel.h"
+#import "HomeworkManageViewController.h"
 
 @interface HomeViewController ()
 
@@ -30,7 +32,14 @@
 
 - (void)loadData {
     [HomeworkHandle homeworkWithPage:0 Success:^(id obj) {
-        [self.dataSource reloadTable:obj];
+        
+        NSMutableArray *dataArr = @[].mutableCopy;
+        for (HomeworkStatusModel *status in obj) {
+            if (!status.isEnd) {
+                [dataArr addObject:status];
+            }
+        }
+        [self.dataSource reloadTable:dataArr];
     } failed:^(id obj) {
         
     }];
@@ -45,6 +54,8 @@
         _tableView.delegate = _dataSource;
         _tableView.tableHeaderView = self.homeworkHeaderView;
         _tableView.allowsSelection = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundColor = [UIColor clearColor];
     }
     return _tableView;
 }
@@ -63,7 +74,9 @@
             
         };
         _homeworkHeaderView.HomeworkManageBlock = ^ {
-            
+            HomeworkManageViewController *vc = [[HomeworkManageViewController alloc] init];
+            vc.hidesBottomBarWhenPushed =  YES;
+            [weakSelf.navigationController pushViewController:vc animated:YES];
         };
     }
     return _homeworkHeaderView;

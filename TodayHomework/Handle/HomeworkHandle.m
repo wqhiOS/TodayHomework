@@ -27,7 +27,6 @@
             success(dataArr);
         }
         
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);
     }];

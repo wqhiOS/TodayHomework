@@ -11,9 +11,11 @@
 @interface AppUtils : NSObject
 
 /*********************** Format date **********************/
+
 + (NSDate *)dateFromString:(NSString *)dateString formatter:(NSString *)formatter;
 +(NSString *)stringFromDate:(NSDate *)date;
 //日期得星期
 + (NSString*)weekdayStringFromDate:(NSDate*)inputDate;
++ (NSString *)currentDate;
 
 @end
