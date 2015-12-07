@@ -107,7 +107,7 @@
     //如果不能获取连接标志，则不能连接网络，直接返回
     if (!didRetrieveFlags)
     {
-        NSLog(@"Error. Could not recover network reachability flags");
+        DLog(@"Error. Could not recover network reachability flags");
         return NO;
     }
     //根据获得的连接标志进行判断

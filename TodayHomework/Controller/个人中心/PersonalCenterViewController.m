@@ -107,17 +107,15 @@
 
 #pragma mark - UITableViewDataSource 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"%ld",self.dataArr.count);
     return self.dataArr.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"%ld",[self.dataArr[section] count]);
     return [self.dataArr[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@",self.dataArr[indexPath.section][indexPath.row]);
+
     [self.cellArr[indexPath.section][indexPath.row] updateUIWithDictionary:self.dataArr[indexPath.section][indexPath.row] withIndexPath:indexPath];
     [self.cellArr[indexPath.section][indexPath.row] setSelectionStyle:UITableViewCellSelectionStyleNone];
     

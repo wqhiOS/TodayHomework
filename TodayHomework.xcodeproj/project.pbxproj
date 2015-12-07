@@ -59,8 +59,6 @@
 		57830EE01C0DE038006B5263 /* THTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EDE1C0DE038006B5263 /* THTabBarController.m */; };
 		57830EE21C0DE0F9006B5263 /* HomeworkHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EE11C0DE0F9006B5263 /* HomeworkHeaderView.xib */; };
 		57830EE51C0DE108006B5263 /* HomeworkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EE41C0DE108006B5263 /* HomeworkHeaderView.m */; };
-		57830EEF1C0DE798006B5263 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EED1C0DE798006B5263 /* TextFieldCell.m */; };
-		57830EF01C0DE798006B5263 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830EEE1C0DE798006B5263 /* TextFieldCell.xib */; };
 		57830EFB1C0DE7D8006B5263 /* chexbox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF31C0DE7D8006B5263 /* chexbox_checked@2x.png */; };
 		57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF41C0DE7D8006B5263 /* chexbox_normal@2x.png */; };
 		57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF51C0DE7D8006B5263 /* radio_checked@2x.png */; };
@@ -82,6 +80,9 @@
 		57C804551C156BA000AF1544 /* UploadAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804531C156BA000AF1544 /* UploadAnswerViewController.xib */; };
 		57C804591C156BBE00AF1544 /* ModifyAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804571C156BBE00AF1544 /* ModifyAnswerViewController.m */; };
 		57C8045A1C156BBE00AF1544 /* ModifyAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804581C156BBE00AF1544 /* ModifyAnswerViewController.xib */; };
+		57C8045E1C156EC500AF1544 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8045C1C156EC500AF1544 /* TextFieldCell.m */; };
+		57C8045F1C156EC500AF1544 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C8045D1C156EC500AF1544 /* TextFieldCell.xib */; };
+		57C804651C15791800AF1544 /* ClassInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804641C15791800AF1544 /* ClassInfoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,9 +181,6 @@
 		57830EE11C0DE0F9006B5263 /* HomeworkHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeworkHeaderView.xib; sourceTree = "<group>"; };
 		57830EE31C0DE108006B5263 /* HomeworkHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkHeaderView.h; sourceTree = "<group>"; };
 		57830EE41C0DE108006B5263 /* HomeworkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkHeaderView.m; sourceTree = "<group>"; };
-		57830EEC1C0DE798006B5263 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
-		57830EED1C0DE798006B5263 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
-		57830EEE1C0DE798006B5263 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		57830EF31C0DE7D8006B5263 /* chexbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_checked@2x.png"; sourceTree = "<group>"; };
 		57830EF41C0DE7D8006B5263 /* chexbox_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chexbox_normal@2x.png"; sourceTree = "<group>"; };
 		57830EF51C0DE7D8006B5263 /* radio_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_checked@2x.png"; sourceTree = "<group>"; };
@@ -216,6 +214,11 @@
 		57C804561C156BBE00AF1544 /* ModifyAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAnswerViewController.h; sourceTree = "<group>"; };
 		57C804571C156BBE00AF1544 /* ModifyAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAnswerViewController.m; sourceTree = "<group>"; };
 		57C804581C156BBE00AF1544 /* ModifyAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyAnswerViewController.xib; sourceTree = "<group>"; };
+		57C8045B1C156EC500AF1544 /* TextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldCell.h; sourceTree = "<group>"; };
+		57C8045C1C156EC500AF1544 /* TextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldCell.m; sourceTree = "<group>"; };
+		57C8045D1C156EC500AF1544 /* TextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		57C804631C15791800AF1544 /* ClassInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfoModel.h; sourceTree = "<group>"; };
+		57C804641C15791800AF1544 /* ClassInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfoModel.m; sourceTree = "<group>"; };
 		7A27961751BEF2DBD147CC55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,9 +395,6 @@
 				57830EAE1C0DDF0F006B5263 /* HomeViewController.m */,
 				5737C2FF1C11734A003F3EDF /* HomeTableDataSource.h */,
 				5737C3001C11734A003F3EDF /* HomeTableDataSource.m */,
-				57C804281C15608700AF1544 /* HomeworkDetailViewController.h */,
-				57C804291C15608700AF1544 /* HomeworkDetailViewController.m */,
-				57C8042A1C15608700AF1544 /* HomeworkDetailViewController.xib */,
 				5737C3071C117AC8003F3EDF /* 发布作业 */,
 				57C804241C1556F200AF1544 /* 作业管理 */,
 			);
@@ -479,7 +479,6 @@
 		57830E791C0DDDE8006B5263 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
-				57830EE61C0DE71D006B5263 /* 发布作业 */,
 				575C93561C1045D20079984F /* HeaderIconCell.h */,
 				575C93571C1045D20079984F /* HeaderIconCell.m */,
 				575C93581C1045D20079984F /* HeaderIconCell.xib */,
@@ -508,6 +507,9 @@
 				5737C3021C1176D1003F3EDF /* HomeCell.h */,
 				5737C3031C1176D1003F3EDF /* HomeCell.m */,
 				5737C3041C1176D1003F3EDF /* HomeCell.xib */,
+				57C8045B1C156EC500AF1544 /* TextFieldCell.h */,
+				57C8045C1C156EC500AF1544 /* TextFieldCell.m */,
+				57C8045D1C156EC500AF1544 /* TextFieldCell.xib */,
 			);
 			path = "今日作业";
 			sourceTree = "<group>";
@@ -542,16 +544,6 @@
 			name = "其他";
 			sourceTree = "<group>";
 		};
-		57830EE61C0DE71D006B5263 /* 发布作业 */ = {
-			isa = PBXGroup;
-			children = (
-				57830EEC1C0DE798006B5263 /* TextFieldCell.h */,
-				57830EED1C0DE798006B5263 /* TextFieldCell.m */,
-				57830EEE1C0DE798006B5263 /* TextFieldCell.xib */,
-			);
-			name = "发布作业";
-			sourceTree = "<group>";
-		};
 		57830EF11C0DE7D8006B5263 /* WUButtonContainerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +570,9 @@
 		57C804241C1556F200AF1544 /* 作业管理 */ = {
 			isa = PBXGroup;
 			children = (
+				57C804281C15608700AF1544 /* HomeworkDetailViewController.h */,
+				57C804291C15608700AF1544 /* HomeworkDetailViewController.m */,
+				57C8042A1C15608700AF1544 /* HomeworkDetailViewController.xib */,
 				57C804251C15571500AF1544 /* HomeworkManageViewController.h */,
 				57C804261C15571500AF1544 /* HomeworkManageViewController.m */,
 				57C8042D1C1561C700AF1544 /* CheckSituationViewController.h */,
@@ -614,6 +609,8 @@
 				57C8044A1C1568D700AF1544 /* HomeworkStatusModel.m */,
 				57C8044E1C15692000AF1544 /* AnswerInfoModel.h */,
 				57C8044F1C15692000AF1544 /* AnswerInfoModel.m */,
+				57C804631C15791800AF1544 /* ClassInfoModel.h */,
+				57C804641C15791800AF1544 /* ClassInfoModel.m */,
 			);
 			path = "今日作业";
 			sourceTree = "<group>";
@@ -702,9 +699,9 @@
 				57C804361C1561FF00AF1544 /* ModifyHomeworkViewController.xib in Resources */,
 				57C804551C156BA000AF1544 /* UploadAnswerViewController.xib in Resources */,
 				575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */,
+				57C8045F1C156EC500AF1544 /* TextFieldCell.xib in Resources */,
 				575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */,
 				57C8045A1C156BBE00AF1544 /* ModifyAnswerViewController.xib in Resources */,
-				57830EF01C0DE798006B5263 /* TextFieldCell.xib in Resources */,
 				57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */,
 				57830E9A1C0DDE59006B5263 /* LoginViewController.xib in Resources */,
 				57830EE21C0DE0F9006B5263 /* HomeworkHeaderView.xib in Resources */,
@@ -778,6 +775,7 @@
 				57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */,
 				57830EC11C0DDFB9006B5263 /* SelectSchoolButton.m in Sources */,
 				57C804591C156BBE00AF1544 /* ModifyAnswerViewController.m in Sources */,
+				57C8045E1C156EC500AF1544 /* TextFieldCell.m in Sources */,
 				5737C3051C1176D1003F3EDF /* HomeCell.m in Sources */,
 				57830EBC1C0DDF23006B5263 /* AddClassViewController.m in Sources */,
 				57830F001C0DE7D8006B5263 /* WUButtonContainrView.m in Sources */,
@@ -796,7 +794,7 @@
 				57830E9B1C0DDE59006B5263 /* SelectSchoolViewController.m in Sources */,
 				57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */,
 				575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */,
-				57830EEF1C0DE798006B5263 /* TextFieldCell.m in Sources */,
+				57C804651C15791800AF1544 /* ClassInfoModel.m in Sources */,
 				57C804271C15571500AF1544 /* HomeworkManageViewController.m in Sources */,
 				57C804541C156BA000AF1544 /* UploadAnswerViewController.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,

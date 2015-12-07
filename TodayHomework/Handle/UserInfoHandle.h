@@ -19,4 +19,16 @@
  */
 + (void)loginWthLoginName:(NSString *)loginName andPassword:(NSString *)password success:(SuccessBlock)success failed:(FailedBlock)failed;
 
+/**
+ *  获得教师加入的所有班级
+ *
+ */
++ (void)classesByTeacerSuccess:(SuccessBlock)success failed:(FailedBlock)failed;
+
+/**
+ *  获得教师所教班级的科目
+ *
+ */
++ (void)subjectsByClasses:(NSString *)classesId Success:(SuccessBlock)success failed:(FailedBlock)failed;
+
 @end

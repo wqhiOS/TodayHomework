@@ -10,6 +10,8 @@
 
 #import "AddClassCell.h"
 #import "TextFieldCell.h"
+#import "UserInfoHandle.h"
+#import "ClassInfoModel.h"
 
 @interface PublishHomeworkViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -21,6 +23,20 @@
 @property (nonatomic, strong) AddClassCell *subjectCell;
 @property (nonatomic, strong) TextFieldCell *homeworkContentCell;
 @property (nonatomic, strong) NSArray *cellArr;
+@property (nonatomic, strong) NSDictionary *subjects;
+
+/**
+ *  班级模型
+ */
+@property (nonatomic, strong) NSArray *classes;
+
+@property (nonatomic, strong) NSMutableSet *gradeTitles;
+@property (nonatomic, strong) NSMutableArray *classTitles;
+
+/**
+ *  班级id拼接的字符串
+ */
+@property (nonatomic, copy) NSString *classIdsStr;
 @end
 
 @implementation PublishHomeworkViewController
@@ -32,6 +48,27 @@
     
     self.cellArr = @[self.startDate,self.endDate,self.gradeCell,self.classCell,self.subjectCell,self.homeworkContentCell];
     [self.view addSubview:self.tableView];
+    [self loadClasses];
+}
+
+- (void)loadClasses {
+    [UserInfoHandle classesByTeacerSuccess:^(id obj) {
+        self.classes = obj;
+        for (ClassInfoModel *classInfo in self.classes) {
+            NSString *gradeName = [NSString stringWithFormat:@"%@%@",classInfo.educationStage,classInfo.gradeId];
+            [self.gradeTitles addObject:gradeName];
+        }
+        [self loadClassesSuccess];
+    } failed:^(id obj) {
+        
+    }];
+}
+
+- (void)loadClassesSuccess {
+    //加载年级
+    [self.gradeCell.containerView setUpWithTitles:self.gradeTitles.allObjects type:WUButtonTypeRadio width:self.gradeCell.containerWidth finished:^(CGFloat height) {
+        self.gradeCell.containerHeight.constant = height;
+    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -47,14 +84,13 @@
     return [self.cellArr[indexPath.row] cellHeight];
 }
 
-
-
 #pragma mark - getter
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.allowsSelection = NO;
     }
     return _tableView;
 }
@@ -62,6 +98,7 @@
 - (TextFieldCell *)startDate {
     if (!_startDate) {
         _startDate = [TextFieldCell textFiledCell];
+        _startDate.titleLabel.text = @"开始时间";
     }
     return _startDate;
 }
@@ -69,6 +106,7 @@
 - (TextFieldCell *)endDate {
     if (!_endDate) {
         _endDate = [TextFieldCell textFiledCell];
+        _endDate.titleLabel.text = @"结束时间";
     }
     return _endDate;
 }
@@ -80,28 +118,21 @@
       
         _gradeCell.containerView.buttonClickBlock = ^(WUButton* button) {
             
-            if ([button.currentTitle isEqualToString:@"小学一年级"]) {
-                
-                [self.classCell.containerView setUpWithTitles:@[@"1班",@"2班"] type:WUButtonTypeMultiple width:self.classCell.containerWidth finished:^(CGFloat height) {
-                    self.classCell.containerHeight.constant = height;
-                }];
-                
-            }else {
-                [self.classCell.containerView setUpWithTitles:@[@"1班",@"2班",@"3班",@"4班",@"5班",@"6班",@"7班",@"8班",@"9班",] type:WUButtonTypeMultiple width:self.classCell.containerWidth finished:^(CGFloat height) {
-                    self.classCell.containerHeight.constant = height;
-                }];
+            NSString *gradeName = button.currentTitle;
+            [self.classTitles removeAllObjects];
+            for (ClassInfoModel *classInfo in self.classes) {
+                NSString *name = [NSString stringWithFormat:@"%@%@",classInfo.educationStage,classInfo.gradeId];
+                if ([name isEqualToString:gradeName]) {
+                    [self.classTitles addObject:classInfo.classedId];
+                }
             }
-            
+            [self.classCell.containerView setUpWithTitles:self.classTitles type:WUButtonTypeMultiple width:self.classCell.containerWidth finished:^(CGFloat height) {
+                self.classCell.containerHeight.constant = height;
+            }];
+           
+
             [self.tableView reloadData];
         };
-        
-        [_gradeCell.containerView setUpWithTitles:@[@"小学一年级",@"小学二年级"] type:WUButtonTypeRadio width:_gradeCell.containerWidth finished:^(CGFloat height) {
-            _gradeCell.containerHeight.constant = height;
-            
-        }];
-        
-
-        
     }
     return _gradeCell;
 }
@@ -111,6 +142,41 @@
         
         _classCell = [AddClassCell addClassCell];
         _classCell.titleLabel.text = @"选择班级";
+        _classCell.containerView.buttonClickBlock = ^ (WUButton* button){
+            
+            NSMutableArray *classIds = @[].mutableCopy;
+            NSString *gradeName = self.gradeCell.containerView.selectedRadioButton.currentTitle;
+            
+            for (WUButton *button in self.classCell.containerView.selectedMultipleButtons) {
+                
+                for (ClassInfoModel *classInfo in self.classes) {
+                 
+                    NSString *className = button.currentTitle;
+                    NSString *name = [NSString stringWithFormat:@"%@%@%@",classInfo.educationStage,classInfo.gradeId,classInfo.classedId];
+                   
+                    if ([name isEqualToString:[gradeName stringByAppendingString:className]]) { //找到对应的model
+                        //保存classId
+                        [classIds addObject:classInfo.id];
+                    }
+                }
+                
+            }
+            self.classIdsStr = [classIds componentsJoinedByString:@","];
+            NSLog(@"%@",self.classIdsStr);
+            [UserInfoHandle subjectsByClasses:self.classIdsStr Success:^(id obj) {
+                self.subjects = obj;
+                [self.subjectCell.containerView setUpWithTitles:self.subjects.allKeys type:WUButtonTypeRadio width:self.subjectCell.containerWidth finished:^(CGFloat height) {
+                    if (height == 20) {
+                        height =38;
+                    }
+                    self.subjectCell.containerHeight.constant = height;
+                }];
+                [self.tableView reloadData];
+            } failed:^(id obj) {
+                
+            }];
+            
+        };
     }
     return _classCell;
 }
@@ -129,6 +195,20 @@
         _homeworkContentCell = [TextFieldCell textFiledCell];
     }
     return _homeworkContentCell;
+}
+
+- (NSMutableSet*)gradeTitles {
+    if (!_gradeTitles) {
+        _gradeTitles = [[NSMutableSet alloc] initWithCapacity:0];;
+    }
+    return _gradeTitles;
+}
+
+- (NSMutableArray *)classTitles {
+    if (!_classTitles) {
+        _classTitles = [NSMutableArray array];
+    }
+    return _classTitles;
 }
 
 

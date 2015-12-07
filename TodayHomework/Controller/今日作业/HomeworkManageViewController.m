@@ -56,7 +56,6 @@ static NSString *cellId = @"HomeCellId";
 #pragma mark - loadData 
 - (void)loadData {
     [HomeworkHandle homeworkWithPage:0 Success:^(id obj) {
-        NSLog(@"%@",obj);
         self.dataArr = obj;
         [self.tableView reloadData];
     } failed:^(id obj) {

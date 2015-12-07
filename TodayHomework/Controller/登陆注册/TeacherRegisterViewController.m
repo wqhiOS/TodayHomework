@@ -116,7 +116,7 @@
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    NSLog(@"%s",__func__);
+
     [self selectSchool:self.selectSchoolBtn ];
     return NO;
 }

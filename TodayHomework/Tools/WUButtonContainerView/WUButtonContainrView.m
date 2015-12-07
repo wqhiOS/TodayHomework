@@ -42,6 +42,7 @@
     
 //如果是再次赋值，应该删去之前创建的button，以及将self.buttons设置为空
     [self.buttons removeAllObjects];
+    [self.selectedMultipleButtons removeAllObjects];
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 
 //之后根据传过来的标题数组初始化buttons
@@ -57,7 +58,7 @@
             button.selected = YES;
             self.selectedRadioButton = button;
         }
-        
+       
         switch (type) {
             case WUButtonTypeRadio:
             {
@@ -87,7 +88,7 @@
     }else {
         self.rowCount = self.buttons.count/self.columnCount;
         self.rowCount += self.buttons.count%self.columnCount==0?0:1;
-        NSLog(@"%ld %d",self.buttons.count/self.columnCount,self.buttons.count%self.columnCount==0?0:1);
+ 
     }
    
 //排列button

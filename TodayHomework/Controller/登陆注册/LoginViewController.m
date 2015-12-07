@@ -44,7 +44,7 @@
         [UserInfoTool saveUserInfo:obj];
         [(AppDelegate *)[UIApplication sharedApplication].delegate startApp];
     } failed:^(id obj) {
-        NSLog(@"%@",obj[@"message"]);
+        DLog(@"%@",obj[@"message"]);
     }];
     
 }

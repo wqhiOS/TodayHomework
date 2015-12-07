@@ -18,5 +18,11 @@
 /******** 今日作业首页 **********/
 #define API_HOMEWORK_TEACHER @"/busyworkInfo/findBusyWorkByTeacher"
 
+/******** 获取教师所在年级 *********/
+#define API_GRADE_TEACHER @"/classInfo/findClassesByTeacher"
+
+/****** 教师获取班级的科目 **********/
+#define API_CourseByClasses @"/busyworkInfo/getCommonCourse"
+
 
 #endif /* THAPI_h */

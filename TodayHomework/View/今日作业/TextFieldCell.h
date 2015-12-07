@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THTextField.h"
 
 @interface TextFieldCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet THTextField *dateTextField;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 
 + (instancetype)textFiledCell;
 
