@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+Frame.h"
+#import "AttachmentPhoto.h"
 @class AttachmentContainerView;
 typedef void (^AddAttachmentBlockType)(AttachmentContainerView *);
 

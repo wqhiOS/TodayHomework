@@ -7,7 +7,6 @@
 //
 
 #import "AttachmentContainerView.h"
-#import "AttachmentPhoto.h"
 
 #define ScreenFullWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenFullHeight  [UIScreen mainScreen].bounds.size.height

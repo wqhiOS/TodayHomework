@@ -18,6 +18,7 @@
 		5737C3051C1176D1003F3EDF /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5737C3031C1176D1003F3EDF /* HomeCell.m */; };
 		5737C3061C1176D1003F3EDF /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5737C3041C1176D1003F3EDF /* HomeCell.xib */; };
 		5737C30A1C117E60003F3EDF /* HomeworkHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5737C3091C117E60003F3EDF /* HomeworkHandle.m */; };
+		57452A111C1725BC00521F7F /* NSString+Gen_uuid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57452A101C1725BC00521F7F /* NSString+Gen_uuid.m */; };
 		575C932F1C101B690079984F /* WUHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C932E1C101B690079984F /* WUHttpClient.m */; };
 		575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93321C101E2A0079984F /* UserInfoHandle.m */; };
 		575C93371C1021740079984F /* BaseHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93361C1021740079984F /* BaseHandle.m */; };
@@ -118,6 +119,8 @@
 		5737C3041C1176D1003F3EDF /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		5737C3081C117E60003F3EDF /* HomeworkHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkHandle.h; sourceTree = "<group>"; };
 		5737C3091C117E60003F3EDF /* HomeworkHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkHandle.m; sourceTree = "<group>"; };
+		57452A0F1C1725BC00521F7F /* NSString+Gen_uuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Gen_uuid.h"; sourceTree = "<group>"; };
+		57452A101C1725BC00521F7F /* NSString+Gen_uuid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Gen_uuid.m"; sourceTree = "<group>"; };
 		575C932D1C101B690079984F /* WUHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUHttpClient.h; sourceTree = "<group>"; };
 		575C932E1C101B690079984F /* WUHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUHttpClient.m; sourceTree = "<group>"; };
 		575C93311C101E2A0079984F /* UserInfoHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHandle.h; sourceTree = "<group>"; };
@@ -334,6 +337,8 @@
 			children = (
 				571FC56F1C082A30009F1F0E /* UIView+Frame.h */,
 				571FC5701C082A30009F1F0E /* UIView+Frame.m */,
+				57452A0F1C1725BC00521F7F /* NSString+Gen_uuid.h */,
+				57452A101C1725BC00521F7F /* NSString+Gen_uuid.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -867,6 +872,7 @@
 				57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */,
 				575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */,
 				57C804651C15791800AF1544 /* ClassInfoModel.m in Sources */,
+				57452A111C1725BC00521F7F /* NSString+Gen_uuid.m in Sources */,
 				57C804271C15571500AF1544 /* HomeworkManageViewController.m in Sources */,
 				57C804541C156BA000AF1544 /* UploadAnswerViewController.m in Sources */,
 				57C804711C1674CF00AF1544 /* AttachmentContainerView.m in Sources */,

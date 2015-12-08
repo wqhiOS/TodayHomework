@@ -49,6 +49,10 @@
    
     NSInteger courseId = [status.busyworkInfo.courseId integerValue]-1;
     NSString *imageName = self.imgArr[courseId];
+//    if (courseId != -1) {
+//        imageName = self.imgArr[courseId];
+//    }
+    
     UIImage *image = [UIImage imageNamed:imageName];
     CGFloat h = image.size.height*0.5;
     self.backgroundImg.image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(h, 50, h, 20) resizingMode:UIImageResizingModeStretch];

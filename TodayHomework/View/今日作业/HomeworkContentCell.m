@@ -10,7 +10,7 @@
 
 @interface HomeworkContentCell()
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 
 
 @end
@@ -35,5 +35,6 @@
 - (CGFloat)cellHeight {
     return 95.f;
 }
+
 
 @end

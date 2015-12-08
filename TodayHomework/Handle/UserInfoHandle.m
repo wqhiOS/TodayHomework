@@ -10,6 +10,7 @@
 
 #import "UserInfoModel.h"
 #import "ClassInfoModel.h"
+#import "NSString+Gen_uuid.h"
 
 
 @implementation UserInfoHandle
@@ -68,6 +69,9 @@
     params[@"classIds"] = classesId;
     params[@"teacherId"] = [[UserInfoTool userInfo] id];
     [[WUHttpClient defaultClient] requestWithPath:url method:WUHttpRequestPost parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        
         if (success) {
             NSDictionary *dict = [NSDictionary dictionaryWithObjects:[responseObject[@"data"] allKeys] forKeys:[responseObject[@"data"] allValues]];
             success(dict);
@@ -75,6 +79,44 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
+    
+}
+
++ (void)publishHomework:(NSString *)classesId startDate:(NSString *)startDate endDate:(NSString *)endDate courseId:(NSString *)courseId memo:(NSString *)memo attachments:(NSArray *)attachments success:(SuccessBlock)success failed:(FailedBlock)failed {
+    
+    NSString *url = [API_HOST stringByAppendingString:API_PUBLISH_HOMEWORK];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"custId"] = [UserInfoTool userInfo].id;
+    params[@"classesId"] = classesId;
+    params[@"startDate"] = startDate;
+    params[@"endDate"] = endDate;
+    params[@"courseId"] = courseId;
+    params[@"memo"] = memo;
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //申明请求的数据是json类型
+    manager.requestSerializer=[AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"iOS" forHTTPHeaderField:@"from"];
+    manager.requestSerializer.timeoutInterval = 60.f;
+    [manager.requestSerializer setValue:CurrentVersion forHTTPHeaderField:@"version"];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"multipart/form-data", @"text/html",@"text/json",@"text/javascript", nil];
+  
+    
+    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        for (int i=0; i<attachments.count; i++) {
+            UIImage *image = attachments[i];
+            NSData *data = UIImageJPEGRepresentation(image, 0.1);
+           
+            [formData appendPartWithFileData:data name:[NSString gen_uuid] fileName:[NSString stringWithFormat:@"%@.jpg",[NSString gen_uuid]] mimeType:@"image/jpg"];
+        }
+        
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject[@"message"]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
     
 }
 @end

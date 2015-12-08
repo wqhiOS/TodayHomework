@@ -31,4 +31,8 @@
  */
 + (void)subjectsByClasses:(NSString *)classesId Success:(SuccessBlock)success failed:(FailedBlock)failed;
 
+
+
++ (void)publishHomework:(NSString *)classesId startDate:(NSString *)startDate endDate:(NSString *)endDate courseId:(NSString *)courseId memo:(NSString *)memo attachments:(NSArray *)attachments success:(SuccessBlock)success failed:(FailedBlock)failed;
+
 @end

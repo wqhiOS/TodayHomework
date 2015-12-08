@@ -75,7 +75,19 @@
 
 #pragma mark - 发布作业
 - (void)publishHomework {
-    
+   
+    NSArray *attachments = self.addAttachmentCell.attachmentContainerView.attachmentsArray;
+    NSMutableArray *imgs = @[].mutableCopy;
+
+    for (int i = 1; i<attachments.count; i++) {
+        [imgs addObject:[attachments[i] image]];
+    }
+   
+    [UserInfoHandle publishHomework:self.classIdsStr startDate:self.startDate.dateTextField.text endDate:self.endDate.dateTextField.text courseId:self.subjects[self.subjectCell.containerView.selectedRadioButton.currentTitle] memo:self.homeworkContentCell.textView.text attachments:imgs success:^(id obj) {
+        
+    } failed:^(id obj) {
+        
+    }];
 }
 
 #pragma mark - UITableViewDataSource

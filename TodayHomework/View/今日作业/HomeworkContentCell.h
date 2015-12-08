@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeworkContentCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 + (instancetype)homeworkContentCell;
 - (CGFloat)cellHeight;
+
 
 @end
