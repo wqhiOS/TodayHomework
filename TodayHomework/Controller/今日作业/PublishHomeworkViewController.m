@@ -12,8 +12,9 @@
 #import "TextFieldCell.h"
 #import "UserInfoHandle.h"
 #import "ClassInfoModel.h"
+#import "AddAttachmentCell.h"
 
-@interface PublishHomeworkViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface PublishHomeworkViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) TextFieldCell *startDate;
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) AddClassCell *classCell;
 @property (nonatomic, strong) AddClassCell *subjectCell;
 @property (nonatomic, strong) TextFieldCell *homeworkContentCell;
+@property (nonatomic, strong) AddAttachmentCell *addAttachmentCell;
 @property (nonatomic, strong) NSArray *cellArr;
 @property (nonatomic, strong) NSDictionary *subjects;
 
@@ -46,7 +48,7 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"发布作业";
     
-    self.cellArr = @[self.startDate,self.endDate,self.gradeCell,self.classCell,self.subjectCell,self.homeworkContentCell];
+    self.cellArr = @[self.startDate,self.endDate,self.gradeCell,self.classCell,self.subjectCell,self.homeworkContentCell,self.addAttachmentCell];
     [self.view addSubview:self.tableView];
     [self loadClasses];
 }
@@ -82,6 +84,40 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.cellArr[indexPath.row] cellHeight];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    UIImagePickerControllerSourceType sourceType;
+    switch (buttonIndex) {
+        case 0:
+        {
+            sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+            break;
+        case 1:
+        {
+            sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+            break;
+        default:
+            break;
+    }
+    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = sourceType;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    
+    //页面展示：
+    [self.addAttachmentCell.attachmentContainerView addAttachmentWithImage:info[UIImagePickerControllerOriginalImage]];
+    [self.tableView reloadData];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 #pragma mark - getter
@@ -162,7 +198,6 @@
                 
             }
             self.classIdsStr = [classIds componentsJoinedByString:@","];
-            NSLog(@"%@",self.classIdsStr);
             [UserInfoHandle subjectsByClasses:self.classIdsStr Success:^(id obj) {
                 self.subjects = obj;
                 [self.subjectCell.containerView setUpWithTitles:self.subjects.allKeys type:WUButtonTypeRadio width:self.subjectCell.containerWidth finished:^(CGFloat height) {
@@ -195,6 +230,23 @@
         _homeworkContentCell = [TextFieldCell textFiledCell];
     }
     return _homeworkContentCell;
+}
+
+- (AddAttachmentCell *)addAttachmentCell {
+    if (!_addAttachmentCell) {
+        _addAttachmentCell = [AddAttachmentCell addAttachmentCell];
+        _addAttachmentCell.attachmentContainerView.addAttachmentBlock = ^ (AttachmentContainerView *attachmentContainerView){
+            
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"上传方式" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"打开相机",@"打开相册", nil];
+            [actionSheet showInView:self.view];
+            
+        };
+        _addAttachmentCell.attachmentContainerView.deleteAttachmentBlock = ^ (AttachmentContainerView *attachmentContainerView){
+            [self.tableView reloadData];
+        };
+
+    }
+    return _addAttachmentCell;
 }
 
 - (NSMutableSet*)gradeTitles {

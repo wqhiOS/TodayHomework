@@ -21,7 +21,9 @@
 }
 
 + (NSString *)stringFromDate:(NSDate *)date {
-    return nil;
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd"];
+    return [format stringFromDate:date  ];
 }
 
 + (NSString*)weekdayStringFromDate:(NSDate*)inputDate {
