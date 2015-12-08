@@ -13,6 +13,8 @@
 #import "UserInfoHandle.h"
 #import "ClassInfoModel.h"
 #import "AddAttachmentCell.h"
+#import "HomeworkContentCell.h"
+#import "PublishHomeworkHeaderView.h"
 
 @interface PublishHomeworkViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -22,8 +24,9 @@
 @property (nonatomic, strong) AddClassCell *gradeCell;
 @property (nonatomic, strong) AddClassCell *classCell;
 @property (nonatomic, strong) AddClassCell *subjectCell;
-@property (nonatomic, strong) TextFieldCell *homeworkContentCell;
+@property (nonatomic, strong) HomeworkContentCell *homeworkContentCell;
 @property (nonatomic, strong) AddAttachmentCell *addAttachmentCell;
+@property (nonatomic, strong) PublishHomeworkHeaderView *publishHomeworkHeaderView;
 @property (nonatomic, strong) NSArray *cellArr;
 @property (nonatomic, strong) NSDictionary *subjects;
 
@@ -53,6 +56,7 @@
     [self loadClasses];
 }
 
+#pragma mark - 获取教师的所有班级信息
 - (void)loadClasses {
     [UserInfoHandle classesByTeacerSuccess:^(id obj) {
         self.classes = obj;
@@ -60,17 +64,18 @@
             NSString *gradeName = [NSString stringWithFormat:@"%@%@",classInfo.educationStage,classInfo.gradeId];
             [self.gradeTitles addObject:gradeName];
         }
-        [self loadClassesSuccess];
+        //加载年级
+        [self.gradeCell.containerView setUpWithTitles:self.gradeTitles.allObjects type:WUButtonTypeRadio width:self.gradeCell.containerWidth finished:^(CGFloat height) {
+            self.gradeCell.containerHeight.constant = height;
+        }];
     } failed:^(id obj) {
         
     }];
 }
 
-- (void)loadClassesSuccess {
-    //加载年级
-    [self.gradeCell.containerView setUpWithTitles:self.gradeTitles.allObjects type:WUButtonTypeRadio width:self.gradeCell.containerWidth finished:^(CGFloat height) {
-        self.gradeCell.containerHeight.constant = height;
-    }];
+#pragma mark - 发布作业
+- (void)publishHomework {
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -86,8 +91,10 @@
     return [self.cellArr[indexPath.row] cellHeight];
 }
 
+#pragma mark - UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     UIImagePickerControllerSourceType sourceType;
+    
     switch (buttonIndex) {
         case 0:
         {
@@ -99,6 +106,10 @@
             sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         }
             break;
+        case 2:
+        {
+            return;
+        }
         default:
             break;
     }
@@ -127,6 +138,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.allowsSelection = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.tableFooterView = self.publishHomeworkHeaderView;
     }
     return _tableView;
 }
@@ -225,9 +238,9 @@
     return _subjectCell;
 }
 
-- (TextFieldCell *)homeworkContentCell {
+- (HomeworkContentCell *)homeworkContentCell {
     if (!_homeworkContentCell) {
-        _homeworkContentCell = [TextFieldCell textFiledCell];
+        _homeworkContentCell = [HomeworkContentCell homeworkContentCell];
     }
     return _homeworkContentCell;
 }
@@ -247,6 +260,17 @@
 
     }
     return _addAttachmentCell;
+}
+
+- (PublishHomeworkHeaderView *)publishHomeworkHeaderView {
+    if (!_publishHomeworkHeaderView) {
+        _publishHomeworkHeaderView = [[PublishHomeworkHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+        __weak typeof(self) weakSelf = self;
+        _publishHomeworkHeaderView.publishHomework = ^ (THSubmitButton *button){
+            [weakSelf publishHomework];
+        };
+    }
+    return _publishHomeworkHeaderView;
 }
 
 - (NSMutableSet*)gradeTitles {

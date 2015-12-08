@@ -16,14 +16,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教育阶段" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-hG-i9k">
-                        <rect key="frame" x="8" y="8" width="56" height="17"/>
+                        <rect key="frame" x="12" y="8" width="56" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7d-eR-CzM" customClass="WUButtonContainrView">
-                        <rect key="frame" x="72" y="8" width="248" height="37"/>
+                        <rect key="frame" x="84" y="8" width="236" height="37"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="37" id="4Z9-Yc-Nda"/>
@@ -34,8 +34,8 @@
                 <constraints>
                     <constraint firstAttribute="topMargin" secondItem="V7d-eR-CzM" secondAttribute="top" id="10V-ft-zV0"/>
                     <constraint firstItem="V7d-eR-CzM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2gS-cO-YLE"/>
-                    <constraint firstItem="GDP-hG-i9k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="G66-dV-FDD"/>
-                    <constraint firstItem="V7d-eR-CzM" firstAttribute="leading" secondItem="GDP-hG-i9k" secondAttribute="trailing" constant="8" id="Raj-2u-yZE"/>
+                    <constraint firstItem="GDP-hG-i9k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="G66-dV-FDD"/>
+                    <constraint firstItem="V7d-eR-CzM" firstAttribute="leading" secondItem="GDP-hG-i9k" secondAttribute="trailing" constant="16" id="Raj-2u-yZE"/>
                     <constraint firstItem="GDP-hG-i9k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ehD-ut-Jz3"/>
                     <constraint firstAttribute="trailing" secondItem="V7d-eR-CzM" secondAttribute="trailing" id="ybX-JU-b6h"/>
                 </constraints>

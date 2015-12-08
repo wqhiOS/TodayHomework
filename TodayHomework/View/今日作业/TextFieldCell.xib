@@ -16,14 +16,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0io-Hf-hif">
-                        <rect key="frame" x="8" y="21" width="56" height="17"/>
+                        <rect key="frame" x="12" y="21" width="56" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-RB-dMh" customClass="THTextField">
-                        <rect key="frame" x="81" y="8" width="231" height="44"/>
+                        <rect key="frame" x="86" y="8" width="222" height="44"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="ZvP-ss-JNx"/>
@@ -34,10 +34,9 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="ghu-RB-dMh" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="DHU-Hf-v4o"/>
-                    <constraint firstItem="0io-Hf-hif" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Iah-ch-bGj"/>
-                    <constraint firstItem="ghu-RB-dMh" firstAttribute="leading" secondItem="0io-Hf-hif" secondAttribute="trailing" constant="17" id="KUX-lU-LKC"/>
-                    <constraint firstItem="ghu-RB-dMh" firstAttribute="leading" secondItem="0io-Hf-hif" secondAttribute="trailing" constant="17" id="g8u-ge-ljA"/>
+                    <constraint firstItem="ghu-RB-dMh" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-4" id="DHU-Hf-v4o"/>
+                    <constraint firstItem="0io-Hf-hif" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="4" id="Iah-ch-bGj"/>
+                    <constraint firstItem="ghu-RB-dMh" firstAttribute="leading" secondItem="0io-Hf-hif" secondAttribute="trailing" constant="18" id="g8u-ge-ljA"/>
                     <constraint firstItem="0io-Hf-hif" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ozD-27-b9d"/>
                     <constraint firstItem="ghu-RB-dMh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qSy-VH-keT"/>
                 </constraints>

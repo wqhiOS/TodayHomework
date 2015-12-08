@@ -131,7 +131,7 @@
 }
 
 - (CGFloat)columnSpacing {
-    return 8;
+    return 20;
 }
 
 #pragma mark - action

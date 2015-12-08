@@ -15,25 +15,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传附件" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yv-2B-tyY">
-                        <rect key="frame" x="8" y="8" width="56" height="17"/>
+                        <rect key="frame" x="12" y="8" width="56" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBN-Ir-4Lc" customClass="AttachmentContainerView">
-                        <rect key="frame" x="8" y="33" width="304" height="98"/>
+                        <rect key="frame" x="8" y="33" width="300" height="98"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="3Yv-2B-tyY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="0ha-rG-Co6"/>
+                    <constraint firstItem="3Yv-2B-tyY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="0ha-rG-Co6"/>
                     <constraint firstItem="rBN-Ir-4Lc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="KNq-Gq-ymP"/>
                     <constraint firstAttribute="bottom" secondItem="rBN-Ir-4Lc" secondAttribute="bottom" constant="8" id="QVV-Ep-oJV"/>
                     <constraint firstItem="rBN-Ir-4Lc" firstAttribute="top" secondItem="3Yv-2B-tyY" secondAttribute="bottom" constant="8" id="aoX-di-e7d"/>
-                    <constraint firstAttribute="trailing" secondItem="rBN-Ir-4Lc" secondAttribute="trailing" constant="8" id="bML-Zt-hM0"/>
+                    <constraint firstAttribute="trailing" secondItem="rBN-Ir-4Lc" secondAttribute="trailing" constant="12" id="bML-Zt-hM0"/>
                     <constraint firstItem="3Yv-2B-tyY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pBm-h6-oMn"/>
                 </constraints>
             </tableViewCellContentView>

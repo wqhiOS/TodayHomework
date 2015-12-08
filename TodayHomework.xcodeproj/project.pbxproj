@@ -90,6 +90,9 @@
 		57C804741C1674CF00AF1544 /* icon_upload_homework@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C804701C1674CF00AF1544 /* icon_upload_homework@2x.png */; };
 		57C804781C16758E00AF1544 /* AddAttachmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804761C16758E00AF1544 /* AddAttachmentCell.m */; };
 		57C804791C16758E00AF1544 /* AddAttachmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804771C16758E00AF1544 /* AddAttachmentCell.xib */; };
+		57C804831C16C34E00AF1544 /* HomeworkContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804811C16C34E00AF1544 /* HomeworkContentCell.m */; };
+		57C804841C16C34E00AF1544 /* HomeworkContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804821C16C34E00AF1544 /* HomeworkContentCell.xib */; };
+		57C804871C16CD2C00AF1544 /* PublishHomeworkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -237,6 +240,11 @@
 		57C804751C16758E00AF1544 /* AddAttachmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAttachmentCell.h; sourceTree = "<group>"; };
 		57C804761C16758E00AF1544 /* AddAttachmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAttachmentCell.m; sourceTree = "<group>"; };
 		57C804771C16758E00AF1544 /* AddAttachmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAttachmentCell.xib; sourceTree = "<group>"; };
+		57C804801C16C34E00AF1544 /* HomeworkContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkContentCell.h; sourceTree = "<group>"; };
+		57C804811C16C34E00AF1544 /* HomeworkContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkContentCell.m; sourceTree = "<group>"; };
+		57C804821C16C34E00AF1544 /* HomeworkContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeworkContentCell.xib; sourceTree = "<group>"; };
+		57C804851C16CD2C00AF1544 /* PublishHomeworkHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHomeworkHeaderView.h; sourceTree = "<group>"; };
+		57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHomeworkHeaderView.m; sourceTree = "<group>"; };
 		7A27961751BEF2DBD147CC55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -527,12 +535,7 @@
 				5737C3021C1176D1003F3EDF /* HomeCell.h */,
 				5737C3031C1176D1003F3EDF /* HomeCell.m */,
 				5737C3041C1176D1003F3EDF /* HomeCell.xib */,
-				57C8045B1C156EC500AF1544 /* TextFieldCell.h */,
-				57C8045C1C156EC500AF1544 /* TextFieldCell.m */,
-				57C8045D1C156EC500AF1544 /* TextFieldCell.xib */,
-				57C804751C16758E00AF1544 /* AddAttachmentCell.h */,
-				57C804761C16758E00AF1544 /* AddAttachmentCell.m */,
-				57C804771C16758E00AF1544 /* AddAttachmentCell.xib */,
+				57C8047F1C16C33400AF1544 /* 发布作业 */,
 			);
 			path = "今日作业";
 			sourceTree = "<group>";
@@ -660,6 +663,24 @@
 			path = "添加附件";
 			sourceTree = "<group>";
 		};
+		57C8047F1C16C33400AF1544 /* 发布作业 */ = {
+			isa = PBXGroup;
+			children = (
+				57C8045B1C156EC500AF1544 /* TextFieldCell.h */,
+				57C8045C1C156EC500AF1544 /* TextFieldCell.m */,
+				57C8045D1C156EC500AF1544 /* TextFieldCell.xib */,
+				57C804801C16C34E00AF1544 /* HomeworkContentCell.h */,
+				57C804811C16C34E00AF1544 /* HomeworkContentCell.m */,
+				57C804821C16C34E00AF1544 /* HomeworkContentCell.xib */,
+				57C804751C16758E00AF1544 /* AddAttachmentCell.h */,
+				57C804761C16758E00AF1544 /* AddAttachmentCell.m */,
+				57C804771C16758E00AF1544 /* AddAttachmentCell.xib */,
+				57C804851C16CD2C00AF1544 /* PublishHomeworkHeaderView.h */,
+				57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */,
+			);
+			name = "发布作业";
+			sourceTree = "<group>";
+		};
 		6B44C7247B1E1D4E27BE205E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +769,7 @@
 				575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */,
 				57C8045F1C156EC500AF1544 /* TextFieldCell.xib in Resources */,
 				575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */,
+				57C804841C16C34E00AF1544 /* HomeworkContentCell.xib in Resources */,
 				57C8045A1C156BBE00AF1544 /* ModifyAnswerViewController.xib in Resources */,
 				57C804791C16758E00AF1544 /* AddAttachmentCell.xib in Resources */,
 				57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */,
@@ -839,6 +861,7 @@
 				57C804351C1561FF00AF1544 /* ModifyHomeworkViewController.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,
 				57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */,
+				57C804831C16C34E00AF1544 /* HomeworkContentCell.m in Sources */,
 				57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */,
 				57830E9B1C0DDE59006B5263 /* SelectSchoolViewController.m in Sources */,
 				57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */,
@@ -857,6 +880,7 @@
 				5737C30A1C117E60003F3EDF /* HomeworkHandle.m in Sources */,
 				575C93541C1044130079984F /* PersonalCenterSubItemCell.m in Sources */,
 				575C933A1C102A4E0079984F /* BaseModel.m in Sources */,
+				57C804871C16CD2C00AF1544 /* PublishHomeworkHeaderView.m in Sources */,
 				57830ECA1C0DDFE3006B5263 /* THTextField.m in Sources */,
 				57830EA71C0DDECE006B5263 /* BaseViewController.m in Sources */,
 				57830E9C1C0DDE59006B5263 /* TeacherRegisterViewController.m in Sources */,
