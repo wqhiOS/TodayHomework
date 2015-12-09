@@ -126,7 +126,6 @@
 
 - (CGFloat)height {
     
-    NSLog(@"%ld",self.rowCount);
     return (self.addAttachmentButton.height + _attachmentRowSpacing)*self.rowCount + _attachmentRowSpacing;
 }
 

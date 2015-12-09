@@ -42,6 +42,9 @@
 }
 
 + (void)classesByTeacerSuccess:(SuccessBlock)success failed:(FailedBlock)failed {
+    
+    [SVProgressHUD show];
+    
     NSString*url=[API_HOST stringByAppendingString:API_GRADE_TEACHER];
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"teachId"] = [[UserInfoTool userInfo] id];
@@ -55,6 +58,7 @@
                 [classes addObject:classInfo];
             }
             if (success) {
+                [SVProgressHUD dismiss];
                 success(classes);
             }
         }
@@ -64,17 +68,19 @@
 }
 
 + (void)subjectsByClasses:(NSString *)classesId Success:(SuccessBlock)success failed:(FailedBlock)failed {
+    
+    [SVProgressHUD show];
     NSString *url = [API_HOST stringByAppendingString:API_CourseByClasses];
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"classIds"] = classesId;
     params[@"teacherId"] = [[UserInfoTool userInfo] id];
     [[WUHttpClient defaultClient] requestWithPath:url method:WUHttpRequestPost parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSLog(@"%@",responseObject);
         
         if (success) {
             NSDictionary *dict = [NSDictionary dictionaryWithObjects:[responseObject[@"data"] allKeys] forKeys:[responseObject[@"data"] allValues]];
             success(dict);
+            [SVProgressHUD dismiss];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -112,11 +118,12 @@
         }
         
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",responseObject[@"message"]);
+        if (success) {
+            success(responseObject[@"message"]);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);
     }];
-    
-    
+
 }
 @end

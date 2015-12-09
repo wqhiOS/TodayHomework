@@ -15,5 +15,9 @@
 @property (nonatomic, copy) NSString *startDate;
 @property (nonatomic, copy) NSString *endDate;
 @property (nonatomic, copy) NSString *courseId;
+/**
+ *  作业id
+ */
+@property (nonatomic, copy) NSString *id;
 
 @end

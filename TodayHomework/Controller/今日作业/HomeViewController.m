@@ -23,9 +23,14 @@
 
 @implementation HomeViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:NOTIFICATION_UPDATE_HOMEWORK object:nil];
     [self.view addSubview:self.tableView];
     [self loadData];
 }

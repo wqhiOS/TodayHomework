@@ -25,5 +25,8 @@
 /******* 所有科目 *******/
 #define ALL_SUBJECTS [NSMutableArray arrayWithObjects:@"语文",@"数学",@"化学",@"生物",@"英语",@"历史",@"地理",@"政治",@"物理",@"其他",nil]
 
+/******* NSNOTIFICATION *********/
+#define NOTIFICATION_UPDATE_HOMEWORK @"updateHomework"
+
 
 #endif

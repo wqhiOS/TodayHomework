@@ -8,6 +8,13 @@
 
 #import "BaseHandle.h"
 
+
+
 @implementation BaseHandle
+
++ (void)initialize {
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+}
 
 @end

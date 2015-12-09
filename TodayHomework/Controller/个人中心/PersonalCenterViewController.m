@@ -27,6 +27,7 @@
     [self initData];
     [self initCell];
     [self.view addSubview:self.tableView];
+    self.isCanTapCloseKeyBoard = NO;
  
 }
 
@@ -101,6 +102,7 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
 //        _tableView.backgroundColor = UIColorFromRGB(0xf3f3f3);
+       
     }
     return _tableView;
 }
@@ -123,7 +125,10 @@
     
 }
 #pragma mark - UITableViewDelegate
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+   
     if ([self.cellArr[indexPath.section][indexPath.row] personalCenterCellBlock]) {
         [self.cellArr[indexPath.section][indexPath.row] personalCenterCellBlock]() ;
     }

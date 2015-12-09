@@ -41,7 +41,6 @@
 
 - (void)updateUIWithDictionary:(NSDictionary *)dict withIndexPath:(NSIndexPath *)indexPath{
     
-    NSLog(@"%@",[API_Picture stringByAppendingString:dict[@"iconHeader"]]);
     [self.headerIconImageView sd_setImageWithURL:[NSURL URLWithString:[API_Picture stringByAppendingString:dict[@"iconHeader"]]]];
     self.custNameLabel.text = dict[@"name"];
 }

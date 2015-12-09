@@ -9,6 +9,7 @@
 #import "WUHttpClient.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
+#import <SVProgressHUD.h>
 @interface WUHttpClient()
 {
     BOOL _isAlertShow;
@@ -52,9 +53,11 @@
         switch (method) {
             case WUHttpRequestGet:
             {
-                
+        
                 [self.manager GET:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                     if (success) {
+                        [SVProgressHUD dismiss];
+                      
                         success(operation, responseObject);
                     }
                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -66,7 +69,7 @@
                 break;
             case WUHttpRequestPost:
             {
-                
+              
                 [self.manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                     if (success) {
                         success(operation, responseObject);

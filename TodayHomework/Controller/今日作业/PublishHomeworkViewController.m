@@ -56,8 +56,13 @@
     [self loadClasses];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+}
+
 #pragma mark - 获取教师的所有班级信息
 - (void)loadClasses {
+    
     [UserInfoHandle classesByTeacerSuccess:^(id obj) {
         self.classes = obj;
         for (ClassInfoModel *classInfo in self.classes) {
@@ -84,6 +89,10 @@
     }
    
     [UserInfoHandle publishHomework:self.classIdsStr startDate:self.startDate.dateTextField.text endDate:self.endDate.dateTextField.text courseId:self.subjects[self.subjectCell.containerView.selectedRadioButton.currentTitle] memo:self.homeworkContentCell.textView.text attachments:imgs success:^(id obj) {
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_UPDATE_HOMEWORK object:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        
         
     } failed:^(id obj) {
         

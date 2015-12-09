@@ -94,6 +94,7 @@
 		57C804831C16C34E00AF1544 /* HomeworkContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804811C16C34E00AF1544 /* HomeworkContentCell.m */; };
 		57C804841C16C34E00AF1544 /* HomeworkContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804821C16C34E00AF1544 /* HomeworkContentCell.xib */; };
 		57C804871C16CD2C00AF1544 /* PublishHomeworkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */; };
+		57C8048F1C17C63000AF1544 /* HomeworkDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8048E1C17C63000AF1544 /* HomeworkDeleteButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -248,6 +249,8 @@
 		57C804821C16C34E00AF1544 /* HomeworkContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeworkContentCell.xib; sourceTree = "<group>"; };
 		57C804851C16CD2C00AF1544 /* PublishHomeworkHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHomeworkHeaderView.h; sourceTree = "<group>"; };
 		57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHomeworkHeaderView.m; sourceTree = "<group>"; };
+		57C8048D1C17C63000AF1544 /* HomeworkDeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkDeleteButton.h; sourceTree = "<group>"; };
+		57C8048E1C17C63000AF1544 /* HomeworkDeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkDeleteButton.m; sourceTree = "<group>"; };
 		7A27961751BEF2DBD147CC55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -540,6 +543,8 @@
 				5737C3021C1176D1003F3EDF /* HomeCell.h */,
 				5737C3031C1176D1003F3EDF /* HomeCell.m */,
 				5737C3041C1176D1003F3EDF /* HomeCell.xib */,
+				57C8048D1C17C63000AF1544 /* HomeworkDeleteButton.h */,
+				57C8048E1C17C63000AF1544 /* HomeworkDeleteButton.m */,
 				57C8047F1C16C33400AF1544 /* 发布作业 */,
 			);
 			path = "今日作业";
@@ -601,23 +606,13 @@
 		57C804241C1556F200AF1544 /* 作业管理 */ = {
 			isa = PBXGroup;
 			children = (
-				57C804281C15608700AF1544 /* HomeworkDetailViewController.h */,
-				57C804291C15608700AF1544 /* HomeworkDetailViewController.m */,
-				57C8042A1C15608700AF1544 /* HomeworkDetailViewController.xib */,
 				57C804251C15571500AF1544 /* HomeworkManageViewController.h */,
 				57C804261C15571500AF1544 /* HomeworkManageViewController.m */,
-				57C8042D1C1561C700AF1544 /* CheckSituationViewController.h */,
-				57C8042E1C1561C700AF1544 /* CheckSituationViewController.m */,
-				57C8042F1C1561C700AF1544 /* CheckSituationViewController.xib */,
-				57C804321C1561FF00AF1544 /* ModifyHomeworkViewController.h */,
-				57C804331C1561FF00AF1544 /* ModifyHomeworkViewController.m */,
-				57C804341C1561FF00AF1544 /* ModifyHomeworkViewController.xib */,
-				57C804511C156BA000AF1544 /* UploadAnswerViewController.h */,
-				57C804521C156BA000AF1544 /* UploadAnswerViewController.m */,
-				57C804531C156BA000AF1544 /* UploadAnswerViewController.xib */,
-				57C804561C156BBE00AF1544 /* ModifyAnswerViewController.h */,
-				57C804571C156BBE00AF1544 /* ModifyAnswerViewController.m */,
-				57C804581C156BBE00AF1544 /* ModifyAnswerViewController.xib */,
+				57C804881C17C4AB00AF1544 /* 作业详情 */,
+				57C804891C17C4BB00AF1544 /* 查看情况 */,
+				57C8048A1C17C4C300AF1544 /* 修改作业 */,
+				57C8048B1C17C4CA00AF1544 /* 上传答案 */,
+				57C8048C1C17C4D500AF1544 /* 修改答案 */,
 			);
 			name = "作业管理";
 			sourceTree = "<group>";
@@ -634,10 +629,10 @@
 			children = (
 				57C804451C1568D700AF1544 /* ClassesInfoModel.h */,
 				57C804461C1568D700AF1544 /* ClassesInfoModel.m */,
-				57C804471C1568D700AF1544 /* HomeworkModel.h */,
-				57C804481C1568D700AF1544 /* HomeworkModel.m */,
 				57C804491C1568D700AF1544 /* HomeworkStatusModel.h */,
 				57C8044A1C1568D700AF1544 /* HomeworkStatusModel.m */,
+				57C804471C1568D700AF1544 /* HomeworkModel.h */,
+				57C804481C1568D700AF1544 /* HomeworkModel.m */,
 				57C8044E1C15692000AF1544 /* AnswerInfoModel.h */,
 				57C8044F1C15692000AF1544 /* AnswerInfoModel.m */,
 				57C804631C15791800AF1544 /* ClassInfoModel.h */,
@@ -684,6 +679,56 @@
 				57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */,
 			);
 			name = "发布作业";
+			sourceTree = "<group>";
+		};
+		57C804881C17C4AB00AF1544 /* 作业详情 */ = {
+			isa = PBXGroup;
+			children = (
+				57C804281C15608700AF1544 /* HomeworkDetailViewController.h */,
+				57C804291C15608700AF1544 /* HomeworkDetailViewController.m */,
+				57C8042A1C15608700AF1544 /* HomeworkDetailViewController.xib */,
+			);
+			name = "作业详情";
+			sourceTree = "<group>";
+		};
+		57C804891C17C4BB00AF1544 /* 查看情况 */ = {
+			isa = PBXGroup;
+			children = (
+				57C8042D1C1561C700AF1544 /* CheckSituationViewController.h */,
+				57C8042E1C1561C700AF1544 /* CheckSituationViewController.m */,
+				57C8042F1C1561C700AF1544 /* CheckSituationViewController.xib */,
+			);
+			name = "查看情况";
+			sourceTree = "<group>";
+		};
+		57C8048A1C17C4C300AF1544 /* 修改作业 */ = {
+			isa = PBXGroup;
+			children = (
+				57C804321C1561FF00AF1544 /* ModifyHomeworkViewController.h */,
+				57C804331C1561FF00AF1544 /* ModifyHomeworkViewController.m */,
+				57C804341C1561FF00AF1544 /* ModifyHomeworkViewController.xib */,
+			);
+			name = "修改作业";
+			sourceTree = "<group>";
+		};
+		57C8048B1C17C4CA00AF1544 /* 上传答案 */ = {
+			isa = PBXGroup;
+			children = (
+				57C804511C156BA000AF1544 /* UploadAnswerViewController.h */,
+				57C804521C156BA000AF1544 /* UploadAnswerViewController.m */,
+				57C804531C156BA000AF1544 /* UploadAnswerViewController.xib */,
+			);
+			name = "上传答案";
+			sourceTree = "<group>";
+		};
+		57C8048C1C17C4D500AF1544 /* 修改答案 */ = {
+			isa = PBXGroup;
+			children = (
+				57C804561C156BBE00AF1544 /* ModifyAnswerViewController.h */,
+				57C804571C156BBE00AF1544 /* ModifyAnswerViewController.m */,
+				57C804581C156BBE00AF1544 /* ModifyAnswerViewController.xib */,
+			);
+			name = "修改答案";
 			sourceTree = "<group>";
 		};
 		6B44C7247B1E1D4E27BE205E /* Pods */ = {
@@ -864,6 +909,7 @@
 				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
 				571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */,
 				57C804351C1561FF00AF1544 /* ModifyHomeworkViewController.m in Sources */,
+				57C8048F1C17C63000AF1544 /* HomeworkDeleteButton.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,
 				57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */,
 				57C804831C16C34E00AF1544 /* HomeworkContentCell.m in Sources */,

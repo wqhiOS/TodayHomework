@@ -25,7 +25,6 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    NSLog(@"%@",[UserInfoTool userInfo]);
     if ([UserInfoTool userInfo]) {
         [self startApp];
     }else {

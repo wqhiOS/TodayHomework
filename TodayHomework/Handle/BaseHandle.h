@@ -11,6 +11,7 @@
 #import "THAPI.h"
 #import <MJExtension.h>
 #import "UserInfoTool.h"
+#import <SVProgressHUD.h>
 
 /**
  *  Handler处理成功时调用的Block
