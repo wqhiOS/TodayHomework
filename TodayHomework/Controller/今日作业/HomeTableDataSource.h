@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+@class HomeworkStatusModel;
+@protocol HomeViewDelegate <NSObject>
+
+@required
+- (void)homeWorkPushHomeDetailPage:(HomeworkStatusModel *)status;
+- (void)homeWorkPushCheckSituationPage:(HomeworkStatusModel *)status;
+
+@end
 
 @interface HomeTableDataSource : NSObject<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, weak) id<HomeViewDelegate> delegate;
 - (instancetype)initWithTableView:(UITableView *)tableView;
-
 - (void)reloadTable:(NSMutableArray *)dataArr;
 @end

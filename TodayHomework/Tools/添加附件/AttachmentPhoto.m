@@ -18,6 +18,7 @@
 @implementation AttachmentPhoto
 
 - (UIButton *)deleteButton {
+    
     if (!_deleteButton) {
         _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_deleteButton setImage:[UIImage imageNamed:@"icon_delete"] forState:UIControlStateNormal];
@@ -35,7 +36,6 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
         [self addSubview:self.deleteButton];
         self.userInteractionEnabled = YES;
         

@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+@class HomeworkStatusModel;
 @interface CheckSituationViewController : BaseViewController
-
+@property (nonatomic, strong) HomeworkStatusModel *status;
 @end

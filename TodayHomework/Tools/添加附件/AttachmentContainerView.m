@@ -75,7 +75,7 @@
 - (void)addAttachmentWithImage:(UIImage *)image {
     
     AttachmentPhoto *attachment = [[AttachmentPhoto alloc] initWithFrame:CGRectMake(0, 0, self.addAttachmentButton.width, self.addAttachmentButton.height)];
-
+  
     attachment.image = image    ;
     attachment.attachmentPhotodDeleteBlock = ^(AttachmentPhoto *attachment) {
         

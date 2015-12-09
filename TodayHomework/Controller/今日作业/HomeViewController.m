@@ -13,12 +13,17 @@
 #import "HomeworkHandle.h"
 #import "HomeworkStatusModel.h"
 #import "HomeworkManageViewController.h"
+#import "HomeworkDetailViewController.h"
+#import "CheckSituationViewController.h"
+#import <MJRefresh.h>
 
-@interface HomeViewController ()
+@interface HomeViewController ()<HomeViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) HomeTableDataSource *dataSource;
 @property (nonatomic, strong) HomeworkHeaderView *homeworkHeaderView;
+@property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, assign) CGFloat page;
 @end
 
 @implementation HomeViewController
@@ -30,31 +35,68 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadData) name:NOTIFICATION_UPDATE_HOMEWORK object:nil];
-    [self.view addSubview:self.tableView];
-    [self loadData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:NOTIFICATION_UPDATE_HOMEWORK object:nil];
+    
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.page = 0;
+        [self loadData];
+    }];
+    [self.tableView.header beginRefreshing];
+    
+    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        self.page++;
+        [self loadData];
+    }];
+}
+
+- (void)refresh {
+    [self.tableView.header beginRefreshing];
 }
 
 - (void)loadData {
-    [HomeworkHandle homeworkWithPage:0 Success:^(id obj) {
+    
+    if (self.page == 0) {
+        [self.dataArr removeAllObjects];
+    }
+    [HomeworkHandle homeworkWithPage:self.page Success:^(id obj) {
         
-        NSMutableArray *dataArr = @[].mutableCopy;
         for (HomeworkStatusModel *status in obj) {
             if (!status.isEnd) {
-                [dataArr addObject:status];
+                [self.dataArr addObject:status];
             }
         }
-        [self.dataSource reloadTable:dataArr];
+        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
+        [self.dataSource reloadTable:self.dataArr];
     } failed:^(id obj) {
         
     }];
 }
 
+#pragma mark - HomeViewDelegate
+- (void)homeWorkPushHomeDetailPage:(HomeworkStatusModel *)status {
+    HomeworkDetailViewController *vc = [[HomeworkDetailViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.status = status;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)homeWorkPushCheckSituationPage:(HomeworkStatusModel *)status {
+    CheckSituationViewController *vc = [[CheckSituationViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.status = status;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - getter
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = tableView;
+        [self.view addSubview:tableView];
         
         self.dataSource = [[HomeTableDataSource alloc] initWithTableView:_tableView];
+        self.dataSource.delegate = self;
         _tableView.dataSource = _dataSource;
         _tableView.delegate = _dataSource;
         _tableView.tableHeaderView = self.homeworkHeaderView;
@@ -75,7 +117,7 @@
             [weakSelf.navigationController pushViewController:vc animated:YES];
         };
         _homeworkHeaderView.personalCenterBlock = ^ {
-
+            
             
         };
         _homeworkHeaderView.HomeworkManageBlock = ^ {
@@ -85,6 +127,13 @@
         };
     }
     return _homeworkHeaderView;
+}
+
+- (NSMutableArray *)dataArr {
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray array];
+    }
+    return _dataArr;
 }
 
 

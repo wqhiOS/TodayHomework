@@ -8,7 +8,7 @@
 
 #import "HomeworkStatusModel.h"
 #import "AppUtils.h"
-#import "AnswerInfoModel.h"
+#import "AttachmentInfoModel.h"
 
 @implementation HomeworkStatusModel
 
@@ -21,6 +21,7 @@
 }
 
 + (NSDictionary *)objectClassInArray {
-    return @{@"listAttachmentInfoANSWER":[AnswerInfoModel class]};
+    return @{@"listAttachmentInfoANSWER":[AttachmentInfoModel class],@"listAttachmentInfowork":[AttachmentInfoModel class]};
+    
 }
 @end

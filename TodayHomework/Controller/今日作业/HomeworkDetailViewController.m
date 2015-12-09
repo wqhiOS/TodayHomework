@@ -7,8 +7,24 @@
 //
 
 #import "HomeworkDetailViewController.h"
+#import "CheckAttachmentContainerView.h"
+
 
 @interface HomeworkDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *startDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subjectLabel;
+@property (weak, nonatomic) IBOutlet UILabel *homeworkContentLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewWidthConstraint;
+
+@property (weak, nonatomic) IBOutlet CheckAttachmentContainerView *homeworkAttachmentsContainerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *homeworkAttachmentsViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet CheckAttachmentContainerView *answerAttachmentsContainerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *answerAttachmentsViewHeightConstraint;
+
 
 @end
 
@@ -17,23 +33,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"作业详情";
+   
+    self.scrollViewWidthConstraint.constant = SCREEN_WIDTH - 8*2;
+    self.title = @"查看作业";
+    [self updateUI];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)updateUI {
+    self.startDateLabel.text = self.status.busyworkInfo.startDate;
+    self.endDateLabel.text = self.status.busyworkInfo.endDate;
+    self.gradeLabel.text = [NSString stringWithFormat:@"%@%@%@",self.status.classesInfo.educationStage,self.status.classesInfo.gradeId,self.status.classesInfo.classedId];
+    self.homeworkContentLabel.text = self.status.busyworkInfo.busyworkMessage;
+    self.homeworkAttachmentsContainerView.updateHeight = ^(CGFloat height) {
+        NSLog(@"%f",height);
+        self.homeworkAttachmentsViewHeightConstraint.constant = height;
+    };
+    self.homeworkAttachmentsContainerView.attachmentInfos = self.status.listAttachmentInfowork;
+    self.answerAttachmentsContainerView.updateHeight = ^(CGFloat height) {
+        NSLog(@"%f",height);
+        self.answerAttachmentsViewHeightConstraint.constant = height;
+    };
+    self.answerAttachmentsContainerView.attachmentInfos  = self.status.listAttachmentInfoANSWER;
+    
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

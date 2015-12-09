@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-12-04(周五)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaQ-Np-PCN">
-                        <rect key="frame" x="50" y="14" width="115" height="17"/>
+                        <rect key="frame" x="58" y="14" width="115" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,10 +48,10 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="civ-ff-bMz">
-                        <rect key="frame" x="50" y="45" width="150" height="17"/>
+                        <rect key="frame" x="58" y="45" width="142" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4N-ur-eBN">
@@ -80,7 +80,7 @@
                     <constraint firstItem="KKI-xA-Kf4" firstAttribute="trailing" secondItem="P4N-ur-eBN" secondAttribute="trailing" id="DUm-DU-Gf5"/>
                     <constraint firstItem="P4N-ur-eBN" firstAttribute="trailing" secondItem="weX-3r-kbO" secondAttribute="trailing" id="EgH-xm-x5H"/>
                     <constraint firstAttribute="trailing" secondItem="weX-3r-kbO" secondAttribute="trailing" constant="20" id="L2f-H8-GOf"/>
-                    <constraint firstItem="iaQ-Np-PCN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="QvG-t2-DH1"/>
+                    <constraint firstItem="iaQ-Np-PCN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="58" id="QvG-t2-DH1"/>
                     <constraint firstItem="waw-Gp-Jmi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Tw3-cS-t91"/>
                     <constraint firstAttribute="trailing" secondItem="waw-Gp-Jmi" secondAttribute="trailing" constant="8" id="U9B-z3-Hsy"/>
                     <constraint firstItem="civ-ff-bMz" firstAttribute="top" secondItem="iaQ-Np-PCN" secondAttribute="bottom" constant="14" id="aHF-aH-ZGR"/>

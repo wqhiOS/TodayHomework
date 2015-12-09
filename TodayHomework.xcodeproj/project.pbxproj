@@ -76,7 +76,6 @@
 		57C8044B1C1568D700AF1544 /* ClassesInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804461C1568D700AF1544 /* ClassesInfoModel.m */; };
 		57C8044C1C1568D700AF1544 /* HomeworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804481C1568D700AF1544 /* HomeworkModel.m */; };
 		57C8044D1C1568D700AF1544 /* HomeworkStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8044A1C1568D700AF1544 /* HomeworkStatusModel.m */; };
-		57C804501C15692000AF1544 /* AnswerInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8044F1C15692000AF1544 /* AnswerInfoModel.m */; };
 		57C804541C156BA000AF1544 /* UploadAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804521C156BA000AF1544 /* UploadAnswerViewController.m */; };
 		57C804551C156BA000AF1544 /* UploadAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804531C156BA000AF1544 /* UploadAnswerViewController.xib */; };
 		57C804591C156BBE00AF1544 /* ModifyAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804571C156BBE00AF1544 /* ModifyAnswerViewController.m */; };
@@ -95,6 +94,9 @@
 		57C804841C16C34E00AF1544 /* HomeworkContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C804821C16C34E00AF1544 /* HomeworkContentCell.xib */; };
 		57C804871C16CD2C00AF1544 /* PublishHomeworkHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */; };
 		57C8048F1C17C63000AF1544 /* HomeworkDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8048E1C17C63000AF1544 /* HomeworkDeleteButton.m */; };
+		57C804B51C180B8600AF1544 /* CheckAttachmentContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */; };
+		57C804B81C181E0800AF1544 /* AttachmentInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804B71C181E0800AF1544 /* AttachmentInfoModel.m */; };
+		57C804BB1C18252F00AF1544 /* Attachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804BA1C18252F00AF1544 /* Attachment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,8 +222,6 @@
 		57C804481C1568D700AF1544 /* HomeworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkModel.m; sourceTree = "<group>"; };
 		57C804491C1568D700AF1544 /* HomeworkStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkStatusModel.h; sourceTree = "<group>"; };
 		57C8044A1C1568D700AF1544 /* HomeworkStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkStatusModel.m; sourceTree = "<group>"; };
-		57C8044E1C15692000AF1544 /* AnswerInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerInfoModel.h; sourceTree = "<group>"; };
-		57C8044F1C15692000AF1544 /* AnswerInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerInfoModel.m; sourceTree = "<group>"; };
 		57C804511C156BA000AF1544 /* UploadAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadAnswerViewController.h; sourceTree = "<group>"; };
 		57C804521C156BA000AF1544 /* UploadAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadAnswerViewController.m; sourceTree = "<group>"; };
 		57C804531C156BA000AF1544 /* UploadAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadAnswerViewController.xib; sourceTree = "<group>"; };
@@ -251,6 +251,12 @@
 		57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHomeworkHeaderView.m; sourceTree = "<group>"; };
 		57C8048D1C17C63000AF1544 /* HomeworkDeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkDeleteButton.h; sourceTree = "<group>"; };
 		57C8048E1C17C63000AF1544 /* HomeworkDeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkDeleteButton.m; sourceTree = "<group>"; };
+		57C804B31C180B8600AF1544 /* CheckAttachmentContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckAttachmentContainerView.h; path = ../CheckAttachmentContainerView.h; sourceTree = "<group>"; };
+		57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckAttachmentContainerView.m; path = ../CheckAttachmentContainerView.m; sourceTree = "<group>"; };
+		57C804B61C181E0800AF1544 /* AttachmentInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachmentInfoModel.h; sourceTree = "<group>"; };
+		57C804B71C181E0800AF1544 /* AttachmentInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentInfoModel.m; sourceTree = "<group>"; };
+		57C804B91C18252F00AF1544 /* Attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attachment.h; sourceTree = "<group>"; };
+		57C804BA1C18252F00AF1544 /* Attachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attachment.m; sourceTree = "<group>"; };
 		7A27961751BEF2DBD147CC55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -627,16 +633,16 @@
 		57C804441C1568D700AF1544 /* 今日作业 */ = {
 			isa = PBXGroup;
 			children = (
-				57C804451C1568D700AF1544 /* ClassesInfoModel.h */,
-				57C804461C1568D700AF1544 /* ClassesInfoModel.m */,
 				57C804491C1568D700AF1544 /* HomeworkStatusModel.h */,
 				57C8044A1C1568D700AF1544 /* HomeworkStatusModel.m */,
 				57C804471C1568D700AF1544 /* HomeworkModel.h */,
 				57C804481C1568D700AF1544 /* HomeworkModel.m */,
-				57C8044E1C15692000AF1544 /* AnswerInfoModel.h */,
-				57C8044F1C15692000AF1544 /* AnswerInfoModel.m */,
+				57C804B61C181E0800AF1544 /* AttachmentInfoModel.h */,
+				57C804B71C181E0800AF1544 /* AttachmentInfoModel.m */,
 				57C804631C15791800AF1544 /* ClassInfoModel.h */,
 				57C804641C15791800AF1544 /* ClassInfoModel.m */,
+				57C804451C1568D700AF1544 /* ClassesInfoModel.h */,
+				57C804461C1568D700AF1544 /* ClassesInfoModel.m */,
 			);
 			path = "今日作业";
 			sourceTree = "<group>";
@@ -653,6 +659,10 @@
 		57C8046A1C1674CF00AF1544 /* 添加附件 */ = {
 			isa = PBXGroup;
 			children = (
+				57C804B31C180B8600AF1544 /* CheckAttachmentContainerView.h */,
+				57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */,
+				57C804B91C18252F00AF1544 /* Attachment.h */,
+				57C804BA1C18252F00AF1544 /* Attachment.m */,
 				57C8046B1C1674CF00AF1544 /* AttachmentContainerView.h */,
 				57C8046C1C1674CF00AF1544 /* AttachmentContainerView.m */,
 				57C8046D1C1674CF00AF1544 /* AttachmentPhoto.h */,
@@ -918,18 +928,19 @@
 				57830EBD1C0DDF23006B5263 /* ClassManageViewController.m in Sources */,
 				575C93331C101E2A0079984F /* UserInfoHandle.m in Sources */,
 				57C804651C15791800AF1544 /* ClassInfoModel.m in Sources */,
+				57C804B81C181E0800AF1544 /* AttachmentInfoModel.m in Sources */,
 				57452A111C1725BC00521F7F /* NSString+Gen_uuid.m in Sources */,
 				57C804271C15571500AF1544 /* HomeworkManageViewController.m in Sources */,
 				57C804541C156BA000AF1544 /* UploadAnswerViewController.m in Sources */,
 				57C804711C1674CF00AF1544 /* AttachmentContainerView.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,
-				57C804501C15692000AF1544 /* AnswerInfoModel.m in Sources */,
 				57C8042B1C15608700AF1544 /* HomeworkDetailViewController.m in Sources */,
 				575C933D1C102A650079984F /* UserInfoModel.m in Sources */,
 				575C93591C1045D20079984F /* HeaderIconCell.m in Sources */,
 				575C93431C102DF90079984F /* ParamInfoModel.m in Sources */,
 				57830E991C0DDE59006B5263 /* LoginViewController.m in Sources */,
 				5737C30A1C117E60003F3EDF /* HomeworkHandle.m in Sources */,
+				57C804BB1C18252F00AF1544 /* Attachment.m in Sources */,
 				575C93541C1044130079984F /* PersonalCenterSubItemCell.m in Sources */,
 				575C933A1C102A4E0079984F /* BaseModel.m in Sources */,
 				57C804871C16CD2C00AF1544 /* PublishHomeworkHeaderView.m in Sources */,
@@ -948,6 +959,7 @@
 				575C93371C1021740079984F /* BaseHandle.m in Sources */,
 				57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */,
 				57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */,
+				57C804B51C180B8600AF1544 /* CheckAttachmentContainerView.m in Sources */,
 				575C934F1C1042700079984F /* PersonalCenterItemCell.m in Sources */,
 				575C93461C10382E0079984F /* UserInfoTool.m in Sources */,
 				57C8044B1C1568D700AF1544 /* ClassesInfoModel.m in Sources */,

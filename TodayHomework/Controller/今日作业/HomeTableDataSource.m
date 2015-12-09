@@ -42,9 +42,18 @@ static NSString *cellId = @"HomeCellId";
 }
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-    cell.status = _dataArr[indexPath.row];
+    HomeworkStatusModel *status = _dataArr[indexPath.row];
+    cell.status = status;
+    
+    cell.homeworkDetailBlock = ^ {
+        if ([self.delegate respondsToSelector:@selector(homeWorkPushHomeDetailPage:)]) {
+            [self.delegate homeWorkPushHomeDetailPage:status];
+        }
+    };
     cell.checkHomeworkSituation = ^ {
-        
+        if ([self.delegate respondsToSelector:@selector(homeWorkPushCheckSituationPage:)]) {
+            [self.delegate homeWorkPushCheckSituationPage:status];
+        }
     };
     return cell;
 }

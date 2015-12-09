@@ -38,6 +38,7 @@ typedef void (^AddAttachmentBlockType)(AttachmentContainerView *);
  */
 @property (nonatomic, assign) NSInteger rowAttachmentCount;
 
+
 /**
  *  设置附件图片
  *
@@ -49,5 +50,7 @@ typedef void (^AddAttachmentBlockType)(AttachmentContainerView *);
  *  刷新附件容器，重新排列附件
  */
 - (void)reloadAttachments;
+
+
 
 @end
