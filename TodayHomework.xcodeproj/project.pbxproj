@@ -97,6 +97,7 @@
 		57C804B51C180B8600AF1544 /* CheckAttachmentContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */; };
 		57C804B81C181E0800AF1544 /* AttachmentInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804B71C181E0800AF1544 /* AttachmentInfoModel.m */; };
 		57C804BB1C18252F00AF1544 /* Attachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804BA1C18252F00AF1544 /* Attachment.m */; };
+		57C804BF1C183A5F00AF1544 /* BrowsePicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804BE1C183A5F00AF1544 /* BrowsePicturesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -251,12 +252,14 @@
 		57C804861C16CD2C00AF1544 /* PublishHomeworkHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHomeworkHeaderView.m; sourceTree = "<group>"; };
 		57C8048D1C17C63000AF1544 /* HomeworkDeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkDeleteButton.h; sourceTree = "<group>"; };
 		57C8048E1C17C63000AF1544 /* HomeworkDeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkDeleteButton.m; sourceTree = "<group>"; };
-		57C804B31C180B8600AF1544 /* CheckAttachmentContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckAttachmentContainerView.h; path = ../CheckAttachmentContainerView.h; sourceTree = "<group>"; };
-		57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckAttachmentContainerView.m; path = ../CheckAttachmentContainerView.m; sourceTree = "<group>"; };
+		57C804B31C180B8600AF1544 /* CheckAttachmentContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAttachmentContainerView.h; sourceTree = "<group>"; };
+		57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAttachmentContainerView.m; sourceTree = "<group>"; };
 		57C804B61C181E0800AF1544 /* AttachmentInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachmentInfoModel.h; sourceTree = "<group>"; };
 		57C804B71C181E0800AF1544 /* AttachmentInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachmentInfoModel.m; sourceTree = "<group>"; };
-		57C804B91C18252F00AF1544 /* Attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attachment.h; sourceTree = "<group>"; };
-		57C804BA1C18252F00AF1544 /* Attachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attachment.m; sourceTree = "<group>"; };
+		57C804B91C18252F00AF1544 /* Attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attachment.h; path = "添加附件/Attachment.h"; sourceTree = "<group>"; };
+		57C804BA1C18252F00AF1544 /* Attachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attachment.m; path = "添加附件/Attachment.m"; sourceTree = "<group>"; };
+		57C804BD1C183A5F00AF1544 /* BrowsePicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePicturesViewController.h; sourceTree = "<group>"; };
+		57C804BE1C183A5F00AF1544 /* BrowsePicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePicturesViewController.m; sourceTree = "<group>"; };
 		7A27961751BEF2DBD147CC55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5B5C49B22473585AECE0BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -330,6 +333,8 @@
 		571FC5621C0817D4009F1F0E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				57C804C11C183A6E00AF1544 /* 浏览图片 */,
+				57C804BC1C18333600AF1544 /* 查看附件 */,
 				57C8046A1C1674CF00AF1544 /* 添加附件 */,
 				57C804661C166C9E00AF1544 /* WUInputAccessoryView */,
 				57830EF11C0DE7D8006B5263 /* WUButtonContainerView */,
@@ -659,10 +664,6 @@
 		57C8046A1C1674CF00AF1544 /* 添加附件 */ = {
 			isa = PBXGroup;
 			children = (
-				57C804B31C180B8600AF1544 /* CheckAttachmentContainerView.h */,
-				57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */,
-				57C804B91C18252F00AF1544 /* Attachment.h */,
-				57C804BA1C18252F00AF1544 /* Attachment.m */,
 				57C8046B1C1674CF00AF1544 /* AttachmentContainerView.h */,
 				57C8046C1C1674CF00AF1544 /* AttachmentContainerView.m */,
 				57C8046D1C1674CF00AF1544 /* AttachmentPhoto.h */,
@@ -739,6 +740,26 @@
 				57C804581C156BBE00AF1544 /* ModifyAnswerViewController.xib */,
 			);
 			name = "修改答案";
+			sourceTree = "<group>";
+		};
+		57C804BC1C18333600AF1544 /* 查看附件 */ = {
+			isa = PBXGroup;
+			children = (
+				57C804B31C180B8600AF1544 /* CheckAttachmentContainerView.h */,
+				57C804B41C180B8600AF1544 /* CheckAttachmentContainerView.m */,
+				57C804B91C18252F00AF1544 /* Attachment.h */,
+				57C804BA1C18252F00AF1544 /* Attachment.m */,
+			);
+			name = "查看附件";
+			sourceTree = "<group>";
+		};
+		57C804C11C183A6E00AF1544 /* 浏览图片 */ = {
+			isa = PBXGroup;
+			children = (
+				57C804BD1C183A5F00AF1544 /* BrowsePicturesViewController.h */,
+				57C804BE1C183A5F00AF1544 /* BrowsePicturesViewController.m */,
+			);
+			name = "浏览图片";
 			sourceTree = "<group>";
 		};
 		6B44C7247B1E1D4E27BE205E /* Pods */ = {
@@ -959,6 +980,7 @@
 				575C93371C1021740079984F /* BaseHandle.m in Sources */,
 				57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */,
 				57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */,
+				57C804BF1C183A5F00AF1544 /* BrowsePicturesViewController.m in Sources */,
 				57C804B51C180B8600AF1544 /* CheckAttachmentContainerView.m in Sources */,
 				575C934F1C1042700079984F /* PersonalCenterItemCell.m in Sources */,
 				575C93461C10382E0079984F /* UserInfoTool.m in Sources */,

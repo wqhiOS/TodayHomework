@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet CheckAttachmentContainerView *answerAttachmentsContainerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *answerAttachmentsViewHeightConstraint;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *homeworkContentLabelWidthConstraint;
 
 @end
 
@@ -33,8 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-   
-    self.scrollViewWidthConstraint.constant = SCREEN_WIDTH - 8*2;
+    self.homeworkContentLabelWidthConstraint.constant = SCREEN_WIDTH - 138 -30;
+    self.scrollViewWidthConstraint.constant = SCREEN_WIDTH;
     self.title = @"查看作业";
     [self updateUI];
     
@@ -45,13 +46,16 @@
     self.endDateLabel.text = self.status.busyworkInfo.endDate;
     self.gradeLabel.text = [NSString stringWithFormat:@"%@%@%@",self.status.classesInfo.educationStage,self.status.classesInfo.gradeId,self.status.classesInfo.classedId];
     self.homeworkContentLabel.text = self.status.busyworkInfo.busyworkMessage;
+    
+    self.homeworkAttachmentsContainerView.containerViewWidth = SCREEN_WIDTH;
     self.homeworkAttachmentsContainerView.updateHeight = ^(CGFloat height) {
-        NSLog(@"%f",height);
         self.homeworkAttachmentsViewHeightConstraint.constant = height;
     };
     self.homeworkAttachmentsContainerView.attachmentInfos = self.status.listAttachmentInfowork;
+    
+    
+    self.answerAttachmentsContainerView.containerViewWidth = SCREEN_WIDTH;
     self.answerAttachmentsContainerView.updateHeight = ^(CGFloat height) {
-        NSLog(@"%f",height);
         self.answerAttachmentsViewHeightConstraint.constant = height;
     };
     self.answerAttachmentsContainerView.attachmentInfos  = self.status.listAttachmentInfoANSWER;

@@ -50,9 +50,8 @@
     NSInteger columnCount = 4;
     NSInteger rowCount = 1;
     
-    NSInteger attachmentWidht = (self.width-(columnCount-1)*columnSpacing)/columnCount;
-    
-    
+    NSInteger attachmentWidht = (self.width-(columnCount+1)*columnSpacing)/columnCount;
+
     if (self.attachmentInfos.count < columnCount) {
         rowCount = 1;
     }else {
@@ -66,7 +65,7 @@
         NSInteger row = i/columnCount;
         NSInteger col = i%columnCount;
         DLog(@"%ld-%ld",row,col);
-        attachment.frame = CGRectMake(col*(attachmentWidht+columnSpacing), row*(attachmentWidht+rowSpacing), attachmentWidht, attachmentWidht);
+        attachment.frame = CGRectMake(columnSpacing+col*(attachmentWidht+columnSpacing), row*(attachmentWidht+rowSpacing), attachmentWidht, attachmentWidht);
         [self addSubview:attachment];
     }
     
