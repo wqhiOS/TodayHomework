@@ -61,6 +61,7 @@
     for (int i = 0; i < self.attachmentInfos.count; i++) {
         Attachment *attachment = [[Attachment alloc] init];
         attachment.attachmentInfo = self.attachmentInfos[i];
+        [attachment addTarget:self action:@selector(attachmentClick:) forControlEvents:UIControlEventTouchUpInside];
         
         NSInteger row = i/columnCount;
         NSInteger col = i%columnCount;
@@ -73,6 +74,12 @@
         self.updateHeight(rowCount*(attachmentWidht+rowSpacing));
     }
   
+}
+
+- (void)attachmentClick:(Attachment *)attachment {
+    if ([self.delegate respondsToSelector:@selector(checkAttachment:)]) {
+        [self.delegate checkAttachment:attachment];
+    }
 }
 
 

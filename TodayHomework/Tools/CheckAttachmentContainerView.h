@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Attachment;
+@protocol CheckAttachemtnDelegate <NSObject>
+
+- (void)checkAttachment:(Attachment *)attachment;
+
+@end
 
 @interface CheckAttachmentContainerView : UIView
 @property (nonatomic, strong) NSArray *attachmentInfos;
 @property (nonatomic, assign) CGFloat containerViewWidth;
 @property (nonatomic, copy) void (^updateHeight)(CGFloat);
+@property (nonatomic, weak) id<CheckAttachemtnDelegate> delegate;
 @end

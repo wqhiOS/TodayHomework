@@ -15,9 +15,11 @@
 - (void)setAttachmentInfo:(AttachmentInfoModel *)attachmentInfo {
     
     _attachmentInfo = attachmentInfo;
-    NSURL *url = [NSURL URLWithString:[API_Picture stringByAppendingString:attachmentInfo.storagePath]];
-    [self sd_setBackgroundImageWithURL:url forState:UIControlStateNormal];
-    
+//    NSURL *url = [NSURL URLWithString:[API_Picture stringByAppendingString:attachmentInfo.storagePath]];
+//    NSLog(@"%@",[API_Picture stringByAppendingString:attachmentInfo.storagePath]);
+//    [self sd_setBackgroundImageWithURL:url forState:UIControlStateNormal];
+    [self setBackgroundImage:[UIImage imageNamed:@"icon_homework_image"] forState:UIControlStateNormal];
+   
 }
 
 @end

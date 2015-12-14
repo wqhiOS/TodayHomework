@@ -33,6 +33,7 @@
 		575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93531C1044130079984F /* PersonalCenterSubItemCell.xib */; };
 		575C93591C1045D20079984F /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93571C1045D20079984F /* HeaderIconCell.m */; };
 		575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93581C1045D20079984F /* HeaderIconCell.xib */; };
+		576E1C401C1EA331009D4589 /* PictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 576E1C3F1C1EA331009D4589 /* PictureCell.m */; };
 		57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E5E1C0DD72A006B5263 /* UserTool.m */; };
 		57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7C1C0DDDE8006B5263 /* AddClassCell.m */; };
 		57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */; };
@@ -151,6 +152,8 @@
 		575C93561C1045D20079984F /* HeaderIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderIconCell.h; sourceTree = "<group>"; };
 		575C93571C1045D20079984F /* HeaderIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderIconCell.m; sourceTree = "<group>"; };
 		575C93581C1045D20079984F /* HeaderIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderIconCell.xib; sourceTree = "<group>"; };
+		576E1C3E1C1EA331009D4589 /* PictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCell.h; sourceTree = "<group>"; };
+		576E1C3F1C1EA331009D4589 /* PictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCell.m; sourceTree = "<group>"; };
 		57830E5D1C0DD72A006B5263 /* UserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTool.h; sourceTree = "<group>"; };
 		57830E5E1C0DD72A006B5263 /* UserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTool.m; sourceTree = "<group>"; };
 		57830E7B1C0DDDE8006B5263 /* AddClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassCell.h; sourceTree = "<group>"; };
@@ -758,6 +761,8 @@
 			children = (
 				57C804BD1C183A5F00AF1544 /* BrowsePicturesViewController.h */,
 				57C804BE1C183A5F00AF1544 /* BrowsePicturesViewController.m */,
+				576E1C3E1C1EA331009D4589 /* PictureCell.h */,
+				576E1C3F1C1EA331009D4589 /* PictureCell.m */,
 			);
 			name = "浏览图片";
 			sourceTree = "<group>";
@@ -952,6 +957,7 @@
 				57C804B81C181E0800AF1544 /* AttachmentInfoModel.m in Sources */,
 				57452A111C1725BC00521F7F /* NSString+Gen_uuid.m in Sources */,
 				57C804271C15571500AF1544 /* HomeworkManageViewController.m in Sources */,
+				576E1C401C1EA331009D4589 /* PictureCell.m in Sources */,
 				57C804541C156BA000AF1544 /* UploadAnswerViewController.m in Sources */,
 				57C804711C1674CF00AF1544 /* AttachmentContainerView.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,

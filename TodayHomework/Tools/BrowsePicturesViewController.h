@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BrowsePicturesViewController : UIViewController
-
+- (instancetype)initWithAttachmentInfos:(NSArray *)attachmentsInfos;
 @end

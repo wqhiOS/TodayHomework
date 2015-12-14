@@ -8,9 +8,10 @@
 
 #import "HomeworkDetailViewController.h"
 #import "CheckAttachmentContainerView.h"
+#import "BrowsePicturesViewController.h"
 
 
-@interface HomeworkDetailViewController ()
+@interface HomeworkDetailViewController ()<CheckAttachemtnDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *startDateLabel;
@@ -48,6 +49,7 @@
     self.homeworkContentLabel.text = self.status.busyworkInfo.busyworkMessage;
     
     self.homeworkAttachmentsContainerView.containerViewWidth = SCREEN_WIDTH;
+    self.homeworkAttachmentsContainerView.delegate = self;
     self.homeworkAttachmentsContainerView.updateHeight = ^(CGFloat height) {
         self.homeworkAttachmentsViewHeightConstraint.constant = height;
     };
@@ -55,12 +57,19 @@
     
     
     self.answerAttachmentsContainerView.containerViewWidth = SCREEN_WIDTH;
+    self.answerAttachmentsContainerView.delegate = self;
     self.answerAttachmentsContainerView.updateHeight = ^(CGFloat height) {
         self.answerAttachmentsViewHeightConstraint.constant = height;
     };
     self.answerAttachmentsContainerView.attachmentInfos  = self.status.listAttachmentInfoANSWER;
     
     
+}
+
+#pragma mark - CheckAttachmentDelegate
+- (void)checkAttachment:(Attachment *)attachment {
+    BrowsePicturesViewController *vc = [[BrowsePicturesViewController alloc] initWithAttachmentInfos:self.status.listAttachmentInfowork];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
