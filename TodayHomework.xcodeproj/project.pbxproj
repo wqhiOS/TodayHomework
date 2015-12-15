@@ -504,17 +504,17 @@
 		57830E6D1C0DDDE8006B5263 /* 班级管理 */ = {
 			isa = PBXGroup;
 			children = (
-				57830EB71C0DDF23006B5263 /* AddClassViewController.h */,
-				57830EB81C0DDF23006B5263 /* AddClassViewController.m */,
+				5710CA7A1C1FADC500D9E652 /* ClassManageViewController.h */,
+				5710CA7B1C1FADC500D9E652 /* ClassManageViewController.m */,
 				5710CA711C1FADC500D9E652 /* ClassManageDataSource.h */,
 				5710CA721C1FADC500D9E652 /* ClassManageDataSource.m */,
+				57830EB71C0DDF23006B5263 /* AddClassViewController.h */,
+				57830EB81C0DDF23006B5263 /* AddClassViewController.m */,
 				5710CA751C1FADC500D9E652 /* ClassManageStudentViewController.h */,
 				5710CA761C1FADC500D9E652 /* ClassManageStudentViewController.m */,
 				5710CA771C1FADC500D9E652 /* ClassManageTeacherViewController.h */,
 				5710CA781C1FADC500D9E652 /* ClassManageTeacherViewController.m */,
 				5710CA791C1FADC500D9E652 /* ClassManageTeacherViewController.xib */,
-				5710CA7A1C1FADC500D9E652 /* ClassManageViewController.h */,
-				5710CA7B1C1FADC500D9E652 /* ClassManageViewController.m */,
 				5710CA7C1C1FADC500D9E652 /* ModifyClassInfoViewController.h */,
 				5710CA7D1C1FADC500D9E652 /* ModifyClassInfoViewController.m */,
 				5710CA7E1C1FADC500D9E652 /* ModifyClassInfoViewController.xib */,

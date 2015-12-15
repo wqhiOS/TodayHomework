@@ -45,9 +45,14 @@
        
         CGFloat progress = (CGFloat)receivedSize/(CGFloat)expectedSize;
         if (progress == 1) {
-            [SVProgressHUD dismiss];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+            });
+            
         }else {
-            [SVProgressHUD showProgress:progress status:@"loading"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+               [SVProgressHUD showProgress:progress status:@"loading"];
+            });
         }
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {

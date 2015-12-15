@@ -48,12 +48,18 @@
 }
 
 - (void)setStudentInfo:(UserInfoModel *)studentInfo {
+    
     self.studentIdLabel.text = studentInfo.loginName;
     self.studentPwdLabel.text = studentInfo.loginPassword;
     self.studentNameLabel.text = studentInfo.custName;
     
-    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:studentInfo.mobile attributes:@{NSUnderlineStyleAttributeName:[NSNumber numberWithInteger:1]}];
-    [self.studentMobileButton setAttributedTitle:attributeStr forState:UIControlStateNormal];
+    if (studentInfo.mobile) {
+        NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:studentInfo.mobile attributes:@{NSUnderlineStyleAttributeName:[NSNumber numberWithInteger:1]}];
+        [self.studentMobileButton setAttributedTitle:attributeStr forState:UIControlStateNormal];
+    }else {
+        [self.studentMobileButton setTitle:@"" forState:UIControlStateNormal];
+    }
+    
    
 }
 
