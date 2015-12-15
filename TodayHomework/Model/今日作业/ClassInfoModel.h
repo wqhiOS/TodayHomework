@@ -36,7 +36,12 @@
 /**
  *  教该班级的老师总数量
  */
-@property (nonatomic, strong) NSNumber *teacherTotal;
+@property (nonatomic, assign) NSInteger teacherTotal;
+
+/**
+ *  学生总量
+ */
+@property (nonatomic, assign) NSInteger studentTotal;
 //"teachersource": [
 //                  "1-语文",
 //                  "9-物理"

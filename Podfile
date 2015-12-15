@@ -1,6 +1,6 @@
 pod "AFNetworking"
-pod "MJExtension"
+pod 'MJExtension', :head
 pod 'SDWebImage', '~>3.7'
-pod 'MJRefresh'
+pod 'MJRefresh', :head
 pod 'SVProgressHUD', :head
 

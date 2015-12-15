@@ -37,20 +37,20 @@
     // Do any additional setup after loading the view from its nib.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:NOTIFICATION_UPDATE_HOMEWORK object:nil];
     
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 0;
         [self loadData];
     }];
-    [self.tableView.header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
     
-    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         self.page++;
         [self loadData];
     }];
 }
 
 - (void)refresh {
-    [self.tableView.header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)loadData {
@@ -65,8 +65,8 @@
                 [self.dataArr addObject:status];
             }
         }
-        [self.tableView.header endRefreshing];
-        [self.tableView.footer endRefreshing];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
         [self.dataSource reloadTable:self.dataArr];
     } failed:^(id obj) {
         

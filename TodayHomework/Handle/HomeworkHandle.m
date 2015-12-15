@@ -25,7 +25,7 @@
         NSMutableArray *dataArr = @[].mutableCopy;
       
         for (NSDictionary *dict in responseObject[@"data"][@"content"]) {
-            HomeworkStatusModel *status = [HomeworkStatusModel objectWithKeyValues:dict];
+            HomeworkStatusModel *status = [HomeworkStatusModel mj_objectWithKeyValues:dict];
             [dataArr addObject:status];
         }
         if (success) {

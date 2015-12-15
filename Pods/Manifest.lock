@@ -20,8 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - MJExtension (2.5.7)
-  - MJRefresh (2.4.7)
+  - MJExtension (HEAD based on 2.5.7)
+  - MJRefresh (HEAD based on 2.4.7)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -29,8 +29,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - MJExtension
-  - MJRefresh
+  - MJExtension (HEAD)
+  - MJRefresh (HEAD)
   - SDWebImage (~> 3.7)
   - SVProgressHUD (HEAD)
 

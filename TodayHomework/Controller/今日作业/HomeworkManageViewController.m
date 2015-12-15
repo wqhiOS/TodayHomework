@@ -38,13 +38,13 @@ static NSString *cellId = @"HomeCellId";
     self.isCanTapCloseKeyBoard = NO;
     
     //下拉刷新
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 0;
         [self loadDataWithPage:self.page];
     }];
-    [self.tableView.header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
     //上拉加载
-    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         self.page++;
         [self loadDataWithPage:self.page];
     }];
@@ -65,8 +65,8 @@ static NSString *cellId = @"HomeCellId";
             [self.dataArr addObjectsFromArray:obj];
         }
         [self.tableView reloadData];
-        [self.tableView.header endRefreshing];
-        [self.tableView.footer endRefreshing];
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     } failed:^(id obj) {
         
     }];

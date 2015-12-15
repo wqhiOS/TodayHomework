@@ -24,7 +24,7 @@
     [[WUHttpClient defaultClient] requestWithPath:url method:WUHttpRequestPost parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
         if ([responseObject[@"code"] integerValue] == 0) {
-            UserInfoModel *userInfo = [UserInfoModel objectWithKeyValues:responseObject[@"data"]];
+            UserInfoModel *userInfo = [UserInfoModel mj_objectWithKeyValues:responseObject[@"data"]];
             if (success) {
                 success(userInfo);
             }
@@ -54,7 +54,7 @@
         if ([responseObject[@"code"] integerValue] == 0) {
             NSMutableArray *classes = @[].mutableCopy;
             for (NSDictionary *dict in responseObject[@"data"]) {
-                ClassInfoModel *classInfo = [ClassInfoModel objectWithKeyValues:dict];
+                ClassInfoModel *classInfo = [ClassInfoModel mj_objectWithKeyValues:dict];
                 [classes addObject:classInfo];
             }
             if (success) {
@@ -126,4 +126,54 @@
     }];
 
 }
+
+
++ (void)updateSubjectsBySubjectsId:(NSString *)subjectsId oldSubjectsId:(NSString *)oldSubjectsId classId:(NSString *)classId success:(SuccessBlock)success failed:(FailedBlock)failed {
+    
+    NSString *url = [API_HOST stringByAppendingString:API_UPDATE_SUBJECTS];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    
+    params[@"classesId"] = classId;
+    params[@"custId"] = [[UserInfoTool userInfo] id];
+    params[@"cours"] = subjectsId;
+    params[@"oldcours"] = oldSubjectsId;
+    
+    [[WUHttpClient defaultClient] requestWithPath:url method:WUHttpRequestPost parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if ([responseObject[@"code"] integerValue] == 0) {
+            if (success) {
+                success(responseObject[@"message"]);
+            }
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        
+        
+    }];
+    
+    
+}
+
++ (void)classStudentsInfo:(NSString *)classId success:(SuccessBlock)success failed:(FailedBlock)failed {
+    
+    NSString *url = [API_HOST stringByAppendingString:API_CLASS_SUTDENTSINFO];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"id"] = classId;
+    
+    [[WUHttpClient defaultClient] requestWithPath:url method:WUHttpRequestGet parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([responseObject[@"code"] integerValue] == 0) {
+            if (success) {
+                
+                NSArray *students = [UserInfoModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+                success(students);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+    
+}
+
+
 @end

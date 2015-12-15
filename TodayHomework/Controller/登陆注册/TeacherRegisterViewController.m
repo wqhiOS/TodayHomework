@@ -40,7 +40,7 @@
     [self setupTextField];
     CGFloat containerViewWidth = SCREEN_WIDTH - self.subjectContainerView.x - 8;
     
-    NSMutableArray *data = @[@{@"name":@"语文",@"subjectId":@"0"},@{@"name":@"数学",@"subjectId":@"1"},@{@"name":@"英语",@"subjectId":@"2"},@{@"name":@"生物",@"subjectId":@"3"}].mutableCopy;
+//    NSMutableArray *data = @[@{@"name":@"语文",@"subjectId":@"0"},@{@"name":@"数学",@"subjectId":@"1"},@{@"name":@"英语",@"subjectId":@"2"},@{@"name":@"生物",@"subjectId":@"3"}].mutableCopy;
 
     
     [self.subjectContainerView setUpWithTitles:[NSMutableArray arrayWithObjects:@"语文",@"数学",@"化学",@"生物",@"英语",@"历史",@"地理",@"政治",@"物理",@"其他",nil] type:WUButtonTypeMultiple width:containerViewWidth finished:^(CGFloat height) {

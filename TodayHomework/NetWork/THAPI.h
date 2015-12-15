@@ -27,5 +27,13 @@
 
 /********** 教师发布作业 **********/
 #define API_PUBLISH_HOMEWORK @"/busyworkInfo/upload"
+
+/******* 删除作业 ************/
 #define API_DELETE_HOMEWORK @"/busyworkInfo/batchUpdHomeWork"
+
+/******* 教师更改所教班级的科目 ************/
+#define API_UPDATE_SUBJECTS @"/classInfo/updateClasses"
+
+/******* 教师获取某班级所有学生信息 ************/
+#define API_CLASS_SUTDENTSINFO @"/classInfo/findStudent/"
 #endif /* THAPI_h */

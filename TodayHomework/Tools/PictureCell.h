@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AttachmentInfoModel;
+#import "AttachmentInfoModel.h"
 @interface PictureCell : UICollectionViewCell
 
 @property (nonatomic, strong) AttachmentInfoModel *attachmentInfo;

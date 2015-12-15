@@ -8,7 +8,7 @@
 
 #import "HomeworkDetailViewController.h"
 #import "CheckAttachmentContainerView.h"
-#import "BrowsePicturesViewController.h"
+#import "BrowsePictureViewController.h"
 
 
 @interface HomeworkDetailViewController ()<CheckAttachemtnDelegate>
@@ -68,7 +68,7 @@
 
 #pragma mark - CheckAttachmentDelegate
 - (void)checkAttachment:(Attachment *)attachment {
-    BrowsePicturesViewController *vc = [[BrowsePicturesViewController alloc] initWithAttachmentInfos:self.status.listAttachmentInfowork];
+    BrowsePictureViewController *vc = [[BrowsePictureViewController alloc] initWithAttachmentInfos:self.status.listAttachmentInfowork index:1];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
