@@ -11,6 +11,7 @@
 #import "ClassInfoModel.h"
 #import "StudentManageCell.h"
 #import "MJRefresh.h"
+#import "WUPopView.h"
 
 @interface ClassManageStudentViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -42,7 +43,8 @@
 }
 
 - (void)more:(UIBarButtonItem *)item {
-    
+    WUPopView *popView = [[WUPopView alloc] init];
+    [popView show    ];
 }
 
 - (void)loadStudentsInfo {

@@ -49,6 +49,19 @@
 		575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93531C1044130079984F /* PersonalCenterSubItemCell.xib */; };
 		575C93591C1045D20079984F /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93571C1045D20079984F /* HeaderIconCell.m */; };
 		575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93581C1045D20079984F /* HeaderIconCell.xib */; };
+		576192821C204BA700179A35 /* WUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192811C204BA700179A35 /* WUPopView.m */; };
+		576192851C204D4100179A35 /* WUPopViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192841C204D4100179A35 /* WUPopViewDataSource.m */; };
+		576192C81C2058E400179A35 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576192AE1C2058E400179A35 /* Info.plist */; };
+		576192C91C2058E400179A35 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192B01C2058E400179A35 /* MASCompositeConstraint.m */; };
+		576192CA1C2058E400179A35 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192B31C2058E400179A35 /* MASConstraint.m */; };
+		576192CB1C2058E400179A35 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192B51C2058E400179A35 /* MASConstraintMaker.m */; };
+		576192CC1C2058E400179A35 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192B71C2058E400179A35 /* MASLayoutConstraint.m */; };
+		576192CD1C2058E400179A35 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192BB1C2058E400179A35 /* MASViewAttribute.m */; };
+		576192CE1C2058E400179A35 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192BD1C2058E400179A35 /* MASViewConstraint.m */; };
+		576192CF1C2058E400179A35 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192BF1C2058E400179A35 /* NSArray+MASAdditions.m */; };
+		576192D01C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192C21C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		576192D11C2058E400179A35 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192C41C2058E400179A35 /* View+MASAdditions.m */; };
+		576192D21C2058E400179A35 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192C71C2058E400179A35 /* ViewController+MASAdditions.m */; };
 		57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E5E1C0DD72A006B5263 /* UserTool.m */; };
 		57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7C1C0DDDE8006B5263 /* AddClassCell.m */; };
 		57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */; };
@@ -191,6 +204,36 @@
 		575C93561C1045D20079984F /* HeaderIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderIconCell.h; sourceTree = "<group>"; };
 		575C93571C1045D20079984F /* HeaderIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderIconCell.m; sourceTree = "<group>"; };
 		575C93581C1045D20079984F /* HeaderIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderIconCell.xib; sourceTree = "<group>"; };
+		576192801C204BA700179A35 /* WUPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUPopView.h; sourceTree = "<group>"; };
+		576192811C204BA700179A35 /* WUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUPopView.m; sourceTree = "<group>"; };
+		576192831C204D4100179A35 /* WUPopViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUPopViewDataSource.h; sourceTree = "<group>"; };
+		576192841C204D4100179A35 /* WUPopViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUPopViewDataSource.m; sourceTree = "<group>"; };
+		576192AE1C2058E400179A35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576192AF1C2058E400179A35 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		576192B01C2058E400179A35 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		576192B11C2058E400179A35 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		576192B21C2058E400179A35 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		576192B31C2058E400179A35 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		576192B41C2058E400179A35 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		576192B51C2058E400179A35 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		576192B61C2058E400179A35 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		576192B71C2058E400179A35 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		576192B81C2058E400179A35 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		576192B91C2058E400179A35 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		576192BA1C2058E400179A35 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		576192BB1C2058E400179A35 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		576192BC1C2058E400179A35 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		576192BD1C2058E400179A35 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		576192BE1C2058E400179A35 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		576192BF1C2058E400179A35 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		576192C01C2058E400179A35 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		576192C11C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		576192C21C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		576192C31C2058E400179A35 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		576192C41C2058E400179A35 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		576192C51C2058E400179A35 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		576192C61C2058E400179A35 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		576192C71C2058E400179A35 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		57830E5D1C0DD72A006B5263 /* UserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTool.h; sourceTree = "<group>"; };
 		57830E5E1C0DD72A006B5263 /* UserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTool.m; sourceTree = "<group>"; };
 		57830E7B1C0DDDE8006B5263 /* AddClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassCell.h; sourceTree = "<group>"; };
@@ -325,6 +368,7 @@
 				5710CAA31C1FB0AC00D9E652 /* ClassManageSubCell.xib */,
 				5710CAA61C1FB0B700D9E652 /* ClassManageSelectSubjectView.h */,
 				5710CAA71C1FB0B700D9E652 /* ClassManageSelectSubjectView.m */,
+				5761927F1C204B6100179A35 /* WUPopView */,
 			);
 			path = "班级管理";
 			sourceTree = "<group>";
@@ -440,6 +484,51 @@
 				5737C3091C117E60003F3EDF /* HomeworkHandle.m */,
 			);
 			path = Handle;
+			sourceTree = "<group>";
+		};
+		5761927F1C204B6100179A35 /* WUPopView */ = {
+			isa = PBXGroup;
+			children = (
+				576192AD1C2058E400179A35 /* Masonry */,
+				576192801C204BA700179A35 /* WUPopView.h */,
+				576192811C204BA700179A35 /* WUPopView.m */,
+				576192831C204D4100179A35 /* WUPopViewDataSource.h */,
+				576192841C204D4100179A35 /* WUPopViewDataSource.m */,
+			);
+			name = WUPopView;
+			sourceTree = "<group>";
+		};
+		576192AD1C2058E400179A35 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				576192AE1C2058E400179A35 /* Info.plist */,
+				576192AF1C2058E400179A35 /* MASCompositeConstraint.h */,
+				576192B01C2058E400179A35 /* MASCompositeConstraint.m */,
+				576192B11C2058E400179A35 /* MASConstraint+Private.h */,
+				576192B21C2058E400179A35 /* MASConstraint.h */,
+				576192B31C2058E400179A35 /* MASConstraint.m */,
+				576192B41C2058E400179A35 /* MASConstraintMaker.h */,
+				576192B51C2058E400179A35 /* MASConstraintMaker.m */,
+				576192B61C2058E400179A35 /* MASLayoutConstraint.h */,
+				576192B71C2058E400179A35 /* MASLayoutConstraint.m */,
+				576192B81C2058E400179A35 /* Masonry.h */,
+				576192B91C2058E400179A35 /* MASUtilities.h */,
+				576192BA1C2058E400179A35 /* MASViewAttribute.h */,
+				576192BB1C2058E400179A35 /* MASViewAttribute.m */,
+				576192BC1C2058E400179A35 /* MASViewConstraint.h */,
+				576192BD1C2058E400179A35 /* MASViewConstraint.m */,
+				576192BE1C2058E400179A35 /* NSArray+MASAdditions.h */,
+				576192BF1C2058E400179A35 /* NSArray+MASAdditions.m */,
+				576192C01C2058E400179A35 /* NSArray+MASShorthandAdditions.h */,
+				576192C11C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				576192C21C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				576192C31C2058E400179A35 /* View+MASAdditions.h */,
+				576192C41C2058E400179A35 /* View+MASAdditions.m */,
+				576192C51C2058E400179A35 /* View+MASShorthandAdditions.h */,
+				576192C61C2058E400179A35 /* ViewController+MASAdditions.h */,
+				576192C71C2058E400179A35 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
 			sourceTree = "<group>";
 		};
 		57830E5C1C0DD6FE006B5263 /* UserTool */ = {
@@ -926,6 +1015,7 @@
 				57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */,
 				57830E8D1C0DDDE8006B5263 /* SelectSchoolHeaderView.xib in Resources */,
 				575C93501C1042700079984F /* PersonalCenterItemCell.xib in Resources */,
+				576192C81C2058E400179A35 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +1079,7 @@
 				57830EC11C0DDFB9006B5263 /* SelectSchoolButton.m in Sources */,
 				5710CA841C1FADC500D9E652 /* ClassManageStudentViewController.m in Sources */,
 				57C804591C156BBE00AF1544 /* ModifyAnswerViewController.m in Sources */,
+				576192CA1C2058E400179A35 /* MASConstraint.m in Sources */,
 				57C8045E1C156EC500AF1544 /* TextFieldCell.m in Sources */,
 				5737C3051C1176D1003F3EDF /* HomeCell.m in Sources */,
 				5710CA6F1C1FAD7700D9E652 /* BrowsePictureViewController.m in Sources */,
@@ -1001,15 +1092,19 @@
 				57C8044C1C1568D700AF1544 /* HomeworkModel.m in Sources */,
 				575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */,
 				5710CA851C1FADC500D9E652 /* ClassManageTeacherViewController.m in Sources */,
+				576192851C204D4100179A35 /* WUPopViewDataSource.m in Sources */,
 				57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */,
+				576192D11C2058E400179A35 /* View+MASAdditions.m in Sources */,
 				5737C2FE1C116F5B003F3EDF /* PersonalCenterTableDataSource.m in Sources */,
 				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
 				571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */,
 				5710CA9A1C1FAE1A00D9E652 /* StudentManageCell.m in Sources */,
 				57C804351C1561FF00AF1544 /* ModifyHomeworkViewController.m in Sources */,
+				576192C91C2058E400179A35 /* MASCompositeConstraint.m in Sources */,
 				57C8048F1C17C63000AF1544 /* HomeworkDeleteButton.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,
 				57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */,
+				576192821C204BA700179A35 /* WUPopView.m in Sources */,
 				57C804831C16C34E00AF1544 /* HomeworkContentCell.m in Sources */,
 				57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */,
 				57830E9B1C0DDE59006B5263 /* SelectSchoolViewController.m in Sources */,
@@ -1020,13 +1115,16 @@
 				5710CA701C1FAD7700D9E652 /* PictureCell.m in Sources */,
 				5710CA821C1FADC500D9E652 /* ClassManageDataSource.m in Sources */,
 				57C804271C15571500AF1544 /* HomeworkManageViewController.m in Sources */,
+				576192CC1C2058E400179A35 /* MASLayoutConstraint.m in Sources */,
 				57C804541C156BA000AF1544 /* UploadAnswerViewController.m in Sources */,
 				57C804711C1674CF00AF1544 /* AttachmentContainerView.m in Sources */,
 				571FC5711C082A30009F1F0E /* UIView+Frame.m in Sources */,
 				57C8042B1C15608700AF1544 /* HomeworkDetailViewController.m in Sources */,
+				576192CD1C2058E400179A35 /* MASViewAttribute.m in Sources */,
 				575C933D1C102A650079984F /* UserInfoModel.m in Sources */,
 				575C93591C1045D20079984F /* HeaderIconCell.m in Sources */,
 				5710CA9F1C1FB0A400D9E652 /* ClassManageCell.m in Sources */,
+				576192CB1C2058E400179A35 /* MASConstraintMaker.m in Sources */,
 				575C93431C102DF90079984F /* ParamInfoModel.m in Sources */,
 				57830E991C0DDE59006B5263 /* LoginViewController.m in Sources */,
 				5737C30A1C117E60003F3EDF /* HomeworkHandle.m in Sources */,
@@ -1040,6 +1138,9 @@
 				571FC5651C081804009F1F0E /* AppUtils.m in Sources */,
 				5737C3011C11734A003F3EDF /* HomeTableDataSource.m in Sources */,
 				57C8044D1C1568D700AF1544 /* HomeworkStatusModel.m in Sources */,
+				576192CE1C2058E400179A35 /* MASViewConstraint.m in Sources */,
+				576192CF1C2058E400179A35 /* NSArray+MASAdditions.m in Sources */,
+				576192D21C2058E400179A35 /* ViewController+MASAdditions.m in Sources */,
 				57830EC81C0DDFE3006B5263 /* THLoginTextField.m in Sources */,
 				57830EE51C0DE108006B5263 /* HomeworkHeaderView.m in Sources */,
 				571FC4FB1C07F30C009F1F0E /* main.m in Sources */,
@@ -1050,6 +1151,7 @@
 				575C93371C1021740079984F /* BaseHandle.m in Sources */,
 				57830EB51C0DDF0F006B5263 /* PublishHomeworkViewController.m in Sources */,
 				57830EDF1C0DE038006B5263 /* THNavigationController.m in Sources */,
+				576192D01C2058E400179A35 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				57C804B51C180B8600AF1544 /* CheckAttachmentContainerView.m in Sources */,
 				575C934F1C1042700079984F /* PersonalCenterItemCell.m in Sources */,
 				575C93461C10382E0079984F /* UserInfoTool.m in Sources */,
