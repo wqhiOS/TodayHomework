@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Masonry (0.6.2)
   - MJExtension (HEAD based on 2.5.7)
   - MJRefresh (HEAD based on 2.4.7)
   - SDWebImage (3.7.3):
@@ -29,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Masonry
   - MJExtension (HEAD)
   - MJRefresh (HEAD)
   - SDWebImage (~> 3.7)
@@ -36,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MJExtension: 2650b64a34ace8d2aa9410d1d17244917032f37a
   MJRefresh: 6eb2f61338f89f64fd628fd43debcf479381ff59
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

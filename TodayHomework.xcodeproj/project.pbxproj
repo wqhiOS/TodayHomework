@@ -49,6 +49,8 @@
 		575C93551C1044130079984F /* PersonalCenterSubItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93531C1044130079984F /* PersonalCenterSubItemCell.xib */; };
 		575C93591C1045D20079984F /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93571C1045D20079984F /* HeaderIconCell.m */; };
 		575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93581C1045D20079984F /* HeaderIconCell.xib */; };
+		576192821C204BA700179A35 /* WUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192811C204BA700179A35 /* WUPopView.m */; };
+		576192851C204D4100179A35 /* WUPopViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192841C204D4100179A35 /* WUPopViewDataSource.m */; };
 		57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E5E1C0DD72A006B5263 /* UserTool.m */; };
 		57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7C1C0DDDE8006B5263 /* AddClassCell.m */; };
 		57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */; };
@@ -80,6 +82,7 @@
 		57830EFE1C0DE7D8006B5263 /* radio_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57830EF61C0DE7D8006B5263 /* radio_normal@2x.png */; };
 		57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EF81C0DE7D8006B5263 /* WUButton.m */; };
 		57830F001C0DE7D8006B5263 /* WUButtonContainrView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830EFA1C0DE7D8006B5263 /* WUButtonContainrView.m */; };
+		57A3ED1E1C224FCA0077C95D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57A3ED1D1C224FCA0077C95D /* Info.plist */; };
 		57C804271C15571500AF1544 /* HomeworkManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804261C15571500AF1544 /* HomeworkManageViewController.m */; };
 		57C8042B1C15608700AF1544 /* HomeworkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C804291C15608700AF1544 /* HomeworkDetailViewController.m */; };
 		57C8042C1C15608700AF1544 /* HomeworkDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C8042A1C15608700AF1544 /* HomeworkDetailViewController.xib */; };
@@ -145,7 +148,6 @@
 		571FC4F61C07F30C009F1F0E /* TodayHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FC4FA1C07F30C009F1F0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		571FC5051C07F30C009F1F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		571FC50A1C07F30C009F1F0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571FC5101C07F334009F1F0E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		571FC5121C07F456009F1F0E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		571FC5131C07F456009F1F0E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,6 +193,10 @@
 		575C93561C1045D20079984F /* HeaderIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderIconCell.h; sourceTree = "<group>"; };
 		575C93571C1045D20079984F /* HeaderIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderIconCell.m; sourceTree = "<group>"; };
 		575C93581C1045D20079984F /* HeaderIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderIconCell.xib; sourceTree = "<group>"; };
+		576192801C204BA700179A35 /* WUPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUPopView.h; sourceTree = "<group>"; };
+		576192811C204BA700179A35 /* WUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUPopView.m; sourceTree = "<group>"; };
+		576192831C204D4100179A35 /* WUPopViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUPopViewDataSource.h; sourceTree = "<group>"; };
+		576192841C204D4100179A35 /* WUPopViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUPopViewDataSource.m; sourceTree = "<group>"; };
 		57830E5D1C0DD72A006B5263 /* UserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTool.h; sourceTree = "<group>"; };
 		57830E5E1C0DD72A006B5263 /* UserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTool.m; sourceTree = "<group>"; };
 		57830E7B1C0DDDE8006B5263 /* AddClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassCell.h; sourceTree = "<group>"; };
@@ -243,6 +249,7 @@
 		57830EF81C0DE7D8006B5263 /* WUButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButton.m; sourceTree = "<group>"; };
 		57830EF91C0DE7D8006B5263 /* WUButtonContainrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUButtonContainrView.h; sourceTree = "<group>"; };
 		57830EFA1C0DE7D8006B5263 /* WUButtonContainrView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUButtonContainrView.m; sourceTree = "<group>"; };
+		57A3ED1D1C224FCA0077C95D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C804251C15571500AF1544 /* HomeworkManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkManageViewController.h; sourceTree = "<group>"; };
 		57C804261C15571500AF1544 /* HomeworkManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeworkManageViewController.m; sourceTree = "<group>"; };
 		57C804281C15608700AF1544 /* HomeworkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeworkDetailViewController.h; sourceTree = "<group>"; };
@@ -325,6 +332,7 @@
 				5710CAA31C1FB0AC00D9E652 /* ClassManageSubCell.xib */,
 				5710CAA61C1FB0B700D9E652 /* ClassManageSelectSubjectView.h */,
 				5710CAA71C1FB0B700D9E652 /* ClassManageSelectSubjectView.m */,
+				5761927F1C204B6100179A35 /* WUPopView */,
 			);
 			path = "班级管理";
 			sourceTree = "<group>";
@@ -365,8 +373,8 @@
 		571FC4F91C07F30C009F1F0E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				57A3ED1D1C224FCA0077C95D /* Info.plist */,
 				571FC5051C07F30C009F1F0E /* Assets.xcassets */,
-				571FC50A1C07F30C009F1F0E /* Info.plist */,
 				571FC4FA1C07F30C009F1F0E /* main.m */,
 				571FC5101C07F334009F1F0E /* PrefixHeader.pch */,
 			);
@@ -440,6 +448,17 @@
 				5737C3091C117E60003F3EDF /* HomeworkHandle.m */,
 			);
 			path = Handle;
+			sourceTree = "<group>";
+		};
+		5761927F1C204B6100179A35 /* WUPopView */ = {
+			isa = PBXGroup;
+			children = (
+				576192801C204BA700179A35 /* WUPopView.h */,
+				576192811C204BA700179A35 /* WUPopView.m */,
+				576192831C204D4100179A35 /* WUPopViewDataSource.h */,
+				576192841C204D4100179A35 /* WUPopViewDataSource.m */,
+			);
+			name = WUPopView;
 			sourceTree = "<group>";
 		};
 		57830E5C1C0DD6FE006B5263 /* UserTool */ = {
@@ -912,6 +931,7 @@
 				57C8045A1C156BBE00AF1544 /* ModifyAnswerViewController.xib in Resources */,
 				57C804791C16758E00AF1544 /* AddAttachmentCell.xib in Resources */,
 				5710CA891C1FADC500D9E652 /* ModifyClassInfoViewController.xib in Resources */,
+				57A3ED1E1C224FCA0077C95D /* Info.plist in Resources */,
 				57830EFD1C0DE7D8006B5263 /* radio_checked@2x.png in Resources */,
 				57830E9A1C0DDE59006B5263 /* LoginViewController.xib in Resources */,
 				5710CAA51C1FB0AC00D9E652 /* ClassManageSubCell.xib in Resources */,
@@ -1001,6 +1021,7 @@
 				57C8044C1C1568D700AF1544 /* HomeworkModel.m in Sources */,
 				575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */,
 				5710CA851C1FADC500D9E652 /* ClassManageTeacherViewController.m in Sources */,
+				576192851C204D4100179A35 /* WUPopViewDataSource.m in Sources */,
 				57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */,
 				5737C2FE1C116F5B003F3EDF /* PersonalCenterTableDataSource.m in Sources */,
 				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
@@ -1010,6 +1031,7 @@
 				57C8048F1C17C63000AF1544 /* HomeworkDeleteButton.m in Sources */,
 				57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */,
 				57830EB31C0DDF0F006B5263 /* HomeViewController.m in Sources */,
+				576192821C204BA700179A35 /* WUPopView.m in Sources */,
 				57C804831C16C34E00AF1544 /* HomeworkContentCell.m in Sources */,
 				57830EAB1C0DDEF0006B5263 /* PersonalCenterViewController.m in Sources */,
 				57830E9B1C0DDE59006B5263 /* SelectSchoolViewController.m in Sources */,
