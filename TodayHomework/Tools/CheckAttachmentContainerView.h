@@ -19,4 +19,5 @@
 @property (nonatomic, assign) CGFloat containerViewWidth;
 @property (nonatomic, copy) void (^updateHeight)(CGFloat);
 @property (nonatomic, weak) id<CheckAttachemtnDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray *attachments;
 @end

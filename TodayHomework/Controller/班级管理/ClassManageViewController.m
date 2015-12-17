@@ -45,6 +45,7 @@
     AddClassViewController *addClassVc = [[AddClassViewController alloc] init];
     addClassVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:addClassVc animated:YES];
+    
 }
 
 #pragma mark - 获取教师的所有班级

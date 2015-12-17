@@ -9,10 +9,10 @@
 #ifndef THAPI_h
 #define THAPI_h
 
-//#define API_HOST @"http://192.16.150.213:14082/education/rest"
-//#define API_Picture @"http://192.16.150.213:14082/education"
-#define API_HOST @"http://101.231.112.90:10005/education/rest"
-#define API_Picture @"http://101.231.112.90:10005/education"
+#define API_HOST @"http://192.16.150.213:14082/education/rest"
+#define API_Picture @"http://192.16.150.213:14082/education"
+//#define API_HOST @"http://101.231.112.90:10005/education/rest"
+//#define API_Picture @"http://101.231.112.90:10005/education"
 /********* 登陆 **********/
 #define API_LOGIN @"/cust/login/"
 

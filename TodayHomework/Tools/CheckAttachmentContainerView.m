@@ -12,7 +12,6 @@
 
 @interface CheckAttachmentContainerView()
 
-@property (nonatomic, strong) NSMutableArray *attachmentPhotos;
 
 @end
 
@@ -62,6 +61,7 @@
         Attachment *attachment = [[Attachment alloc] init];
         attachment.attachmentInfo = self.attachmentInfos[i];
         [attachment addTarget:self action:@selector(attachmentClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.attachments addObject:attachment];
         
         NSInteger row = i/columnCount;
         NSInteger col = i%columnCount;
@@ -74,6 +74,13 @@
         self.updateHeight(rowCount*(attachmentWidht+rowSpacing));
     }
   
+}
+
+- (NSMutableArray *)attachments {
+    if (!_attachments) {
+        _attachments = [NSMutableArray array];
+    }
+    return _attachments;
 }
 
 - (void)attachmentClick:(Attachment *)attachment {

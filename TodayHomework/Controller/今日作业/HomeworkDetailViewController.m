@@ -9,6 +9,8 @@
 #import "HomeworkDetailViewController.h"
 #import "CheckAttachmentContainerView.h"
 #import "BrowsePictureViewController.h"
+#import "Attachment.h"
+#import "AttachmentInfoModel.h"
 
 
 @interface HomeworkDetailViewController ()<CheckAttachemtnDelegate>
@@ -68,8 +70,18 @@
 
 #pragma mark - CheckAttachmentDelegate
 - (void)checkAttachment:(Attachment *)attachment {
-    BrowsePictureViewController *vc = [[BrowsePictureViewController alloc] initWithAttachmentInfos:self.status.listAttachmentInfowork index:1];
-    [self.navigationController pushViewController:vc animated:YES];
+ 
+    
+    if ([attachment.attachmentInfo.attachmentType isEqualToString:@"作业文档"]) {
+        NSInteger index = [self.homeworkAttachmentsContainerView.attachments indexOfObject:attachment];
+        BrowsePictureViewController *vc = [[BrowsePictureViewController alloc] initWithAttachmentInfos:self.status.listAttachmentInfowork index:index];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else {
+        NSInteger index = [self.answerAttachmentsContainerView.attachments indexOfObject:attachment];
+        BrowsePictureViewController *vc = [[BrowsePictureViewController alloc] initWithAttachmentInfos:self.status.listAttachmentInfowork index:index];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
 }
 
 @end

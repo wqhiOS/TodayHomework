@@ -24,6 +24,8 @@
 		5710CAA41C1FB0AC00D9E652 /* ClassManageSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5710CAA21C1FB0AC00D9E652 /* ClassManageSubCell.m */; };
 		5710CAA51C1FB0AC00D9E652 /* ClassManageSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5710CAA31C1FB0AC00D9E652 /* ClassManageSubCell.xib */; };
 		5710CAA81C1FB0B700D9E652 /* ClassManageSelectSubjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5710CAA71C1FB0B700D9E652 /* ClassManageSelectSubjectView.m */; };
+		5716CD701C2289200074FD9E /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5716CD6E1C2289200074FD9E /* AddStudentViewController.m */; };
+		5716CD711C2289200074FD9E /* AddStudentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5716CD6F1C2289200074FD9E /* AddStudentViewController.xib */; };
 		571FC4FB1C07F30C009F1F0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC4FA1C07F30C009F1F0E /* main.m */; };
 		571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571FC5051C07F30C009F1F0E /* Assets.xcassets */; };
 		571FC5201C07F456009F1F0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 571FC5131C07F456009F1F0E /* AppDelegate.m */; };
@@ -50,7 +52,6 @@
 		575C93591C1045D20079984F /* HeaderIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C93571C1045D20079984F /* HeaderIconCell.m */; };
 		575C935A1C1045D20079984F /* HeaderIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575C93581C1045D20079984F /* HeaderIconCell.xib */; };
 		576192821C204BA700179A35 /* WUPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192811C204BA700179A35 /* WUPopView.m */; };
-		576192851C204D4100179A35 /* WUPopViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 576192841C204D4100179A35 /* WUPopViewDataSource.m */; };
 		57830E5F1C0DD72A006B5263 /* UserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E5E1C0DD72A006B5263 /* UserTool.m */; };
 		57830E881C0DDDE8006B5263 /* AddClassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57830E7C1C0DDDE8006B5263 /* AddClassCell.m */; };
 		57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57830E7D1C0DDDE8006B5263 /* AddClassCell.xib */; };
@@ -145,6 +146,9 @@
 		5710CAA31C1FB0AC00D9E652 /* ClassManageSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassManageSubCell.xib; sourceTree = "<group>"; };
 		5710CAA61C1FB0B700D9E652 /* ClassManageSelectSubjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassManageSelectSubjectView.h; sourceTree = "<group>"; };
 		5710CAA71C1FB0B700D9E652 /* ClassManageSelectSubjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassManageSelectSubjectView.m; sourceTree = "<group>"; };
+		5716CD6D1C2289200074FD9E /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentViewController.h; sourceTree = "<group>"; };
+		5716CD6E1C2289200074FD9E /* AddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStudentViewController.m; sourceTree = "<group>"; };
+		5716CD6F1C2289200074FD9E /* AddStudentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddStudentViewController.xib; sourceTree = "<group>"; };
 		571FC4F61C07F30C009F1F0E /* TodayHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		571FC4FA1C07F30C009F1F0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		571FC5051C07F30C009F1F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,8 +199,6 @@
 		575C93581C1045D20079984F /* HeaderIconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderIconCell.xib; sourceTree = "<group>"; };
 		576192801C204BA700179A35 /* WUPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUPopView.h; sourceTree = "<group>"; };
 		576192811C204BA700179A35 /* WUPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUPopView.m; sourceTree = "<group>"; };
-		576192831C204D4100179A35 /* WUPopViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUPopViewDataSource.h; sourceTree = "<group>"; };
-		576192841C204D4100179A35 /* WUPopViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUPopViewDataSource.m; sourceTree = "<group>"; };
 		57830E5D1C0DD72A006B5263 /* UserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTool.h; sourceTree = "<group>"; };
 		57830E5E1C0DD72A006B5263 /* UserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTool.m; sourceTree = "<group>"; };
 		57830E7B1C0DDDE8006B5263 /* AddClassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassCell.h; sourceTree = "<group>"; };
@@ -332,9 +334,28 @@
 				5710CAA31C1FB0AC00D9E652 /* ClassManageSubCell.xib */,
 				5710CAA61C1FB0B700D9E652 /* ClassManageSelectSubjectView.h */,
 				5710CAA71C1FB0B700D9E652 /* ClassManageSelectSubjectView.m */,
-				5761927F1C204B6100179A35 /* WUPopView */,
 			);
 			path = "班级管理";
+			sourceTree = "<group>";
+		};
+		5716CD6C1C2288CB0074FD9E /* 学生管理 */ = {
+			isa = PBXGroup;
+			children = (
+				5710CA751C1FADC500D9E652 /* ClassManageStudentViewController.h */,
+				5710CA761C1FADC500D9E652 /* ClassManageStudentViewController.m */,
+				5716CD721C2289610074FD9E /* 添加学生 */,
+			);
+			name = "学生管理";
+			sourceTree = "<group>";
+		};
+		5716CD721C2289610074FD9E /* 添加学生 */ = {
+			isa = PBXGroup;
+			children = (
+				5716CD6D1C2289200074FD9E /* AddStudentViewController.h */,
+				5716CD6E1C2289200074FD9E /* AddStudentViewController.m */,
+				5716CD6F1C2289200074FD9E /* AddStudentViewController.xib */,
+			);
+			name = "添加学生";
 			sourceTree = "<group>";
 		};
 		571FC4ED1C07F30C009F1F0E = {
@@ -394,6 +415,7 @@
 		571FC5621C0817D4009F1F0E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5761927F1C204B6100179A35 /* WUPopView */,
 				57C804C11C183A6E00AF1544 /* 浏览图片 */,
 				57C804BC1C18333600AF1544 /* 查看附件 */,
 				57C8046A1C1674CF00AF1544 /* 添加附件 */,
@@ -455,10 +477,9 @@
 			children = (
 				576192801C204BA700179A35 /* WUPopView.h */,
 				576192811C204BA700179A35 /* WUPopView.m */,
-				576192831C204D4100179A35 /* WUPopViewDataSource.h */,
-				576192841C204D4100179A35 /* WUPopViewDataSource.m */,
 			);
 			name = WUPopView;
+			path = "../View/班级管理";
 			sourceTree = "<group>";
 		};
 		57830E5C1C0DD6FE006B5263 /* UserTool */ = {
@@ -529,8 +550,7 @@
 				5710CA721C1FADC500D9E652 /* ClassManageDataSource.m */,
 				57830EB71C0DDF23006B5263 /* AddClassViewController.h */,
 				57830EB81C0DDF23006B5263 /* AddClassViewController.m */,
-				5710CA751C1FADC500D9E652 /* ClassManageStudentViewController.h */,
-				5710CA761C1FADC500D9E652 /* ClassManageStudentViewController.m */,
+				5716CD6C1C2288CB0074FD9E /* 学生管理 */,
 				5710CA771C1FADC500D9E652 /* ClassManageTeacherViewController.h */,
 				5710CA781C1FADC500D9E652 /* ClassManageTeacherViewController.m */,
 				5710CA791C1FADC500D9E652 /* ClassManageTeacherViewController.xib */,
@@ -943,6 +963,7 @@
 				57830E9D1C0DDE59006B5263 /* TeacherRegisterViewController.xib in Resources */,
 				57830E891C0DDDE8006B5263 /* AddClassCell.xib in Resources */,
 				571FC5061C07F30C009F1F0E /* Assets.xcassets in Resources */,
+				5716CD711C2289200074FD9E /* AddStudentViewController.xib in Resources */,
 				57830EFC1C0DE7D8006B5263 /* chexbox_normal@2x.png in Resources */,
 				57830E8D1C0DDDE8006B5263 /* SelectSchoolHeaderView.xib in Resources */,
 				575C93501C1042700079984F /* PersonalCenterItemCell.xib in Resources */,
@@ -1021,7 +1042,6 @@
 				57C8044C1C1568D700AF1544 /* HomeworkModel.m in Sources */,
 				575C93401C102AA40079984F /* SchoolInfoModel.m in Sources */,
 				5710CA851C1FADC500D9E652 /* ClassManageTeacherViewController.m in Sources */,
-				576192851C204D4100179A35 /* WUPopViewDataSource.m in Sources */,
 				57830E8A1C0DDDE8006B5263 /* OtherClassCell.m in Sources */,
 				5737C2FE1C116F5B003F3EDF /* PersonalCenterTableDataSource.m in Sources */,
 				57830EFF1C0DE7D8006B5263 /* WUButton.m in Sources */,
@@ -1053,6 +1073,7 @@
 				57830E991C0DDE59006B5263 /* LoginViewController.m in Sources */,
 				5737C30A1C117E60003F3EDF /* HomeworkHandle.m in Sources */,
 				57C804BB1C18252F00AF1544 /* Attachment.m in Sources */,
+				5716CD701C2289200074FD9E /* AddStudentViewController.m in Sources */,
 				575C93541C1044130079984F /* PersonalCenterSubItemCell.m in Sources */,
 				575C933A1C102A4E0079984F /* BaseModel.m in Sources */,
 				57C804871C16CD2C00AF1544 /* PublishHomeworkHeaderView.m in Sources */,

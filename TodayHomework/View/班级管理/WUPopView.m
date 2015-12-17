@@ -7,7 +7,6 @@
 //
 
 #import "WUPopView.h"
-#import "WUPopViewDataSource.h"
 #import "Masonry.h"
 
 @interface WUPopView()<UITableViewDataSource,UITableViewDelegate>
@@ -58,7 +57,8 @@
     [self addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(17);
-        make.right.left.bottom.equalTo(self);
+        make.height.equalTo(self);
+        make.right.left.equalTo(self);
     }];
     
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
@@ -122,6 +122,13 @@
     cell.textLabel.font = [UIFont systemFontOfSize:13];
     cell.textLabel.textColor = [UIColor whiteColor];
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(popView:didSelectRowAtIndexPath:)]) {
+        [self.delegate popView:self didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 

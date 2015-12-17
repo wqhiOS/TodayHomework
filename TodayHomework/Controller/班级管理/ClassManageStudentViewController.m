@@ -13,7 +13,7 @@
 #import "MJRefresh.h"
 #import "WUPopView.h"
 
-@interface ClassManageStudentViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ClassManageStudentViewController ()<UITableViewDelegate,UITableViewDataSource,WUPopViewDelegate>
 {
     NSString *_classId;
     NSArray *_students;
@@ -43,8 +43,11 @@
 }
 
 - (void)more:(UIBarButtonItem *)item {
+    
     WUPopView *popView = [[WUPopView alloc] init];
+    popView.delegate = self;
     [popView show    ];
+   
 }
 
 - (void)loadStudentsInfo {
@@ -94,5 +97,9 @@
     return 10;
 }
 
+#pragma mark - WUPopViewDelegate
+- (void)popView:(WUPopView *)popView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 
 @end
